@@ -161,14 +161,27 @@
                   <div>
                     <video autoplay loop muted>
                       <source src="./img/main_video.mp4" type="video/mp4" >
-                    </video>
+                      </video>
+                    video {
+                        object-fit: cover;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                      
+                      }
                       .video-wrapper {
- 
-                            position: relative;
-                          
-                            width: 400px;
-                            height: 200px;
-                          }
+                        border: 2px solid #000;
+                        width: 300px;
+                        height: 300px;
+                        position: relative;
+                        overflow: hidden;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      }
                   </div>
 
 
