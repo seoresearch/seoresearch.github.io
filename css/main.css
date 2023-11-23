@@ -162,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', Helvetica, sans-serif;
   font-weight: 600;
   font-style: normal;
-  color: #f5f5f5;
+  color: #252525;
 }
 
 h1 {
@@ -454,7 +454,7 @@ pre {
   color: #333;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #f5f5f5;
+  background-color: #252525;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -1255,7 +1255,7 @@ td {
 }
 
 .site-main-menu li a {
-  color: #f5f5f5;
+  color: #252525;
   text-decoration: none;
   line-height: 50px;
   font-size: 14px;
@@ -1344,7 +1344,7 @@ td {
 .page-title {
   display: block;
   position: relative;
-  background-color: #252525;
+  background-color: #f5f5f5;
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
   padding: 65px 70px;
@@ -2401,7 +2401,7 @@ ul.social-links li:last-child a {
 .portfolio-filters li a,
 .portfolio-filters li a:hover,
 .portfolio-filters li a:not([href]) {
-  color: #f5f5f5;
+  color: #252525;
   font-size: 12px;
   line-height: 1.5;
   padding: 3px 14px;
@@ -2535,7 +2535,7 @@ ul.social-links li:last-child a {
   padding: 4px 10px;
   margin: 0;
   background-color: #222;
-  color: #f5f5f5;
+  color: #252525;
   font-size: 14px;
   line-height: 1.2;
   top: 20px;
@@ -2549,7 +2549,7 @@ ul.social-links li:last-child a {
   display: inline-block;
   padding: 3px 7px;
   background-color: #222;
-  color: #f5f5f5;
+  color: #252525;
   font-size: 11px;
   line-height: 1.2em;
   bottom: 20px;
@@ -2636,7 +2636,7 @@ ul.social-links li:last-child a {
 .blog-card .post-without-f-image {
   padding-bottom: 46.875%;
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: #252525;
 }
 
 .blog-card .post-info {
@@ -2666,7 +2666,7 @@ ul.social-links li:last-child a {
   padding: 3px 7px;
   line-height: 1.2em;
   font-size: 11px;
-  color: #f5f5f5;
+  color: #252525;
 }
 
 .blog-card .post-date {
@@ -2951,7 +2951,7 @@ ul.social-links li:last-child a {
   width: 12px;
   height: 12px;
   margin: 5px;
-  background: #f5f5f5;
+  background: #252525;
   border: 2px solid #9e9e9e;
   display: block;
   -webkit-backface-visibility: visible;
@@ -3394,7 +3394,7 @@ ul.social-links li:last-child a {
 .fw-pricing .fw-pricing-row span {
   display: block;
   line-height: 1;
-  color: #f5f5f5;
+  color: #252525;
   font-size: 42px;
 }
 
@@ -3464,7 +3464,7 @@ ul.social-links li:last-child a {
 
 .blog-post-page .page-wrapper {
   position: relative;
-  border-left: 15px solid #f5f5f5;
+  border-left: 15px solid #252525;
 }
 
 .blog-post-content {
@@ -4785,7 +4785,7 @@ a.post-thumbnail:hover {
   height: 2px;
   left: 0;
   bottom: -4px;
-  background-color: #f5f5f5;
+  background-color: #252525;
 }
 
 .blog-sidebar .post-date {
@@ -4959,7 +4959,7 @@ a.post-thumbnail:hover {
   position: relative;
   margin: 60px -70px -60px;
   padding: 15px 45px;;
-  background-color: #252525;
+  background-color: #f5f5f5;
   border-top: 2px solid #333;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
@@ -5235,7 +5235,7 @@ a.post-thumbnail:hover {
     width: 100%;
     max-width: 100%;
     background-color: #fff;
-    border-bottom: 1px solid #f5f5f5;
+    border-bottom: 1px solid #252525;
     left: 0;
     right: 0;
     height: 50px;
