@@ -1245,7 +1245,7 @@ td {
 .site-main-menu li {
   display: inline-block;
   position: relative;
-  color: #fff;
+  color: #333;
   text-decoration: none;
   margin-right: 40px;
 }
@@ -1255,7 +1255,7 @@ td {
 }
 
 .site-main-menu li a {
-  color: #ffffff;
+  color: #252525;
   text-decoration: none;
   line-height: 50px;
   font-size: 14px;
