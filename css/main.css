@@ -1187,15 +1187,18 @@ td {
 
 .text-logo {
   float: left;
+  color: #333;
 }
 
 .text-logo a {
   display: block;
   outline: 0;
+  color: #252525;
 }
 
 .text-logo a:focus {
   outline: 0;
+  color: #252525;
 }
 
 .logo-symbol {
@@ -1254,10 +1257,12 @@ td {
 
 .site-main-menu li:last-child {
   margin-right: 0;
+  background-color: #fff;
 }
 
 .site-main-menu li a {
   color: #252525;
+  background-color: #fff;
   text-decoration: none;
   line-height: 50px;
   font-size: 14px;
