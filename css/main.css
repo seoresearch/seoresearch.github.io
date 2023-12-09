@@ -1298,7 +1298,7 @@ td {
     .site-main-menu .sub-menu {
       display: block;
       position: absolute;
-      background-color: #fff;
+      background-color: #ffffff;
       left: -23px;
       top: 100px;
       width: auto;
@@ -1319,6 +1319,7 @@ td {
     .site-main-menu li:last-child > .sub-menu {
       left: auto;
       right: 0;
+      background-color: #ffffff;
     }
 
     .sub-menu li {
@@ -1326,6 +1327,7 @@ td {
       margin: 0 0 12px;
       padding: 0;
       color: #666;
+      background-color: #ffffff;
     }
 
     .sub-menu li:last-child {
@@ -1337,6 +1339,8 @@ td {
       opacity: .5;
       line-height: 1.6em;
       width: max-content;
+      color: #666;
+      background-color: #ffffff;
     }
 
     .sub-menu li.current-menu-item a,
