@@ -1305,6 +1305,7 @@ td {
       display: block;
       margin: 0 0 12px;
       padding: 0;
+      color: #666;
     }
 
     .sub-menu li:last-child {
