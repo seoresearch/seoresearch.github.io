@@ -1269,6 +1269,26 @@ td {
 }
 
 @media only screen and (max-width : 320px) {
+
+    .header.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #ffffff;
+  right: 0;
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 20px 50px;
+}
+
+.text-logo {
+  float: left;
+}
+
+.text-logo a {
+  display: block;
+  outline: 0;
+}
     .site-main-menu li:hover > .sub-menu {
       visibility: visible;
       opacity: 1;
