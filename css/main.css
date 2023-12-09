@@ -1245,7 +1245,7 @@ td {
 .site-main-menu li {
   display: inline-block;
   position: relative;
-  color: #333;
+  color: #fff;
   text-decoration: none;
   margin-right: 40px;
 }
@@ -1255,7 +1255,7 @@ td {
 }
 
 .site-main-menu li a {
-  color: #252525;
+  color: #ffffff;
   text-decoration: none;
   line-height: 50px;
   font-size: 14px;
@@ -1278,7 +1278,7 @@ td {
     .site-main-menu .sub-menu {
       display: block;
       position: absolute;
-      background-color: #333;
+      background-color: #fff;
       left: -23px;
       top: 100px;
       width: auto;
