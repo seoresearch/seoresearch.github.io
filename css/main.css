@@ -1167,7 +1167,7 @@ td {
   position: relative;
 }
 
-@media only screen and (min-width: 991px) {
+@media only screen and (max-width: 991px) {
   .header {
     width: calc(100% + 40px);
     margin-left: -20px;
