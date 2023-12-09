@@ -1268,7 +1268,7 @@ td {
   opacity: 1;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 420px) {
     .site-main-menu li:hover > .sub-menu {
       visibility: visible;
       opacity: 1;
