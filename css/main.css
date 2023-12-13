@@ -1165,12 +1165,15 @@ td {
   width: 100%;
   padding-bottom: 40px;
   position: relative;
+    background: #ffffff;
+  
 }
 
 @media only screen and (min-width: 992px) {
   .header {
     width: calc(100% + 40px);
     margin-left: -20px;
+    background: #ffffff;
   }
 }
 
@@ -1179,6 +1182,7 @@ td {
   left: 0;
   top: 0;
   background-color: #ffffff;
+  background: #ffffff;
   right: 0;
   margin: 0 auto;
   max-width: 1240px;
@@ -1236,6 +1240,8 @@ td {
 
 .site-nav {
   float: right;
+  background-color: #ffffff;
+  background: #ffffff;
 }
 
 .site-main-menu {
@@ -1251,6 +1257,7 @@ td {
   position: relative;
   color: #333;
   background-color: #fff;
+  background: #ffffff;
   text-decoration: none;
   margin-right: 40px;
 }
@@ -1258,11 +1265,13 @@ td {
 .site-main-menu li:last-child {
   margin-right: 0;
   background-color: #fff;
+  background: #ffffff;
 }
 
 .site-main-menu li a {
   color: #252525;
   background-color: #fff;
+  background: #ffffff;
   text-decoration: none;
   line-height: 50px;
   font-size: 14px;
