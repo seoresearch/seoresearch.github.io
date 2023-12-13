@@ -1285,6 +1285,9 @@ td {
 }
 
 @media only screen and (max-width : 320px) {
+  .header {
+    background: #ffffff;
+  }
 
  
     .site-main-menu li:hover > .sub-menu {
