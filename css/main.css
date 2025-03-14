@@ -1377,6 +1377,99 @@ td {
     }
 }
 
+@media only screen and (min-width : 600px) {
+  .header {
+    color: #ffffff;
+    background: #ffffff;
+  }
+
+ 
+    .site-main-menu li:hover > .sub-menu {
+      visibility: visible;
+      opacity: 0.5;
+      top: 100%;
+      color: #ffffff;
+      background: #ffffff;
+    }
+
+    .site-main-menu .sub-menu {
+      display: block;
+      position: absolute;
+      color: #ffffff;
+      background-color: #ffffff;
+      background: #ffffff;
+      left: -23px;
+      top: 100px;
+      width: auto;
+      max-width: none;
+      margin: 0;
+      padding: 20px 23px;
+      border-radius: 8px;
+      -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,.1);
+      -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,.1);
+      box-shadow: 0px 0px 20px 0px rgba(0,0,0,.1);
+      opacity: 0.5;
+      visibility: hidden;
+      -moz-transition: all 0.25s ease-in-out;
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+    }
+
+    .site-main-menu li:last-child > .sub-menu {
+      left: auto;
+      right: 0;
+      color: #ffffff;
+      background-color: #ffffff;
+      background: #ffffff;
+    }
+
+    .sub-menu li {
+      display: block;
+      margin: 0 0 12px;
+      padding: 0;
+      color: #666;
+      background-color: #ffffff;
+      background: #ffffff;
+    }
+
+    .sub-menu li:last-child {
+      margin-bottom: 0;
+    }
+
+    .sub-menu li a {
+      display: block;
+      opacity: .5;
+      line-height: 1.6em;
+      width: max-content;
+      color: #666;
+      background-color: #ffffff;
+      background: #ffffff;
+    }
+
+    .sub-menu li.current-menu-item a,
+    .sub-menu li a:hover {
+      opacity: 0.5;
+      color: #ffffff;
+      background: #ffffff;
+    }
+
+    .site-main-menu .menu-item-has-children > a:after {
+      content: "\f107";
+      display: inline-block;
+      font-family: "Font Awesome 5 Free";
+      font-style: normal;
+      font-weight: 700;
+      text-rendering: auto;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      margin-left: 5px;
+      opacity: .3;
+      color: #ffffff;
+      background-color: transparent;
+      background: #ffffff;
+    }
+}
+
 /* ============================================================================= 
 5. Site content
 ============================================================================= */
