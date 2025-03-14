@@ -1284,7 +1284,7 @@ td {
   opacity: 0.5;
 }
 
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 600px) {
   .header {
     color: #ffffff;
     background: #ffffff;
