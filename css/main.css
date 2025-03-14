@@ -1281,25 +1281,28 @@ td {
 .site-main-menu li.current-menu-item > a,
 .site-main-menu li.current-menu-parent > a,
 .site-main-menu li:hover > a {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 @media only screen and (max-width : 320px) {
   .header {
+    color: #ffffff;
     background: #ffffff;
   }
 
  
     .site-main-menu li:hover > .sub-menu {
       visibility: visible;
-      opacity: 1;
+      opacity: 0.5;
       top: 100%;
+      color: #ffffff;
       background: #ffffff;
     }
 
     .site-main-menu .sub-menu {
       display: block;
       position: absolute;
+      color: #ffffff;
       background-color: #ffffff;
       background: #ffffff;
       left: -23px;
@@ -1312,7 +1315,7 @@ td {
       -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,.1);
       -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,.1);
       box-shadow: 0px 0px 20px 0px rgba(0,0,0,.1);
-      opacity: 1;
+      opacity: 0.5;
       visibility: hidden;
       -moz-transition: all 0.25s ease-in-out;
       -webkit-transition: all 0.25s ease-in-out;
@@ -1322,6 +1325,7 @@ td {
     .site-main-menu li:last-child > .sub-menu {
       left: auto;
       right: 0;
+      color: #ffffff;
       background-color: #ffffff;
       background: #ffffff;
     }
@@ -1351,7 +1355,8 @@ td {
 
     .sub-menu li.current-menu-item a,
     .sub-menu li a:hover {
-      opacity: 1;
+      opacity: 0.5;
+      color: #ffffff;
       background: #ffffff;
     }
 
@@ -1366,6 +1371,7 @@ td {
       -webkit-font-smoothing: antialiased;
       margin-left: 5px;
       opacity: .3;
+      color: #ffffff;
       background-color: transparent;
       background: #ffffff;
     }
