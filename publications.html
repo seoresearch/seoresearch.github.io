@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Seo Research Group - Publications</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="Seo Research Group - Publications"/>
-  <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, portfolio"/>
-  <meta name="author" content="lmpixels"/>
+
+  <title>Publications | Seo Research Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Publications from the Seo Research Group and selected earlier contributions by Hyowon Seo."
+  >
+  <meta
+    name="keywords"
+    content="Seo Research Group, Hyowon Seo, publications, molecularly programmed separations, electrochemistry, photochemistry, continuous flow"
+  >
+  <meta name="author" content="Hyowon Seo">
+
   <link rel="shortcut icon" href="favicon26.ico">
 
   <link rel="stylesheet" href="css/normalize.css" type="text/css">
@@ -15,630 +23,462 @@
   <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
   <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
   <link rel="stylesheet" href="css/main.css" type="text/css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css"
+  >
+
+  <style>
+    :root {
+      --seo-ink: #2f3f42;
+      --seo-muted: #667477;
+      --seo-accent: #2f7f80;
+      --seo-accent-dark: #236566;
+      --seo-soft: #f3f7f7;
+      --seo-line: #dce5e5;
+      --seo-white: #ffffff;
+    }
+
+    .publications-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .publications-intro p {
+      max-width: 880px;
+      margin: 0;
+      color: var(--seo-muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .profile-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .profile-button {
+      display: inline-block;
+      padding: 9px 13px;
+      color: var(--seo-accent-dark);
+      background: var(--seo-white);
+      border: 1px solid var(--seo-line);
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .profile-button:hover,
+    .profile-button:focus {
+      color: var(--seo-white);
+      background: var(--seo-accent);
+      border-color: var(--seo-accent);
+      text-decoration: none;
+    }
+
+    .publication-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 42px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .publication-nav a {
+      display: block;
+      padding: 8px 12px;
+      color: var(--seo-ink);
+      background: var(--seo-soft);
+      border: 1px solid var(--seo-line);
+      border-radius: 18px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .publication-nav a:hover,
+    .publication-nav a:focus {
+      color: var(--seo-white);
+      background: var(--seo-accent);
+      border-color: var(--seo-accent);
+      text-decoration: none;
+    }
+
+    .publication-section {
+      margin-bottom: 50px;
+      scroll-margin-top: 95px;
+    }
+
+    .publication-section-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 17px;
+      padding-bottom: 11px;
+      border-bottom: 2px solid var(--seo-line);
+    }
+
+    .publication-section-header h2 {
+      margin: 0;
+      color: var(--seo-ink);
+      font-size: 27px;
+      line-height: 1.3;
+    }
+
+    .publication-section-header p {
+      margin: 0;
+      color: var(--seo-muted);
+      font-size: 13px;
+    }
+
+    .publication-year {
+      margin: 28px 0 8px;
+      color: var(--seo-accent-dark);
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    .publication-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .publication-item {
+      display: grid;
+      grid-template-columns: 118px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--seo-line);
+    }
+
+    .publication-item:last-child {
+      border-bottom: 0;
+    }
+
+    .publication-item.no-image {
+      grid-template-columns: 1fr;
+    }
+
+    .publication-thumb {
+      display: block;
+      overflow: hidden;
+      width: 118px;
+      height: 86px;
+      background: #fafcfc;
+      border: 1px solid var(--seo-line);
+      border-radius: 4px;
+    }
+
+    .publication-thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 5px;
+    }
+
+    .publication-body {
+      min-width: 0;
+    }
+
+    .publication-title-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .publication-title {
+      margin: 0;
+      color: var(--seo-ink);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .publication-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .publication-title a:hover,
+    .publication-title a:focus {
+      color: var(--seo-accent-dark);
+      text-decoration: underline;
+    }
+
+    .publication-badge {
+      flex: 0 0 auto;
+      padding: 4px 7px;
+      color: var(--seo-accent-dark);
+      background: var(--seo-soft);
+      border: 1px solid var(--seo-line);
+      border-radius: 12px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .publication-venue {
+      margin: 4px 0 3px;
+      color: var(--seo-accent-dark);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .publication-authors {
+      margin: 0;
+      color: var(--seo-muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .self-author {
+      color: var(--seo-ink);
+      font-weight: 700;
+    }
+
+    .publication-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 8px;
+    }
+
+    .publication-link {
+      display: inline-block;
+      padding: 4px 8px;
+      color: var(--seo-accent-dark);
+      background: var(--seo-white);
+      border: 1px solid var(--seo-line);
+      border-radius: 3px;
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .publication-link:hover,
+    .publication-link:focus {
+      color: var(--seo-white);
+      background: var(--seo-accent);
+      border-color: var(--seo-accent);
+      text-decoration: none;
+    }
+
+    .publication-note {
+      margin-top: 26px;
+      padding: 14px 16px;
+      color: var(--seo-muted);
+      background: var(--seo-soft);
+      border-left: 3px solid var(--seo-accent);
+      border-radius: 4px;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .publication-loading,
+    .publication-error {
+      padding: 24px;
+      color: var(--seo-muted);
+      background: var(--seo-soft);
+      border: 1px solid var(--seo-line);
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      .publications-intro {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-buttons {
+        justify-content: flex-start;
+      }
+
+      .publication-item {
+        grid-template-columns: 88px minmax(0, 1fr);
+        gap: 13px;
+      }
+
+      .publication-thumb {
+        width: 88px;
+        height: 72px;
+      }
+
+      .publication-title-row {
+        display: block;
+      }
+
+      .publication-badge {
+        display: inline-block;
+        margin-top: 6px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .publication-item,
+      .publication-item.no-image {
+        grid-template-columns: 1fr;
+      }
+
+      .publication-thumb {
+        width: 100%;
+        max-width: 180px;
+        height: 105px;
+      }
+    }
+  </style>
 
   <script src="js/modernizr.custom.js"></script>
 </head>
 
 <body class="page">
 
-<div class="lm-animated-bg"></div>
+  <div class="lm-animated-bg"></div>
 
-<!-- Loading animation -->
-<div class="preloader">
-  <div class="preloader-animation">
-    <div class="preloader-spinner">
+  <!-- Loading animation -->
+  <div class="preloader">
+    <div class="preloader-animation">
+      <div class="preloader-spinner"></div>
     </div>
   </div>
-</div>
-<!-- /Loading animation -->
+  <!-- /Loading animation -->
 
-<!-- Scroll To Top Button -->
-<div class="lmpixels-scroll-to-top"><i class="lnr lnr-chevron-up"></i></div>
-<!-- /Scroll To Top Button -->
+  <!-- Scroll To Top Button -->
+  <div class="lmpixels-scroll-to-top" aria-label="Scroll to top">
+    <i class="lnr lnr-chevron-up" aria-hidden="true"></i>
+  </div>
+  <!-- /Scroll To Top Button -->
 
-<div class="page-scroll">
-  <div id="page_container" class="page-container bg-move-effect" data-animation="transition-flip-in-right">
+  <div class="page-scroll">
+    <div
+      id="page_container"
+      class="page-container bg-move-effect"
+      data-animation="transition-flip-in-right"
+    >
 
-    <!-- Header -->
-    <header id="site_header" class="header">
-      <div class="header-content clearfix">
+      <!-- Header -->
+      <header id="site_header" class="header">
+        <div class="header-content clearfix">
 
-        <!-- Text Logo -->
-       <div class="text-logo">
-          <a href="index.html">
-    
-            <div class="logo-text">Seo Research Group </div>
-          </a>
-  </div> 
-        <!-- /Text Logo -->
-
-        <!-- Navigation -->
-        <div class="site-nav mobile-menu-hide">
-          <ul class="leven-classic-menu site-main-menu">
-            <li class="menu-item">
-              <a href="index.html">Home</a>
-            </li>
-
-            <li class="menu-item">
-              <a href="members.html">Members</a>
-            </li>
-
-            <li class="menu-item">
-              <a href="research.html">Research</a>
-            </li>
-
-            <li class="menu-item current-menu-item">
-              <a href="publications.html">Publications</a>
-            </li>
-
-            <li class="menu-item">
-              <a href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-
-        <a class="menu-toggle mobile-visible">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    </header>
-    <!-- /Header -->
-
-    <div id="main" class="site-main">
-      <div id="main-content" class="single-page-content">
-        <div id="primary" class="content-area">
-
-          <div class="page-title">
-            <h1>Publications</h1>
-            
+          <div class="text-logo">
+            <a href="index.html" aria-label="Seo Research Group home">
+              <div class="logo-text">Seo Research Group</div>
+            </a>
           </div>
 
-          <div id="content" class="page-content site-content single-post" role="main">
+          <nav class="site-nav mobile-menu-hide" aria-label="Primary navigation">
+            <ul class="leven-classic-menu site-main-menu">
+              <li class="menu-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="menu-item">
+                <a href="members.html">Members</a>
+              </li>
+              <li class="menu-item">
+                <a href="research.html">Research</a>
+              </li>
+              <li class="menu-item current-menu-item">
+                <a href="publications.html" aria-current="page">Publications</a>
+              </li>
+              <li class="menu-item">
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
 
-            <div class="row">
-              <div class=" col-xs-12 col-sm-12 ">
-                <!-- Portfolio Content -->
-                <div id="portfolio_content_q" class="portfolio-content">
-                
+          <a class="menu-toggle mobile-visible" aria-label="Open navigation menu">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </a>
+        </div>
+      </header>
+      <!-- /Header -->
 
-                  <!-- Portfolio Grid -->
-                  <div class=" col-xs-12 col-sm-12 ">
-                    <div class="portfolio-grid one-column shuffle">
+      <main id="main" class="site-main">
+        <div id="main-content" class="single-page-content">
+          <div id="primary" class="content-area">
 
-                  <figure class="item standard">
-                        <h1>2026</h1>
-                      </figure>
+            <div class="page-title">
+              <h1>Publications</h1>
+            </div>
 
-                                            <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" >
-                            <img src="./img/publications/Photo3.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            
-                            <h4><li>Continuous Light-Driven Pure CO2 Production by Regenerative Non-Aqueous Amine–Photoacid Cycling</li></h4>
-                              
-                            <h6> ChemRxiv 2026<a
-                                    href="">Link<a
-                                                  href="https://chemrxiv.org/doi/full/10.26434/chemrxiv.15005144/v1"></a></h6>
-                            <p>
-                              Gi Hyun Byun, Nayeong Kim, Joonyoung F. Joung, Michael Massen-Hane, Betar M. Gallant, Hyowon Seo, T. Alan Hatton
-                              </p>
+            <div
+              id="content"
+              class="page-content site-content single-post"
+              role="main"
+            >
+              <section class="publications-intro" aria-label="Publication overview">
+                <p>
+                  Publications since the Seo Research Group was established are
+                  listed first, followed by earlier contributions. Journal
+                  covers and preprints are provided as secondary links rather
+                  than displayed as separate publication records.
+                </p>
 
-      
-
-                            
-                          </div>
-                        </div>
-                      </figure> 
-                      <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" >
-                            <img src="./img/publications/Slug.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            
-                            <h4><li>Continuous CO<sub>2</sub> Capture with Photochemical Release in a Slug Flow Reactor</li></h4>
-                              
-                            <h6> ACS Energy Letters 2026 in press<a
-                                    href="">Link<a
-                                                  href="https://pubs.acs.org/doi/10.1021/acsenergylett.6c00666"></a></h6>
-                            <p>
-                              Byun, G. H.; Bromberg, L.; Gallant, B. M.; <mark>Seo, H.</mark>; Hatton T. A.
-                              </p>
-
-      
-
-                            
-                          </div>
-                        </div>
-                      </figure> 
-                      
-                      <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" >
-                            <img src="./img/publications/Pulse.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            
-                            <h4><li>Pulsed Chronopotentiometry for Electrochemical CO<sub>2</sub> Capture with Molecular Redox Mediators</li></h4>
-                              
-                            <h6> ACS Energy Letters 2026 11, 2, 2052-2058<a
-                                    href="">Link<a
-                                                  href="https://pubs.acs.org/doi/10.1021/acsenergylett.5c03844"></a></h6>
-                            <p>
-                              Wu, P.-H., Hatton, T. A., <mark>Seo, H.<sup>*</sup></mark>
-                              </p>
-
-                              <div class="col-xs-12 col-sm-4"height="60%">
-                              <br>
-                           
-                            <img src="./img/publications/Pulse_cover.jpg" alt="" title=""/>
-                          </div>
-                            <br>
-                  
-                               <a href="" target="_blank">Supplementary Cover</a>
-                            
-                          </div>
-                        </div>
-                      </figure> 
-
-                  <figure class="item standard">
-                        <h1>2025</h1>
-                      </figure>
-
-                      <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" >
-                            <img src="./img/publications/Pulse.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            
-                            <h4><li>A Systematic Study of Pulsed Chronopotentiometry for Electrochemical CO<sub>2</sub> Capture with Molecular Redox Mediators</li></h4>
-                              
-                            <h6> ChemRxiv 2025 <a
-                                    href="https://chemrxiv.org/engage/chemrxiv/article-details/69164119a10c9f5ca13782ab">Link</a></h6>
-                            <p>
-                              Wu, P.-H., Hatton, T. A., <mark>Seo, H.<sup>*</sup></mark>
-                              </p>
-                          </div>
-                        </div>
-                      </figure> 
-
-
-                       <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" >
-                            <img src="./img/publications/iron.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            
-                            <h4><li>Leveraging electrons for electrochemical CO<sub>2</sub> capture using a hemi-labile iron complex</li></h4>
-                              
-                            <h6> Angew. Chem. Int. Ed. 2025, 137 (38), e202505723 <a
-                                    href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202505723">Link</a></h6>
-                            <p>
-                              <mark>Seo, H.<sup>*</sup></mark>, Chen, Y., Walter, E., Abdinejad, M., Hatton, T. A. <sup>*</sup>
-                              </p>
-                          </div>
-                        </div>
-                      </figure> 
-
-                      <figure class="item standard">
-                        <h1>2024</h1>
-                      </figure>
-
-                      
-                 <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" >
-                            <img src="./img/publications/BDQ.jpg" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            
-                            <h4><li>Oxygen-Stable Electrochemical CO<sub>2</sub> Capture using Redox-Active Heterocyclic Benzodithiophene Quinone</li></h4>
-                              
-                            <h6> Angew. Chem. Int. Ed. 2024, 63, e202412229<a
-                                    href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202412229">Link</a></h6>
-                            <p>
-                              Abdinejad, M.,Masen-Hane, M., <mark>Seo, H.</mark>,  Hatton, T. A. <sup>*</sup>
-                              </p>
-                          </div>
-                        </div>
-                      </figure>
-                      
-                
-                       <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" >
-                            <img src="./img/publications/photo-jacs.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            
-                            <h4><li>Visible Light-Driven CO<sub>2</sub> Capture and Release Using Photoactive Pyranine in Water in Continuous Flow</li></h4>
-                              
-                            <h6> J. Am. Chem. Soc. 2024, 146, 39, 26777–26785<a
-                                    href="https://pubs.acs.org/doi/full/10.1021/jacs.4c07278"
-                                    target="_blank">Link</a></h6>
-                            <p>
-                              <mark>Seo, H.</mark><sup>+</sup>, Schretter, J.<sup>+</sup>, Massen-Hane, M., Hatton T. A.<sup>*</sup>    <sup>+</sup>equal contribution
-                              </p>
-                            <br>
-                            <br>
-                            <div class="col-xs-12 col-sm-4"height="60%">
-                              <br>
-                           
-                            <img src="./img/publications/JACSfront.jpg" alt="" title=""/>
-                          </div>
-                            <br>
-                  
-                               <a href="" target="_blank">Front Cover</a>
-
-                            <br>
-                            <br>
-               
-                     
-                          </div>
-                        </div>
-                      </figure> 
-
-            
-
-                      
-                      
-                      <figure class="item standard">
-                        <h1>Before Stony Brook</h1>
-                      </figure>
-                      
-                      <figure class="item standard">
-                        <h1>2023</h1>
-                      </figure>
-
-
-                      <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" >
-                            <img src="./img/publications/acr.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            
-                            <h4><li>Redox-mediated pH Swing Systems for Electrochemical Carbon Capture</li></h4>
-                              
-                            <h6> Acc. Chem. Res. [Invited Review Article] 2023, 56, 3153-3164<a
-                                    href="https://pubs.acs.org/doi/10.1021/acs.accounts.3c00430?utm_source=SendGrid_ealert&utm_medium=ealert&utm_campaign=CIT_10.1021/jacs.1c10656"
-                                    target="_blank">Link</a></h6>
-                            <p>
-                              <mark>Seo, H.</mark>, Nitzsche, M. P., Hatton T. A.<sup>*</sup>
-                              </p>
-                          </div>
-                        </div>
-                      </figure> 
-                      
-
-
-                      
-                       <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" >
-                            <img src="./img/publications/photo.PNG" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            
-                            <h4><li>Photochemical CO<sub>2</sub> Capture and Release in Water Enabled By Photoacid Under Visible Light</li></h4>
-                              
-                            <h6> ChemRxiv: 10.26434/chemrxiv-2023-pd83k (2023) <a
-                                    href="https://chemrxiv.org/engage/chemrxiv/article-details/649253ff24989702c2b0ad2a"
-                                    target="_blank">Link</a></h6>
-                            <p>
-                              <mark>Seo, H.</mark>, Hatton T. A.<sup>*</sup>
-                              </p>
-                          </div>
-                        </div>
-                      </figure> 
-                      
-                      <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" >
-                            <img src="./img/publications/MRS.PNG" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            <h4><li>Molecular Redox‑Active Organic Materials for Electrochemical Carbon Capture</li></h4>
-                            <h6> MRS Communications [Invited Review Article] 2023, 13, 6, 994-1008 <a
-                                    href="https://link.springer.com/article/10.1557/s43579-023-00454-y"
-                                    target="_blank">Link</a></h6>
-                            <p>
-                              <mark>Seo, H.</mark><sup>*</sup>
-                              </p>
-                          </div>
-                        </div>
-                      </figure>   
-                        
-                       <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4">
-                            <img src="./img/publications/NR.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            <h4><li>Electrochemical Direct Air Capture of CO2 Using Neutral Red as Reversible Redox-active Material</li></h4>
-                            <h6> Nat. Commun. 2023, 14, 313 <a
-                                    href="https://www.nature.com/articles/s41467-023-35866-w"
-                                    target="_blank">Link</a></h6>
-                            <p>
-                              <mark>Seo, H.</mark> Hatton T. A.<sup>*</sup>
-                              </p>
-                          </div>
-                        </div>
-                      </figure> 
-                       
-                      <figure class="item standard">
-                        <h1>2022</h1>
-                      </figure>
-
-                      <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4">
-                            <img src="./img/publications/LQ.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            <h4><li>Towards Solvent-Free Continuous-Flow Electrochemically Mediated Carbon Capture with High Concentration Liquid Quinone Chemistry</li></h4>
-                            <h6>Joule 2022, 6, 221-239
-                               <a href="https://www.cell.com/joule/fulltext/S2542-4351(21)00541-9?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435121005419%3Fshowall%3Dtrue"
-                                               target="_blank">Link</a></h6>
-                            <p>
-                              Diederichsen, K. M.; Liu, Y.; Ozbek, N.; <mark>Seo, H.</mark>; Hatton, T. A.<sup>*</sup>
-                            </p>
-                          </div>
-                        </div>
-                      </figure>
-                        
-
-                      <figure class="item standard" data-groups='["category_all", "category_contributed"]'>
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4">
-                            <img src="./img/publications/RAA.jpeg" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            <h4><li>Elctrochemical Capture and Release of CO<sub>2</sub> with a Redox-Active Amine</li></h4>
-                            <h6> JACS 2022, 144, 2164-2170 
-                              <a href="https://pubs.acs.org/doi/full/10.1021/jacs.1c10656" target="_blank">Link</a>
-
-                             
-                            </h6>
-                            <p><mark>Seo, H.</mark>; Rahimi, M.; Hatton, T. A.<sup>*</sup> 
-                            </p>
-                            <br>
-
-                             <div class="col-xs-12 col-sm-4"height="60%">
-                            <img src="./img/publications/JACS_Cover.jpg" alt="" title=""/>
-                          </div>
-                            <br>
-                            <br>
-                               <a href="https://pubs.acs.org/toc/jacsat/144/5" target="_blank">Supplementary Journal Cover</a>
-                          </div>
-                        </div>
-                      </figure>
-                        
-                      
-                      <figure class="item standard">
-                        <h1>2019</h1>
-                      </figure>
-                        
-
-                      <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" height="60%">
-                            <img src="./img/publications/Ketyl_Radical.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            <h4><li>Catalytic Generation and Use of Ketyl Radical from Unactivated Aliphatic Carbonyl Compounds</li></h4>
-                            <h6>Org. Lett. 2019, 21, 10159-10163 <a
-                                      href="https://pubs.acs.org/doi/full/10.1021/acs.orglett.9b04235" target="_blank">Link</a></h6>
-                            <p><mark>Seo, H.</mark>; Jamison, T. F.<sup>*</sup>
-                            </p>
-                          </div>
-                        </div>
-                      </figure>
-                        
-
-                     
-                      <figure class="item standard"
-                              >
-                        <h1>2018</h1>
-                      </figure>
-                        
-
-                      <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" height="60%">
-                            <img src="./img/publications/AdvSynthCatal.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            <h4><li>Using Carbon Dioxide as a Building Block in Continuous Flow Synthesis</li></h4>
-                            <h6>Adv. Synth. Catal. 2018, 361, 247-261 [Review Article]<a
-                                    href="https://onlinelibrary.wiley.com/doi/abs/10.1002/adsc.201801228" target="_blank">Link</a></h6>
-                            <p>
-                              <mark>Seo, H.</mark>; Nguyen, L. V.; Jamison, T. F.<sup>*</sup>
-                            </p>
-                          </div>
-                        </div>
-                      </figure>
-                        
-
-                     <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" height="60%">
-                            <img src="./img/publications/JCEdu.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            <h4><li>Continuous-Flow Chemistry in Undergraduate
-Education: Sustainable Conversion of Reclaimed Vegetable Oil into Biodiesel</li></h4>
-                            <h6>J. Chem. Edu. 2018, 361, 1371-1375 <a
-                                    href="https://pubs.acs.org/doi/abs/10.1021/acs.jchemed.7b00719" target="_blank">Link</a></h6>
-                            <p>
-                              Leibfarth, F. A.; Russell, M. G.; Langley, D. M.; <mark>Seo, H.</mark>; Kelly, L. P.; Carney,
-D. W.; Sello, J. K.; Jamison, T. F.<sup>*</sup>
-                            </p>
-                          </div>
-                        </div>
-                      </figure>
-                       
-
-                      <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" height="60%">
-                            <img src="./img/publications/Book2.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                           <h4><li>Science of Synthesis: Flow Chemistry in Organic Synthesis</li></h4>
-                            <h6>2018, 1, 429 [Book Chapter]<a
-                                    href="https://www.thieme-connect.de/products/ebooks/lookinside/10.1055/sos-SD-228-00239?device=desktop&innerWidth=412&offsetWidth=412" target="_blank">Link</a></h6>
-                            <p>
-                              Beingessner, R. L.; Longstreet, A. R.; McTeague, T. A.; Kelly, L. P.; <mark>Seo, H.</mark>; Tran,
-T. H.; Wicker, A. C.; and Jamison, T. F.<sup>*</sup>
-                            </p>
-                          </div>
-                        </div>
-                      </figure>
-                        
-
-                      <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" height="60%">
-                            <img src="./img/publications/Ni.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            <h4><li>Ni-Catalyzed
-Electrochemical Decarboxylative C–C Couplings in Batch and Continuous Flow</li></h4>
-                            <h6>Org. Lett. 2018, 20, 1338-1341 [Review Article]<a
-                                    href="https://onlinelibrary.wiley.com/doi/abs/10.1002/adsc.201801228" target="_blank">Link</a></h6>
-                            <p>
-                              Li, H.; Breen, C. P.; <mark>Seo, H.</mark>; Jamison, T. F.<sup>*</sup>; Fang, Y.-Q.<sup>*</sup>; Bio, M. M.<sup>*</sup> 
-                            </p>
-                          </div>
-                        </div>
-                      </figure>
-                       
-
-              
-                      <figure class="item standard"
-                              data-groups='["category_all", "category_lead", "category_contributed"]'>
-                        <h1>2017</h1>
-                      </figure>
-                        
-                         <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" height="60%">
-                            <img src="./img/publications/monomethylation.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            <h4><li>Selective N-Monomethylation of Primary Anilines with Dimethyl Carbonate in
-Continuous Flow</li></h4>
-                            <h6>Tetrahedron 2017, 74, 3124-3128 <a
-                                    href="https://www.sciencedirect.com/science/article/abs/pii/S0040402017312346" target="_blank">Link</a></h6>
-                            <p>
-                               <mark>Seo, H.</mark>; Bedard, A.-C.; Chen, W. P.; Hicklin, R. W.; Alabugin, A.; Jamison, T. F. <sup>*</sup></p>
-                          </div>
-                        </div>
-                      </figure>
-                        
-                       <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" height="60%">
-                            <img src="./img/publications/beta-carboxylation.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                           <h4> <li>Direct β-Selective Hydrocarboxylation of Styrenes
-with CO<sub>2</sub> Enabled by Continuous Flow Photoredox Catalysis</li></h4>
-                            <h6>JACS 2017, 139, 13969-13972 <a
-                                    href="https://onlinelibrary.wiley.com/doi/abs/10.1002/adsc.201801228" target="_blank">Link</a></h6>
-                            <p>
-                              <mark>Seo, H.</mark>; Liu, A.; Jamison, T. F. <sup>*</sup>
-                            </p>
-                            <br>
-                            <p> Highlighted by <a
-                                                 href="https://www.thieme-connect.com/products/ejournals/abstract/10.1055/s-0036-1592037" target="_blank">Synfacts</a></p>
-                          </div>
-                        </div>
-                      </figure>
-                       
-
-                       <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" height="60%">
-                            <img src="./img/publications/CO2toaminoacid.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            <h4><li>Photoredox Activation of Carbon Dioxide for Amino Acid Synthesis in Continuous Flow</li></h4>
-                            <h6>Nat. Chem. 2017, 9, 453-456 <a
-                                    href="https://www.nature.com/articles/nchem.2690" target="_blank">Link</a></h6>
-                            <p>
-                              <mark>Seo, H.</mark>; Katcher, M. H.; Jamison, T. F.<sup>*</sup>
-                            </p>
-                            <br>
-                            <p> Highlighted by <a
-                                                 href="https://www.thieme-connect.com/products/ejournals/abstract/10.1055/s-0036-1590098" target="_blank">Synfacts</a>
-                            <a
-                                                 href="https://chemistry-europe.onlinelibrary.wiley.com/doi/abs/10.1002/cssc.201700205" target="_blank">ChemSusChem</a>
-                               <a
-                                                 href="https://phys.org/news/2017-01-amino-acids-single-electron-carbon-dioxide.html" target="_blank">Phys.org</a>
-                                <a
-                                                 href="https://www.sciencelink.net/c2w/nieuws/organici-maken-aminozuiren-van-koolstofdioxide/item18744" target="_blank">c2w.nl</a>
-                              
-                                <a
-                                                 href="https://connect.h1.co/article/727212076" target="_blank">H1Connect</a>
-                         
-                            </p>
-                        
-                          </div>
-                        </div>
-                      </figure>
-                       
-                      
-
-                      <figure class="item standard"
-                              data-groups='["category_all", "category_lead"]'>
-                        <h1>2013</h1>
-                      </figure>
-                       
-                       <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" height="60%">
-                            <img src="./img/publications/Incar.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            <h4><li>Stereoselective Synthesis of 7-epi-Incarvilline</li></h4>
-                            <h6>Org. Lett. 2013, 15, 531-533 <a
-                                    href="https://pubs.acs.org/doi/abs/10.1021/ol303395f" target="_blank">Link</a></h6>
-                            <p>
-                              <mark>Seo, H.<sup><span>&#8224;</span></sup></mark>; Yun, H.<sup><span>&#8224;</span></sup>; Lee, S.; Jang, J.; Han, Y. T.; Kim, D.-D.; Lee, J.; Suh, Y.-G.<sup>*</sup></p>
-                          </div>
-                        </div>
-                      </figure>
-                        
-
-
-                    
-
-
-                   
-                      
-                    </div>
-                  </div>
-                  <!-- /Portfolio Content -->
+                <div class="profile-buttons">
+                  <a
+                    id="scholar-link"
+                    class="profile-button"
+                    href="https://scholar.google.com/citations?user=NMCGDdYAAAAJ&amp;hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Google Scholar
+                  </a>
+                  <a
+                    id="orcid-link"
+                    class="profile-button"
+                    href="https://orcid.org/0000-0002-9569-1902"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    ORCID
+                  </a>
                 </div>
+              </section>
+
+              <ul class="publication-nav" aria-label="Publication sections">
+                <li><a href="#preprints">Preprints</a></li>
+                <li><a href="#since-2024">Since 2024</a></li>
+                <li><a href="#earlier-work">Earlier Contributions</a></li>
+              </ul>
+
+              <div id="publication-root">
+                <div class="publication-loading">Loading publications…</div>
+              </div>
+
+              <div id="publication-legend" class="publication-note">
+                * corresponding author; † equal contribution
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </main>
 
       <!-- Footer -->
       <footer class="site-footer clearfix">
         <div class="footer-social">
           <ul class="footer-social-links">
-            <li>Hyowon Seo</li>
+            <li>Seo Research Group</li>
             <li>
-              <a href="mailto:hyowon.seo@stonybrook.edu" target="_blank">hyowon.seo@stonybrook.edu</a>
+              <a href="mailto:hyowon.seo@stonybrook.edu">
+                hyowon.seo@stonybrook.edu
+              </a>
             </li>
           </ul>
         </div>
@@ -657,5 +497,217 @@ with CO<sub>2</sub> Enabled by Continuous Flow Photoredox Catalysis</li></h4>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/validator.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+    (function () {
+      "use strict";
+
+      const DATA_URL = "./data/publications.json";
+      const root = document.getElementById("publication-root");
+
+      function escapeHtml(value) {
+        return String(value ?? "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
+      function highlightSeo(authors) {
+        const escaped = escapeHtml(authors);
+        return escaped
+          .replace(
+            /Seo,\s*H\.(\*|†)?/g,
+            '<span class="self-author">$&</span>'
+          )
+          .replace(
+            /Hyowon Seo(\*|†)?/g,
+            '<span class="self-author">$&</span>'
+          );
+      }
+
+      function primaryLink(record) {
+        if (Array.isArray(record.links) && record.links.length) {
+          return record.links[0].url;
+        }
+        if (record.doi) {
+          return "https://doi.org/" + record.doi;
+        }
+        return "";
+      }
+
+      function publicationItem(record) {
+        const link = primaryLink(record);
+        const title = escapeHtml(record.title);
+        const titleMarkup = link
+          ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${title}</a>`
+          : title;
+
+        const imageMarkup = record.image
+          ? `
+            <a
+              class="publication-thumb"
+              href="${escapeHtml(link || record.image)}"
+              ${link ? 'target="_blank" rel="noopener noreferrer"' : ""}
+            >
+              <img
+                src="${escapeHtml(record.image)}"
+                alt="${escapeHtml(record.image_alt || record.title)}"
+                loading="lazy"
+              >
+            </a>
+          `
+          : "";
+
+        const linksMarkup = (record.links || [])
+          .map(
+            (item) => `
+              <a
+                class="publication-link"
+                href="${escapeHtml(item.url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ${escapeHtml(item.label)}
+              </a>
+            `
+          )
+          .join("");
+
+        return `
+          <li class="publication-item${record.image ? "" : " no-image"}">
+            ${imageMarkup}
+            <article class="publication-body">
+              <div class="publication-title-row">
+                <h3 class="publication-title">${titleMarkup}</h3>
+                ${record.badge ? `<span class="publication-badge">${escapeHtml(record.badge)}</span>` : ""}
+              </div>
+              <div class="publication-venue">${escapeHtml(record.venue)}</div>
+              <p class="publication-authors">${highlightSeo(record.authors)}</p>
+              ${linksMarkup ? `<div class="publication-links">${linksMarkup}</div>` : ""}
+            </article>
+          </li>
+        `;
+      }
+
+      function groupedByYear(records) {
+        return records.reduce((groups, record) => {
+          const year = String(record.year || "Other");
+          if (!groups[year]) groups[year] = [];
+          groups[year].push(record);
+          return groups;
+        }, {});
+      }
+
+      function renderYearGroups(records) {
+        const groups = groupedByYear(records);
+        return Object.keys(groups)
+          .sort((a, b) => Number(b) - Number(a))
+          .map((year) => {
+            const items = groups[year]
+              .sort((a, b) =>
+                String(b.sort_date || b.year).localeCompare(
+                  String(a.sort_date || a.year)
+                )
+              )
+              .map(publicationItem)
+              .join("");
+
+            return `
+              <h3 class="publication-year">${escapeHtml(year)}</h3>
+              <ul class="publication-list">${items}</ul>
+            `;
+          })
+          .join("");
+      }
+
+      function renderSection(id, title, description, records) {
+        if (!records.length) return "";
+
+        return `
+          <section id="${id}" class="publication-section" aria-labelledby="${id}-heading">
+            <div class="publication-section-header">
+              <h2 id="${id}-heading">${escapeHtml(title)}</h2>
+              <p>${escapeHtml(description)}</p>
+            </div>
+            ${renderYearGroups(records)}
+          </section>
+        `;
+      }
+
+      fetch(DATA_URL, { cache: "no-store" })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`Could not load ${DATA_URL}`);
+          }
+          return response.json();
+        })
+        .then((data) => {
+          const records = Array.isArray(data.publications)
+            ? data.publications
+            : [];
+
+          const preprints = records.filter(
+            (record) => record.type === "preprint"
+          );
+
+          const current = records.filter(
+            (record) =>
+              record.section === "current" &&
+              record.type !== "preprint"
+          );
+
+          const prior = records.filter(
+            (record) => record.section === "prior"
+          );
+
+          root.innerHTML =
+            renderSection(
+              "preprints",
+              "Preprints",
+              "Current manuscripts not yet represented by a final journal article.",
+              preprints
+            ) +
+            renderSection(
+              "since-2024",
+              "Publications Since 2024",
+              "Work published since the Seo Research Group was established at Stony Brook.",
+              current
+            ) +
+            renderSection(
+              "earlier-work",
+              "Earlier Contributions",
+              "Research completed before the group was established at Stony Brook.",
+              prior
+            );
+
+          if (data.profile) {
+            const scholar = document.getElementById("scholar-link");
+            const orcid = document.getElementById("orcid-link");
+            const legend = document.getElementById("publication-legend");
+
+            if (data.profile.google_scholar) {
+              scholar.href = data.profile.google_scholar;
+            }
+            if (data.profile.orcid) {
+              orcid.href = "https://orcid.org/" + data.profile.orcid;
+            }
+            if (data.profile.legend) {
+              legend.textContent = data.profile.legend;
+            }
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          root.innerHTML = `
+            <div class="publication-error">
+              The publication list could not be loaded. Confirm that
+              <code>data/publications.json</code> was copied to the repository.
+            </div>
+          `;
+        });
+    })();
+  </script>
 </body>
 </html>
