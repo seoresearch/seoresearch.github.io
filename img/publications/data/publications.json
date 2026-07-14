@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "profile": {
+    "name": "Hyowon Seo",
+    "orcid": "0000-0002-9569-1902",
+    "google_scholar": "https://scholar.google.com/citations?user=NMCGDdYAAAAJ&hl=en",
+    "legend": "* corresponding author; † equal contribution"
+  },
+  "last_updated": "2026-07-14",
+  "publications": [
+    {
+      "title": "Continuous Light-Driven Pure CO₂ Production by Regenerative Non-Aqueous Amine–Photoacid Cycling",
+      "authors": "Byun, G. H.; Kim, N.; Joung, J. F.; Massen-Hane, M.; Gallant, B. M.; Seo, H.; Hatton, T. A.",
+      "venue": "ChemRxiv (2026)",
+      "year": 2026,
+      "sort_date": "2026-06-24",
+      "section": "current",
+      "type": "preprint",
+      "badge": "Preprint",
+      "doi": "10.26434/chemrxiv.15005144",
+      "image": "./img/publications/Photo3.png",
+      "image_alt": "Graphical abstract for continuous light-driven carbon dioxide production",
+      "links": [
+        {
+          "label": "Preprint",
+          "url": "https://doi.org/10.26434/chemrxiv.15005144"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Continuous CO₂ Capture with Photochemical Release in a Slug Flow Reactor",
+      "authors": "Byun, G. H.; Bromberg, L.; Gallant, B. M.; Seo, H.; Hatton, T. A.",
+      "venue": "ACS Energy Letters 2026, 11 (6), 4496–4503",
+      "year": 2026,
+      "sort_date": "2026-05-08",
+      "section": "current",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1021/acsenergylett.6c00666",
+      "image": "./img/publications/Slug.png",
+      "image_alt": "Graphical abstract for continuous photochemical carbon dioxide capture in a slug-flow reactor",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1021/acsenergylett.6c00666"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Pulsed Chronopotentiometry for Electrochemical CO₂ Capture with Molecular Redox Mediators",
+      "authors": "Wu, P.-H.; Hatton, T. A.; Seo, H.*",
+      "venue": "ACS Energy Letters 2026, 11 (2), 2052–2058",
+      "year": 2026,
+      "sort_date": "2026-02-01",
+      "section": "current",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1021/acsenergylett.5c03844",
+      "image": "./img/publications/Pulse.png",
+      "image_alt": "Graphical abstract for pulsed electrochemical carbon dioxide capture",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1021/acsenergylett.5c03844"
+        },
+        {
+          "label": "Preprint",
+          "url": "https://doi.org/10.26434/chemrxiv-2025-tkxbl"
+        },
+        {
+          "label": "Cover",
+          "url": "./img/publications/Pulse_cover.jpg"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Leveraging Electrons for Electrochemical CO₂ Capture Using a Hemi-Labile Iron Complex",
+      "authors": "Seo, H.*; Chen, Y.; Walter, E.; Abdinejad, M.; Hatton, T. A.*",
+      "venue": "Angewandte Chemie International Edition 2025, 64 (38), e202505723",
+      "year": 2025,
+      "sort_date": "2025-09-15",
+      "section": "current",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1002/anie.202505723",
+      "image": "./img/publications/iron.png",
+      "image_alt": "Graphical abstract for electrochemical carbon dioxide capture using a hemi-labile iron complex",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1002/anie.202505723"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Oxygen-Stable Electrochemical CO₂ Capture Using Redox-Active Heterocyclic Benzodithiophene Quinone",
+      "authors": "Abdinejad, M.; Massen-Hane, M.; Seo, H.; Hatton, T. A.*",
+      "venue": "Angewandte Chemie International Edition 2024, 63 (52), e202412229",
+      "year": 2024,
+      "sort_date": "2024-12-20",
+      "section": "current",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1002/anie.202412229",
+      "image": "./img/publications/BDQ.jpg",
+      "image_alt": "Graphical abstract for oxygen-stable electrochemical carbon dioxide capture",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1002/anie.202412229"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Visible Light-Driven CO₂ Capture and Release Using Photoactive Pyranine in Water in Continuous Flow",
+      "authors": "Seo, H.†; Schretter, J.†; Massen-Hane, M.; Hatton, T. A.*",
+      "venue": "Journal of the American Chemical Society 2024, 146 (39), 26777–26785",
+      "year": 2024,
+      "sort_date": "2024-10-02",
+      "section": "current",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1021/jacs.4c07278",
+      "image": "./img/publications/photo-jacs.png",
+      "image_alt": "Graphical abstract for visible-light-driven carbon dioxide capture and release in continuous flow",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1021/jacs.4c07278"
+        },
+        {
+          "label": "Preprint",
+          "url": "https://doi.org/10.26434/chemrxiv-2023-pd83k"
+        },
+        {
+          "label": "Cover",
+          "url": "./img/publications/JACSfront.jpg"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Redox-Mediated pH Swing Systems for Electrochemical Carbon Capture",
+      "authors": "Seo, H.; Nitzsche, M. P.; Hatton, T. A.*",
+      "venue": "Accounts of Chemical Research 2023, 56, 3153–3164",
+      "year": 2023,
+      "sort_date": "2023-11-10",
+      "section": "prior",
+      "type": "review",
+      "badge": "Invited Review",
+      "doi": "10.1021/acs.accounts.3c00430",
+      "image": "./img/publications/acr.png",
+      "image_alt": "Graphical abstract for redox-mediated pH swing carbon capture systems",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1021/acs.accounts.3c00430"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Molecular Redox-Active Organic Materials for Electrochemical Carbon Capture",
+      "authors": "Seo, H.*",
+      "venue": "MRS Communications 2023, 13 (6), 994–1008",
+      "year": 2023,
+      "sort_date": "2023-09-01",
+      "section": "prior",
+      "type": "perspective",
+      "badge": "Perspective",
+      "doi": "10.1557/s43579-023-00454-y",
+      "image": "./img/publications/MRS.PNG",
+      "image_alt": "Graphical abstract for molecular redox-active organic materials in carbon capture",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1557/s43579-023-00454-y"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Electrochemical Direct Air Capture of CO₂ Using Neutral Red as Reversible Redox-Active Material",
+      "authors": "Seo, H.; Hatton, T. A.*",
+      "venue": "Nature Communications 2023, 14, 313",
+      "year": 2023,
+      "sort_date": "2023-01-19",
+      "section": "prior",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1038/s41467-023-35866-w",
+      "image": "./img/publications/NR.png",
+      "image_alt": "Graphical abstract for electrochemical direct air capture using neutral red",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1038/s41467-023-35866-w"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Toward Solvent-Free Continuous-Flow Electrochemically Mediated Carbon Capture with High-Concentration Liquid Quinone Chemistry",
+      "authors": "Diederichsen, K. M.; Liu, Y.; Ozbek, N.; Seo, H.; Hatton, T. A.*",
+      "venue": "Joule 2022, 6 (1), 221–239",
+      "year": 2022,
+      "sort_date": "2022-01-19",
+      "section": "prior",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1016/j.joule.2021.12.001",
+      "image": "./img/publications/LQ.png",
+      "image_alt": "Graphical abstract for solvent-free continuous-flow electrochemical carbon capture",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1016/j.joule.2021.12.001"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Electrochemical Carbon Dioxide Capture and Release with a Redox-Active Amine",
+      "authors": "Seo, H.; Rahimi, M.; Hatton, T. A.*",
+      "venue": "Journal of the American Chemical Society 2022, 144 (5), 2164–2170",
+      "year": 2022,
+      "sort_date": "2022-02-09",
+      "section": "prior",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1021/jacs.1c10656",
+      "image": "./img/publications/RAA.jpeg",
+      "image_alt": "Graphical abstract for electrochemical carbon dioxide capture with a redox-active amine",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1021/jacs.1c10656"
+        },
+        {
+          "label": "Cover",
+          "url": "./img/publications/JACS_Cover.jpg"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Catalytic Generation and Use of Ketyl Radical from Unactivated Aliphatic Carbonyl Compounds",
+      "authors": "Seo, H.; Jamison, T. F.*",
+      "venue": "Organic Letters 2019, 21 (24), 10159–10163",
+      "year": 2019,
+      "sort_date": "2019-12-20",
+      "section": "prior",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1021/acs.orglett.9b04235",
+      "image": "./img/publications/Ketyl_Radical.png",
+      "image_alt": "Graphical abstract for catalytic ketyl radical generation",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1021/acs.orglett.9b04235"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Using Carbon Dioxide as a Building Block in Continuous Flow Synthesis",
+      "authors": "Seo, H.; Nguyen, L. V.; Jamison, T. F.*",
+      "venue": "Advanced Synthesis & Catalysis 2019, 361 (2), 247–264",
+      "year": 2019,
+      "sort_date": "2019-01-21",
+      "section": "prior",
+      "type": "review",
+      "badge": "Review",
+      "doi": "10.1002/adsc.201801228",
+      "image": "./img/publications/AdvSynthCatal.png",
+      "image_alt": "Graphical abstract for carbon dioxide as a building block in continuous-flow synthesis",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1002/adsc.201801228"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Selective N-Monomethylation of Primary Anilines with Dimethyl Carbonate in Continuous Flow",
+      "authors": "Seo, H.; Bédard, A.-C.; Chen, W. P.; Hicklin, R. W.; Alabugin, A.; Jamison, T. F.*",
+      "venue": "Tetrahedron 2018, 74 (25), 3124–3128",
+      "year": 2018,
+      "sort_date": "2018-06-21",
+      "section": "prior",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1016/j.tet.2017.11.068",
+      "image": "./img/publications/monomethylation.png",
+      "image_alt": "Graphical abstract for selective monomethylation in continuous flow",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1016/j.tet.2017.11.068"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Continuous-Flow Chemistry in Undergraduate Education: Sustainable Conversion of Reclaimed Vegetable Oil into Biodiesel",
+      "authors": "Leibfarth, F. A.; Russell, M. G.; Langley, D. M.; Seo, H.; Kelly, L. P.; Carney, D. W.; Sello, J. K.; Jamison, T. F.*",
+      "venue": "Journal of Chemical Education 2018, 95 (8), 1371–1375",
+      "year": 2018,
+      "sort_date": "2018-06-04",
+      "section": "prior",
+      "type": "article",
+      "badge": "Education",
+      "doi": "10.1021/acs.jchemed.7b00719",
+      "image": "./img/publications/JCEdu.png",
+      "image_alt": "Graphical abstract for continuous-flow chemistry in undergraduate education",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1021/acs.jchemed.7b00719"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Science of Synthesis: Flow Chemistry in Organic Synthesis",
+      "authors": "Beingessner, R. L.; Longstreet, A. R.; McTeague, T. A.; Kelly, L. P.; Seo, H.; Tran, T. H.; Wicker, A. C.; Jamison, T. F.*",
+      "venue": "Science of Synthesis 2018, Vol. 1, p. 429",
+      "year": 2018,
+      "sort_date": "2018-01-01",
+      "section": "prior",
+      "type": "chapter",
+      "badge": "Book Chapter",
+      "doi": "",
+      "image": "./img/publications/Book2.png",
+      "image_alt": "Cover image for Science of Synthesis: Flow Chemistry in Organic Synthesis",
+      "links": [
+        {
+          "label": "Chapter",
+          "url": "https://www.thieme-connect.de/products/ebooks/lookinside/10.1055/sos-SD-228-00239"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Ni-Catalyzed Electrochemical Decarboxylative C–C Couplings in Batch and Continuous Flow",
+      "authors": "Li, H.; Breen, C. P.; Seo, H.; Jamison, T. F.*; Fang, Y.-Q.*; Bio, M. M.*",
+      "venue": "Organic Letters 2018, 20 (5), 1338–1341",
+      "year": 2018,
+      "sort_date": "2018-02-12",
+      "section": "prior",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1021/acs.orglett.8b00070",
+      "image": "./img/publications/Ni.png",
+      "image_alt": "Graphical abstract for nickel-catalyzed electrochemical decarboxylative coupling",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1021/acs.orglett.8b00070"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Direct β-Selective Hydrocarboxylation of Styrenes with CO₂ Enabled by Continuous-Flow Photoredox Catalysis",
+      "authors": "Seo, H.; Liu, A.; Jamison, T. F.*",
+      "venue": "Journal of the American Chemical Society 2017, 139 (40), 13969–13972",
+      "year": 2017,
+      "sort_date": "2017-10-11",
+      "section": "prior",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1021/jacs.7b05942",
+      "image": "./img/publications/beta-carboxylation.png",
+      "image_alt": "Graphical abstract for beta-selective hydrocarboxylation in continuous flow",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1021/jacs.7b05942"
+        },
+        {
+          "label": "Highlight",
+          "url": "https://www.thieme-connect.com/products/ejournals/abstract/10.1055/s-0036-1592037"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Photoredox Activation of Carbon Dioxide for Amino Acid Synthesis in Continuous Flow",
+      "authors": "Seo, H.; Katcher, M. H.; Jamison, T. F.*",
+      "venue": "Nature Chemistry 2017, 9 (5), 453–456",
+      "year": 2017,
+      "sort_date": "2017-05-01",
+      "section": "prior",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1038/nchem.2690",
+      "image": "./img/publications/CO2toaminoacid.png",
+      "image_alt": "Graphical abstract for photoredox activation of carbon dioxide in continuous flow",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1038/nchem.2690"
+        },
+        {
+          "label": "Highlight",
+          "url": "https://www.thieme-connect.com/products/ejournals/abstract/10.1055/s-0036-1590098"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Stereoselective Synthesis of 7-epi-Incarvilline",
+      "authors": "Seo, H.†; Yun, H.†; Lee, S.; Jang, J.; Han, Y. T.; Kim, D.-D.; Lee, J.; Suh, Y.-G.*",
+      "venue": "Organic Letters 2013, 15 (3), 531–533",
+      "year": 2013,
+      "sort_date": "2013-02-01",
+      "section": "prior",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1021/ol303395f",
+      "image": "./img/publications/Incar.png",
+      "image_alt": "Graphical abstract for the stereoselective synthesis of 7-epi-incarvilline",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1021/ol303395f"
+        }
+      ],
+      "manual": true
+    }
+  ]
+}
