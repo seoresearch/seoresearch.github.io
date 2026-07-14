@@ -153,19 +153,31 @@
       text-align: center;
     }
 
+    .pillar-image-link {
+      display: block;
+      width: 100%;
+      cursor: zoom-in;
+    }
+
     .pillar-visual img {
       display: block;
       width: 100%;
-      max-height: 540px;
+      height: auto;
       object-fit: contain;
     }
 
-    .research-pillar.dynamic .pillar-visual img {
-      max-height: 500px;
+    .research-pillar.molecular .pillar-visual img {
+      max-width: 540px;
+      margin: 0 auto;
     }
 
-    .research-pillar.continuous .pillar-visual img {
-      max-height: 330px;
+    .pillar-zoom-note {
+      display: block;
+      margin-top: 8px;
+      color: #7a8789;
+      font-size: 11px;
+      line-height: 1.4;
+      text-align: right;
     }
 
     .pillar-visual figcaption {
@@ -562,15 +574,24 @@
                 aria-labelledby="molecular-heading"
               >
                 <figure class="pillar-visual">
-                  <img
-                    src="./img/research/Mol_rec_research.png"
-                    alt="Closed and open coordination states of a redox-responsive iron complex"
-                    loading="lazy"
+                  <a
+                    class="pillar-image-link"
+                    href="./img/research/Mol_rec_full.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open the full molecular recognition figure"
                   >
+                    <img
+                      src="./img/research/Mol_rec_full.png"
+                      alt="Full molecular scheme showing redox-dependent closed, open, and guarded coordination states of an iron complex"
+                      loading="lazy"
+                    >
+                  </a>
+                  <span class="pillar-zoom-note">Select the figure to view it at full resolution.</span>
                   <figcaption>
-                    Representative example from our published work:
-                    redox-dependent coordination changes create closed and open
-                    molecular states with distinct binding behavior.
+                    Full representative scheme from our published work:
+                    redox-dependent coordination changes create closed, open,
+                    and guarded molecular states with distinct binding behavior.
                   </figcaption>
                 </figure>
 
@@ -615,15 +636,24 @@
                 aria-labelledby="interfaces-heading"
               >
                 <figure class="pillar-visual">
-                  <img
-                    src="./img/research/Pulse_interface.png"
-                    alt="Continuous and pulsed waveforms producing different transport and relaxation layers at an electrode interface"
-                    loading="lazy"
+                  <a
+                    class="pillar-image-link"
+                    href="./img/research/Pulse_full.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open the full dynamic interfaces figure"
                   >
+                    <img
+                      src="./img/research/Pulse_full.png"
+                      alt="Full comparison of continuous and pulsed electrochemical operation, transport layers, relaxation, and voltage response"
+                      loading="lazy"
+                    >
+                  </a>
+                  <span class="pillar-zoom-note">Select the figure to view it at full resolution.</span>
                   <figcaption>
-                    Representative example from our published work:
-                    time-dependent operation reorganizes concentration
-                    profiles and relaxation near an electrochemical interface.
+                    Full representative figure from our published work:
+                    time-dependent operation reorganizes concentration profiles,
+                    relaxation, and electrochemical response at an interface.
                   </figcaption>
                 </figure>
 
@@ -669,13 +699,22 @@
                 aria-labelledby="processes-heading"
               >
                 <figure class="pillar-visual">
-                  <img
-                    src="./img/research/Continuous_process.png"
-                    alt="Continuous flow tube-in-tube process with controlled gas and liquid streams"
-                    loading="lazy"
+                  <a
+                    class="pillar-image-link"
+                    href="./img/research/Continuous_process_full.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open the full continuous processes figure"
                   >
+                    <img
+                      src="./img/research/Continuous_process_full.png"
+                      alt="Full photo-swing carbon capture scheme coupled to a continuous-flow tube-in-tube process"
+                      loading="lazy"
+                    >
+                  </a>
+                  <span class="pillar-zoom-note">Select the figure to view it at full resolution.</span>
                   <figcaption>
-                    Representative example from our published work:
+                    Full representative scheme from our published work:
                     reversible molecular chemistry translated into continuous
                     multiphase flow operation.
                   </figcaption>
