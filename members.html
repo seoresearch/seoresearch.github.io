@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Seo Research Group - Members</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="Seo Research Group - Members"/>
-  <meta name="keywords" content="members, contact information, research interests"/>
-  <meta name="author" content="lmpixels"/>
+
+  <title>Members | Seo Research Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Meet the researchers of the Seo Research Group at Stony Brook University, working across molecular recognition, dynamic interfaces, and continuous separation processes."
+  >
+  <meta
+    name="keywords"
+    content="Seo Research Group, Stony Brook University, molecularly programmed separations, group members, separation science"
+  >
+  <meta name="author" content="Hyowon Seo">
+
   <link rel="shortcut icon" href="favicon26.ico">
 
   <link rel="stylesheet" href="css/normalize.css" type="text/css">
@@ -15,369 +23,757 @@
   <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
   <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
   <link rel="stylesheet" href="css/main.css" type="text/css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css"
+  >
+
+  <style>
+    :root {
+      --seo-ink: #2f3f42;
+      --seo-muted: #667477;
+      --seo-accent: #2f7f80;
+      --seo-accent-dark: #236566;
+      --seo-soft: #f3f7f7;
+      --seo-line: #dce5e5;
+      --seo-white: #ffffff;
+    }
+
+    .people-intro {
+      max-width: 920px;
+      margin-bottom: 42px;
+      color: var(--seo-muted);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .pi-profile {
+      margin-bottom: 54px;
+      padding: 30px;
+      background: var(--seo-white);
+      border: 1px solid var(--seo-line);
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(32, 53, 56, 0.07);
+    }
+
+    .pi-photo {
+      display: block;
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      margin: 0 auto 24px;
+      border-radius: 6px;
+    }
+
+    .pi-name {
+      margin-top: 0;
+      margin-bottom: 4px;
+      color: var(--seo-ink);
+      font-size: 30px;
+      line-height: 1.25;
+    }
+
+    .pi-role {
+      margin-bottom: 18px;
+      color: var(--seo-accent-dark);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .pi-bio {
+      color: var(--seo-muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .profile-links {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .profile-links li {
+      display: inline-block;
+      margin: 0 14px 8px 0;
+    }
+
+    .profile-links a {
+      color: var(--seo-accent-dark);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .profile-links a:hover,
+    .profile-links a:focus {
+      color: var(--seo-accent);
+      text-decoration: underline;
+    }
+
+    .timeline {
+      margin: 24px 0 0;
+      padding: 20px 0 0;
+      border-top: 1px solid var(--seo-line);
+    }
+
+    .timeline h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: var(--seo-ink);
+      font-size: 18px;
+    }
+
+    .timeline-item {
+      display: flex;
+      margin-bottom: 9px;
+      color: var(--seo-muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .timeline-year {
+      flex: 0 0 108px;
+      color: var(--seo-ink);
+      font-weight: 700;
+    }
+
+    .people-section {
+      margin-top: 46px;
+    }
+
+    .people-section .block-title {
+      margin-bottom: 25px;
+    }
+
+    .member-grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .member-grid > [class*="col-"] {
+      display: flex;
+      margin-bottom: 30px;
+    }
+
+    .member-card {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      overflow: hidden;
+      background: var(--seo-white);
+      border: 1px solid var(--seo-line);
+      border-radius: 8px;
+      box-shadow: 0 7px 22px rgba(32, 53, 56, 0.06);
+    }
+
+    .member-photo {
+      display: block;
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      object-position: center 18%;
+      background: var(--seo-soft);
+      border-bottom: 1px solid var(--seo-line);
+    }
+
+    .member-card-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 23px 23px 21px;
+    }
+
+    .member-name {
+      margin: 0 0 4px;
+      color: var(--seo-ink);
+      font-size: 21px;
+      line-height: 1.3;
+    }
+
+    .member-role {
+      margin-bottom: 16px;
+      color: var(--seo-accent-dark);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .member-label {
+      display: block;
+      margin-top: 14px;
+      margin-bottom: 4px;
+      color: var(--seo-ink);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .member-detail {
+      margin: 0;
+      color: var(--seo-muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .member-email {
+      margin-top: auto;
+      padding-top: 18px;
+    }
+
+    .member-email a {
+      color: var(--seo-accent-dark);
+      font-size: 13px;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+      text-decoration: none;
+    }
+
+    .member-email a:hover,
+    .member-email a:focus {
+      color: var(--seo-accent);
+      text-decoration: underline;
+    }
+
+    .alumni-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .alumni-list li {
+      padding: 16px 17px;
+      background: var(--seo-soft);
+      border: 1px solid var(--seo-line);
+      border-radius: 6px;
+    }
+
+    .alumni-name {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--seo-ink);
+      font-weight: 700;
+    }
+
+    .alumni-detail {
+      color: var(--seo-muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 991px) {
+      .member-photo {
+        height: 330px;
+      }
+
+      .alumni-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 767px) {
+      .pi-profile {
+        padding: 23px;
+      }
+
+      .pi-name {
+        font-size: 27px;
+      }
+
+      .timeline-item {
+        display: block;
+        margin-bottom: 13px;
+      }
+
+      .timeline-year {
+        display: block;
+        margin-bottom: 2px;
+      }
+
+      .member-photo {
+        height: auto;
+        max-height: 480px;
+      }
+
+      .alumni-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 
   <script src="js/modernizr.custom.js"></script>
 </head>
 
 <body class="page">
 
-<div class="lm-animated-bg"></div>
+  <div class="lm-animated-bg"></div>
 
-<!-- Loading animation -->
-<div class="preloader">
-  <div class="preloader-animation">
-    <div class="preloader-spinner">
+  <!-- Loading animation -->
+  <div class="preloader">
+    <div class="preloader-animation">
+      <div class="preloader-spinner"></div>
     </div>
   </div>
-</div>
-<!-- /Loading animation -->
+  <!-- /Loading animation -->
 
-<!-- Scroll To Top Button -->
-<div class="lmpixels-scroll-to-top"><i class="lnr lnr-chevron-up"></i></div>
-<!-- /Scroll To Top Button -->
+  <!-- Scroll To Top Button -->
+  <div class="lmpixels-scroll-to-top" aria-label="Scroll to top">
+    <i class="lnr lnr-chevron-up" aria-hidden="true"></i>
+  </div>
+  <!-- /Scroll To Top Button -->
 
-<div class="page-scroll">
-  <div id="page_container" class="page-container bg-move-effect" data-animation="transition-flip-in-right">
+  <div class="page-scroll">
+    <div
+      id="page_container"
+      class="page-container bg-move-effect"
+      data-animation="transition-flip-in-right"
+    >
 
-    <!-- Header -->
-    <header id="site_header" class="header">
-      <div class="header-content clearfix">
+      <!-- Header -->
+      <header id="site_header" class="header">
+        <div class="header-content clearfix">
 
-        <!-- Text Logo -->
-        <div class="text-logo">
-          <a href="index.html">
-    
-            <div class="logo-text">Seo Research Group </div>
-          </a>
-  </div> 
-        <!-- /Text Logo -->
-
-        <!-- Navigation -->
-        <div class="site-nav mobile-menu-hide">
-          <ul class="leven-classic-menu site-main-menu">
-            <li class="menu-item">
-              <a href="index.html">Home</a>
-            </li>
-
-            <li class="menu-item current-menu-item">
-              <a href="members.html">Members</a>
-            </li>
-
-            <li class="menu-item">
-              <a href="research.html">Research</a>
-            </li>
-
-            <li class="menu-item">
-              <a href="publications.html">Publications</a>
-            </li>
-
-            <li class="menu-item">
-              <a href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-
-        <a class="menu-toggle mobile-visible">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    </header>
-    <!-- /Header -->
-
-    <div id="main" class="site-main">
-      <div id="main-content" class="single-page-content">
-        <div id="primary" class="content-area">
-
-          <div class="page-title">
-            <h1>Members</h1>
-           
+          <div class="text-logo">
+            <a href="index.html" aria-label="Seo Research Group home">
+              <div class="logo-text">Seo Research Group</div>
+            </a>
           </div>
 
-          <div id="content" class="page-content site-content single-post" role="main">
-            <div class="row">
+          <nav class="site-nav mobile-menu-hide" aria-label="Primary navigation">
+            <ul class="leven-classic-menu site-main-menu">
+              <li class="menu-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="menu-item current-menu-item">
+                <a href="members.html" aria-current="page">Members</a>
+              </li>
+              <li class="menu-item">
+                <a href="research.html">Research</a>
+              </li>
+              <li class="menu-item">
+                <a href="publications.html">Publications</a>
+              </li>
+              <li class="menu-item">
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
 
-              <div class=" col-xs-12 col-sm-12 ">
-              <div class="row">
-                      <div class="col-xs-12 col-sm-4">
-                                <img src="./img/HS.jpg" alt="" title=""/>
-                      </div>
+          <a class="menu-toggle mobile-visible" aria-label="Open navigation menu">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </a>
+        </div>
+      </header>
+      <!-- /Header -->
 
-                
-                      <div class="col-xs-12 col-sm-8">
-                        
-                      <div class="block-title">
-                        <h2>Dr. Hyowon Seo (PI)</h2>
-                      </div>
-                        
-                      <h6><a
-                            href="https://scholar.google.com/citations?user=NMCGDdYAAAAJ&hl=en"
-                            target="_blank">Google Scholar</a></h6>
-                      <br>
-                      <p>Dr.Hyowon Seo is an Assistant Professor of Materials Science and Chemical Engineering at the Stony Brook University since Jan 2024. 
-                        Her research is focused on molecular engineering for energy and catalysis. 
-                        Before starting at the Stony Brook University, 
-                        she was a postdoctoral associate in the T. Alan Hatton Group in Chemical Engineering at the MIT, where she studied electrochemical engineering for electrochemical carbon capture systems. 
-                        She earned her PhD in Chemistry in 2019 from MIT, where she studied
-                        photoredox activation of CO<sub>2</sub> in flow for the synthesis of value-added products with Prof. Timothy Jamison. While there, she received
-                        Korean Government Scholarship and Amgen Graduate Fellowship. 
-                        She obtained her BS and MS degrees in Pharmacy at the Seoul National University, South Korea, where she studied total synthesis of natural products with Prof. Young-Ger Suh. 
-                        
-                        <br>
-                        <br>
-                       <h4>Education/Experience</h4>
-                       <p>2024-current: Assistant Professor in Materials Science and Chemical Engineering, Stony Brook University</p>    
-                      <p>2019-2024: Postdoctoral Associate in Chemical Engineering, MIT</p>   
-                      <p>2014-2019: Ph.D in Chemistry, MIT</p>
-                      <p>2011-2013: M.S. in Pharmacy, Seoul National University, South Korea</p>
-                      <p>2007-2011: B.S. in Pharmacy, Seoul National University, South Korea</p>
-                        <br>
-                        <p>hyowon.seo at stonybrook dot edu</p>
-                      
-                      </div>
-                </div>
-                        <br>
-                        <br>
-                        <br>
-                 
-          
-             
-                    
-                  </div>
+      <main id="main" class="site-main">
+        <div id="main-content" class="single-page-content">
+          <div id="primary" class="content-area">
 
-               
+            <div class="page-title">
+              <h1>Members</h1>
+            </div>
 
-              <div class=" col-xs-12 col-sm-12 ">
-                <div class="block-title">
-                  <h2>Members</h2>
-                </div>
-                 <div class="block-title">
-                  <h3>Postdoctoral Researchers</h3>
-                </div>
+            <div
+              id="content"
+              class="page-content site-content single-post"
+              role="main"
+            >
 
-                     <div class="col-xs-12 col-sm-4">
-                          <img src="./img/Jiae.PNG" style="width:auto;height:360px;" alt="" title="" class="center">
-                          <br>
-                          <br>
-                          <h4>Dr. Jiae Ryu </h4>
-                          <h4>Education/Experience</h4>
-                      
-                          <p>2026: Ph.D.,Chemical Engineering, SUNY ESF  </p>
-                
-                          <h4>Research Interests</h4>
-                          <p>Critical mineral separation</p>
+              <p class="people-intro">
+                Our group brings together researchers in molecular chemistry,
+                electrochemistry, interfacial science, transport, and process
+                engineering to develop molecularly programmed separations across
+                molecular, interfacial, and process scales.
+              </p>
 
-                          <br>
-                          <p>jiae.ryu at stonybrook dot edu</p>
-                          <br>
-                          <br>
-                          <br>
-                  </div>
-
-
-                
-                <div class="block-title">
-                  <h3>Graduate Students</h3>
-                </div>
-                
-
-                
-              
-                <div class="col-xs-12 col-sm-12">
-                  <div class="row">
+              <!-- Principal Investigator -->
+              <section class="pi-profile" aria-labelledby="pi-heading">
+                <div class="row">
                   <div class="col-xs-12 col-sm-4">
-                          <img src="./img/Ping-Han_Wu.jpg" style="width:auto;height:360px;" alt="" title="" class="center">
-                          <br>
-                          <br>
-                          <h4>Ping-Han "Bing" Wu (PhD Student)</h4>
-                          <h4>Education/Experience</h4>
-                          <p>2024-current: Ph.D. Student since 2024 spring</p>
-                          <p>2022: B.S.,Chemical Engineering, Chung Yuan Christian University, Taiwan </p>
-                
-                          <h4>Research Interests</h4>
-                          <p>membrane separation, electrochemical carbon capture</p>
-
-                          <br>
-                          <p>ping-han.wu at stonybrook dot edu</p>
-                          <br>
-                          <br>
-                          <br>
-                
+                    <img
+                      class="pi-photo"
+                      src="./img/HS.jpg"
+                      alt="Hyowon Seo, principal investigator of the Seo Research Group"
+                    >
                   </div>
 
-                  <div class="col-xs-12 col-sm-4">
-                          <img src="./img/Mondal.jpg" style="width:auto;height:360px;" alt="" title="" class="center">
-                          <br>
-                          <br>
-                          <h4>Shibsankar Mondal (PhD Student)</h4>
-                          <h4>Education/Experience</h4>
-                          <p>2024-current: Ph.D. Student since 2025 spring</p>
-                          <p>2022: B.S.,Chemical Engineering, University Of Calcutta, India  </p>
-                
-                          <h4>Research Interests</h4>
-                          <p>Electrochemical conversion of the captured CO2</p>
+                  <div class="col-xs-12 col-sm-8">
+                    <h2 id="pi-heading" class="pi-name">Hyowon Seo</h2>
+                    <div class="pi-role">Principal Investigator · Assistant Professor</div>
 
-                          <br>
-                          <p>shibsankar.mondal at stonybrook dot edu</p>
-                          <br>
-                          <br>
-                          <br>
-                  </div>
-                     <div class="col-xs-12 col-sm-4">
-                          <img src="./img/Lim.jpg" style="width:auto;height:360px;object-fit:cover;"alt="" title="" class="center">
-                          <br>
-                          <br>
-                          <h4>Hyung Chan "Declan" Lim (Master Student)</h4>
-                          <h4>Education/Experience</h4>
-                          <p>2024-current: Master's Student since 2024 spring</p>
-                          <p>2023: B.S.,Energy and Mineral Resources Engineering, Sejong University, South Korea </p>
-                
-                          <h4>Research Interests</h4>
-                          <p>Electrochemical carbon capture</p>
+                    <p class="pi-bio">
+                      Hyowon Seo is an Assistant Professor in the Department of
+                      Materials Science and Chemical Engineering at Stony Brook
+                      University. Her research group develops molecularly
+                      programmed separation systems by connecting molecular
+                      recognition, dynamic interfaces, and continuous processes.
+                      The group investigates how molecular structure, interfacial
+                      organization, and nonequilibrium transport govern selective
+                      capture, transfer, and release across complex chemical
+                      systems.
+                    </p>
 
-                          <br>
-                          <p>HyungChan.Lim at stonybrook dot edu</p>
-                          <br>
-                          <br>
-                          <br>
-                       </div>
-                  </div>
-                </div>
-                
+                    <p class="pi-bio">
+                      Before joining Stony Brook University in 2024, she was a
+                      postdoctoral associate in the T. Alan Hatton Group in MIT
+                      Chemical Engineering, where she developed electrochemical
+                      carbon-capture systems. She received her PhD in Chemistry
+                      from MIT in 2019, where she studied photoredox activation of
+                      CO<sub>2</sub> in continuous flow with Timothy Jamison. She
+                      earned BS and MS degrees in Pharmacy from Seoul National
+                      University, where she studied natural-product synthesis with
+                      Young-Ger Suh.
+                    </p>
 
-              </div>
-                          <br>
-                          <br>
-                          <br>
+                    <ul class="profile-links">
+                      <li>
+                        <a
+                          href="https://scholar.google.com/citations?user=NMCGDdYAAAAJ&amp;hl=en"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Google Scholar
+                        </a>
+                      </li>
+                      <li>
+                        <a href="mailto:hyowon.seo@stonybrook.edu">
+                          hyowon.seo@stonybrook.edu
+                        </a>
+                      </li>
+                    </ul>
 
-              <div class=" col-xs-12 col-sm-12 ">
-               
-                  <div class="block-title">
-                    <h3>Undergraduate Students</h3>
-                  </div>
+                    <div class="timeline">
+                      <h3>Education and Experience</h3>
 
-                
+                      <div class="timeline-item">
+                        <span class="timeline-year">2024–present</span>
+                        <span>
+                          Assistant Professor, Materials Science and Chemical
+                          Engineering, Stony Brook University
+                        </span>
+                      </div>
 
-                
-                <br>
-                <br>
-                
-               <div class="col-xs-12 col-sm-12">
-                 <div class="row">
-                  
-                   
-                    <div class="col-xs-12 col-sm-4">
-                         <img src="./img/Hanyi.jpg" style="width:auto;height:360px;"alt="" title="" class="center">
-                       
-                          <br>
-                          <br>
-                        <h4>Hanyi Seok (Undergrad)</h4>
-                        <h4>Education/Experience</h4>
-                        <p>Current: Undergrad at Stony Brook University (ESM)  
-                   </div>
-                   </div>
-                </div>
+                      <div class="timeline-item">
+                        <span class="timeline-year">2019–2024</span>
+                        <span>
+                          Postdoctoral Associate, Chemical Engineering, MIT
+                        </span>
+                      </div>
 
-                <br>
-                <br>
-                
-            
-              
-                <br>
-                <br>
+                      <div class="timeline-item">
+                        <span class="timeline-year">2014–2019</span>
+                        <span>PhD in Chemistry, MIT</span>
+                      </div>
 
-                <div class="col-xs-12 col-sm-12">
-                  <div class="row">
-                 
+                      <div class="timeline-item">
+                        <span class="timeline-year">2011–2013</span>
+                        <span>
+                          MS in Pharmacy, Seoul National University, South Korea
+                        </span>
+                      </div>
 
-
+                      <div class="timeline-item">
+                        <span class="timeline-year">2007–2011</span>
+                        <span>
+                          BS in Pharmacy, Seoul National University, South Korea
+                        </span>
+                      </div>
                     </div>
+                  </div>
+                </div>
+              </section>
+              <!-- /Principal Investigator -->
+
+              <!-- Postdoctoral Researchers -->
+              <section class="people-section" aria-labelledby="postdoc-heading">
+                <div class="block-title">
+                  <h2 id="postdoc-heading">Postdoctoral Researchers</h2>
                 </div>
 
+                <div class="row member-grid">
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                    <article class="member-card">
+                      <img
+                        class="member-photo"
+                        src="./img/Jiae.PNG"
+                        alt="Jiae Ryu, postdoctoral researcher"
+                        loading="lazy"
+                      >
+                      <div class="member-card-body">
+                        <h3 class="member-name">Jiae Ryu</h3>
+                        <div class="member-role">Postdoctoral Researcher</div>
 
-                          <br>
-                          <br>
+                        <span class="member-label">Education</span>
+                        <p class="member-detail">
+                          PhD in Chemical Engineering, SUNY College of
+                          Environmental Science and Forestry, 2026
+                        </p>
 
-                 <div class=" col-xs-12 col-sm-12 ">
-               
-                  <div class="block-title">
-                    <h3>Alumni</h3>
+                        <span class="member-label">Current Research</span>
+                        <p class="member-detail">
+                          Molecular recognition for selective ion and
+                          critical-element separations
+                        </p>
+
+                        <div class="member-email">
+                          <a href="mailto:jiae.ryu@stonybrook.edu">
+                            jiae.ryu@stonybrook.edu
+                          </a>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </section>
+              <!-- /Postdoctoral Researchers -->
+
+              <!-- Graduate Researchers -->
+              <section class="people-section" aria-labelledby="graduate-heading">
+                <div class="block-title">
+                  <h2 id="graduate-heading">Graduate Researchers</h2>
+                </div>
+
+                <div class="row member-grid">
+
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                    <article class="member-card">
+                      <img
+                        class="member-photo"
+                        src="./img/Ping-Han_Wu.jpg"
+                        alt="Ping-Han Wu, PhD student"
+                        loading="lazy"
+                      >
+                      <div class="member-card-body">
+                        <h3 class="member-name">Ping-Han “Bing” Wu</h3>
+                        <div class="member-role">PhD Student</div>
+
+                        <span class="member-label">Education</span>
+                        <p class="member-detail">
+                          PhD student, Stony Brook University, Spring 2024–present
+                        </p>
+                        <p class="member-detail">
+                          BS in Chemical Engineering, Chung Yuan Christian
+                          University, Taiwan, 2022
+                        </p>
+
+                        <span class="member-label">Current Research</span>
+                        <p class="member-detail">
+                          Membrane separations and electrochemical carbon capture
+                        </p>
+
+                        <div class="member-email">
+                          <a href="mailto:ping-han.wu@stonybrook.edu">
+                            ping-han.wu@stonybrook.edu
+                          </a>
+                        </div>
+                      </div>
+                    </article>
                   </div>
 
-                   <div class="col-xs-12 col-sm-4">
-                       
-                        <h4>Alex D'Acunto (Master)</h4>
-                        <p>Current: Spellman High Voltage
-                        <h4>Nashita Nawarah (Undergrad)</h4>
-                        <h4>Ahmed Nihal (Undergrad)</h4>
-                        <h4>Dereck Severino (Undergrad)</h4>
-                        <h4>Alisher Abdurazzokov (Undergrad)</h4>
-                        <h4>Sam Chowdhury (Undergrad) </h4>
-                        <h4>Naiomie Michel (Undergrad)</h4>
-                          <h4>Ava Gross (Undergrad)</h4>
-                          <h4>Sheena Chen (Undergrad)</h4>
-                          <h4>Winnie Dong (Undergrad)</h4>
-                          <h4>Chelsea Walz (Undergrad)</h4>
-                        
-                          
-                   </div>
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                    <article class="member-card">
+                      <img
+                        class="member-photo"
+                        src="./img/Mondal.jpg"
+                        alt="Shibsankar Mondal, PhD student"
+                        loading="lazy"
+                      >
+                      <div class="member-card-body">
+                        <h3 class="member-name">Shibsankar Mondal</h3>
+                        <div class="member-role">PhD Student</div>
 
-                
-            ``` </div>
-                
-                <br>
-                <br>
-                   
-                <br>
-                <br>
-                
-                
-                 
-                <br>
-                
+                        <span class="member-label">Education</span>
+                        <p class="member-detail">
+                          PhD student, Stony Brook University, Spring 2025–present
+                        </p>
+                        <p class="member-detail">
+                          BS in Chemical Engineering, University of Calcutta,
+                          India, 2022
+                        </p>
 
-                <br>
-                <br>
-                <br>
-                
-                
-               
-             
+                        <span class="member-label">Current Research</span>
+                        <p class="member-detail">
+                          Dynamic electrochemical operation and conversion of
+                          captured CO<sub>2</sub>
+                        </p>
 
-                
+                        <div class="member-email">
+                          <a href="mailto:shibsankar.mondal@stonybrook.edu">
+                            shibsankar.mondal@stonybrook.edu
+                          </a>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
 
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                    <article class="member-card">
+                      <img
+                        class="member-photo"
+                        src="./img/Lim.jpg"
+                        alt="Hyung Chan Declan Lim, master's student"
+                        loading="lazy"
+                      >
+                      <div class="member-card-body">
+                        <h3 class="member-name">Hyung Chan “Declan” Lim</h3>
+                        <div class="member-role">Master’s Student</div>
 
-                
-              
+                        <span class="member-label">Education</span>
+                        <p class="member-detail">
+                          Master’s student, Stony Brook University,
+                          Spring 2024–present
+                        </p>
+                        <p class="member-detail">
+                          BS in Energy and Mineral Resources Engineering, Sejong
+                          University, South Korea, 2023
+                        </p>
+
+                        <span class="member-label">Current Research</span>
+                        <p class="member-detail">
+                          Electrochemical carbon capture
+                        </p>
+
+                        <div class="member-email">
+                          <a href="mailto:HyungChan.Lim@stonybrook.edu">
+                            HyungChan.Lim@stonybrook.edu
+                          </a>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+
+                </div>
+              </section>
+              <!-- /Graduate Researchers -->
+
+              <!-- Undergraduate Researchers -->
+              <section class="people-section" aria-labelledby="undergraduate-heading">
+                <div class="block-title">
+                  <h2 id="undergraduate-heading">Undergraduate Researchers</h2>
+                </div>
+
+                <div class="row member-grid">
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                    <article class="member-card">
+                      <img
+                        class="member-photo"
+                        src="./img/Hanyi.jpg"
+                        alt="Hanyi Seok, undergraduate researcher"
+                        loading="lazy"
+                      >
+                      <div class="member-card-body">
+                        <h3 class="member-name">Hanyi Seok</h3>
+                        <div class="member-role">Undergraduate Researcher</div>
+
+                        <span class="member-label">Education</span>
+                        <p class="member-detail">
+                          Undergraduate student in Engineering Science and
+                          Materials, Stony Brook University
+                        </p>
+
+                        <!-- Add a Current Research section here when the public
+                             project description is finalized. -->
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </section>
+              <!-- /Undergraduate Researchers -->
+
+              <!-- Alumni -->
+              <section class="people-section" aria-labelledby="alumni-heading">
+                <div class="block-title">
+                  <h2 id="alumni-heading">Alumni</h2>
+                </div>
+
+                <ul class="alumni-list">
+                  <li>
+                    <span class="alumni-name">Alex D’Acunto</span>
+                    <span class="alumni-detail">
+                      Master’s researcher · Spellman High Voltage
+                    </span>
+                  </li>
+                  <li>
+                    <span class="alumni-name">Nashita Nawarah</span>
+                    <span class="alumni-detail">Undergraduate researcher</span>
+                  </li>
+                  <li>
+                    <span class="alumni-name">Ahmed Nihal</span>
+                    <span class="alumni-detail">Undergraduate researcher</span>
+                  </li>
+                  <li>
+                    <span class="alumni-name">Dereck Severino</span>
+                    <span class="alumni-detail">Undergraduate researcher</span>
+                  </li>
+                  <li>
+                    <span class="alumni-name">Alisher Abdurazzokov</span>
+                    <span class="alumni-detail">Undergraduate researcher</span>
+                  </li>
+                  <li>
+                    <span class="alumni-name">Sam Chowdhury</span>
+                    <span class="alumni-detail">Undergraduate researcher</span>
+                  </li>
+                  <li>
+                    <span class="alumni-name">Naiomie Michel</span>
+                    <span class="alumni-detail">Undergraduate researcher</span>
+                  </li>
+                  <li>
+                    <span class="alumni-name">Ava Gross</span>
+                    <span class="alumni-detail">Undergraduate researcher</span>
+                  </li>
+                  <li>
+                    <span class="alumni-name">Sheena Chen</span>
+                    <span class="alumni-detail">Undergraduate researcher</span>
+                  </li>
+                  <li>
+                    <span class="alumni-name">Winnie Dong</span>
+                    <span class="alumni-detail">Undergraduate researcher</span>
+                  </li>
+                  <li>
+                    <span class="alumni-name">Chelsea Walz</span>
+                    <span class="alumni-detail">Undergraduate researcher</span>
+                  </li>
+                </ul>
+              </section>
+              <!-- /Alumni -->
+
             </div>
           </div>
         </div>
-      </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer clearfix">
+        <div class="footer-social">
+          <ul class="footer-social-links">
+            <li>Seo Research Group</li>
+            <li>
+              <a href="mailto:hyowon.seo@stonybrook.edu">
+                hyowon.seo@stonybrook.edu
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+      <!-- /Footer -->
+
     </div>
-
-    <!-- Footer -->
-    <footer class="site-footer clearfix">
-      <div class="footer-social">
-        <ul class="footer-social-links">
-          <li>Seo Research Group</li>
-          <li>
-            <a href="mailto:hyowon.seo@stonybrook.edu" target="_blank">hyowon.seo@stonybrook.edu</a>
-          </li>
-        </ul>
-      </div>
-    </footer>
-    <!-- /Footer -->
-
   </div>
-</div>
 
-<script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.shuffle.min.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/validator.js"></script>
-<script src="js/main.js"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.shuffle.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/validator.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
