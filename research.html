@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Seo Research Group - Contact</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="Seo Research Group - Contact"/>
-  <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, portfolio"/>
-  <meta name="author" content="lmpixels"/>
+
+  <title>Research | Seo Research Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="The Seo Research Group develops molecularly programmed separations by connecting molecular recognition, dynamic interfaces, and continuous processes."
+  >
+  <meta
+    name="keywords"
+    content="molecularly programmed separations, molecular recognition, dynamic interfaces, continuous processes, separation science, Seo Research Group, Stony Brook University"
+  >
+  <meta name="author" content="Hyowon Seo">
+
   <link rel="shortcut icon" href="favicon26.ico">
 
   <link rel="stylesheet" href="css/normalize.css" type="text/css">
@@ -15,168 +23,827 @@
   <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
   <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
   <link rel="stylesheet" href="css/main.css" type="text/css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css"
+  >
+
+  <style>
+    :root {
+      --seo-ink: #2f3f42;
+      --seo-muted: #667477;
+      --seo-accent: #2f7f80;
+      --seo-accent-dark: #236566;
+      --seo-soft: #f3f7f7;
+      --seo-line: #dce5e5;
+      --seo-white: #ffffff;
+    }
+
+    .research-lead {
+      max-width: 1040px;
+      margin-bottom: 42px;
+    }
+
+    .research-kicker {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--seo-accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .research-lead h2 {
+      margin: 0 0 18px;
+      color: var(--seo-ink);
+      font-size: 38px;
+      line-height: 1.2;
+    }
+
+    .research-lead p {
+      margin: 0;
+      color: var(--seo-muted);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .framework-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 64px;
+    }
+
+    .framework-card {
+      display: block;
+      min-height: 184px;
+      padding: 25px 24px;
+      color: inherit;
+      background: var(--seo-white);
+      border: 1px solid var(--seo-line);
+      border-radius: 8px;
+      box-shadow: 0 7px 22px rgba(32, 53, 56, 0.06);
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .framework-card:hover,
+    .framework-card:focus {
+      color: inherit;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(32, 53, 56, 0.10);
+      text-decoration: none;
+    }
+
+    .framework-number {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--seo-accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .framework-card h3 {
+      margin: 0 0 10px;
+      color: var(--seo-ink);
+      font-size: 22px;
+      line-height: 1.3;
+    }
+
+    .framework-card p {
+      margin: 0;
+      color: var(--seo-muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .research-pillar {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.88fr) minmax(0, 1.12fr);
+      gap: 44px;
+      align-items: center;
+      margin: 0 0 42px;
+      padding: 34px;
+      background: var(--seo-white);
+      border: 1px solid var(--seo-line);
+      border-radius: 9px;
+      box-shadow: 0 9px 28px rgba(32, 53, 56, 0.065);
+      scroll-margin-top: 95px;
+    }
+
+    .research-pillar.is-reversed .pillar-visual {
+      order: 2;
+    }
+
+    .research-pillar.is-reversed .pillar-copy {
+      order: 1;
+    }
+
+    .pillar-visual {
+      min-width: 0;
+      margin: 0;
+      padding: 18px;
+      background: #fbfcfc;
+      border: 1px solid var(--seo-line);
+      border-radius: 7px;
+      text-align: center;
+    }
+
+    .pillar-visual img {
+      display: block;
+      width: 100%;
+      max-height: 540px;
+      object-fit: contain;
+    }
+
+    .research-pillar.dynamic .pillar-visual img {
+      max-height: 500px;
+    }
+
+    .research-pillar.continuous .pillar-visual img {
+      max-height: 330px;
+    }
+
+    .pillar-visual figcaption {
+      margin-top: 13px;
+      color: #7a8789;
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .pillar-scale {
+      display: inline-block;
+      margin-bottom: 9px;
+      color: var(--seo-accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .pillar-copy h2 {
+      margin: 0 0 7px;
+      color: var(--seo-ink);
+      font-size: 31px;
+      line-height: 1.25;
+    }
+
+    .pillar-subtitle {
+      margin-bottom: 18px;
+      color: var(--seo-accent-dark);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .pillar-copy p {
+      margin: 0 0 15px;
+      color: var(--seo-muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .topic-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 21px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .topic-list li {
+      padding: 7px 11px;
+      color: var(--seo-ink);
+      background: var(--seo-soft);
+      border: 1px solid var(--seo-line);
+      border-radius: 18px;
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .program-section {
+      margin-top: 62px;
+    }
+
+    .program-section > p {
+      max-width: 960px;
+      color: var(--seo-muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .question-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .question-card {
+      padding: 22px 20px;
+      background: var(--seo-soft);
+      border: 1px solid var(--seo-line);
+      border-top: 3px solid var(--seo-accent);
+      border-radius: 6px;
+    }
+
+    .question-card h3 {
+      margin: 0 0 9px;
+      color: var(--seo-ink);
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
+    .question-card p {
+      margin: 0;
+      color: var(--seo-muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .application-panel {
+      margin-top: 56px;
+      padding: 32px 34px;
+      background: var(--seo-soft);
+      border-left: 5px solid var(--seo-accent);
+      border-radius: 7px;
+    }
+
+    .application-panel h2 {
+      margin: 0 0 12px;
+      color: var(--seo-ink);
+      font-size: 27px;
+    }
+
+    .application-panel p {
+      max-width: 980px;
+      margin: 0;
+      color: var(--seo-muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .application-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .application-list li {
+      padding: 9px 13px;
+      color: var(--seo-ink);
+      background: var(--seo-white);
+      border: 1px solid var(--seo-line);
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .research-cta {
+      margin: 56px 0 34px;
+      padding: 38px 36px;
+      color: var(--seo-white);
+      background: var(--seo-ink);
+      border-radius: 8px;
+    }
+
+    .research-cta h2 {
+      margin: 0 0 12px;
+      color: var(--seo-white);
+      font-size: 29px;
+      line-height: 1.3;
+    }
+
+    .research-cta p {
+      max-width: 920px;
+      margin: 0 0 22px;
+      color: #e2e9e9;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .research-button {
+      display: inline-block;
+      margin-right: 8px;
+      padding: 11px 18px;
+      color: var(--seo-ink);
+      background: var(--seo-white);
+      border: 1px solid var(--seo-white);
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .research-button:hover,
+    .research-button:focus {
+      color: var(--seo-ink);
+      background: #edf3f3;
+      border-color: #edf3f3;
+      text-decoration: none;
+    }
+
+    .research-button.secondary {
+      color: var(--seo-white);
+      background: transparent;
+      border-color: #9eb0b2;
+    }
+
+    .research-button.secondary:hover,
+    .research-button.secondary:focus {
+      color: var(--seo-white);
+      background: rgba(255, 255, 255, 0.10);
+      border-color: #c4d0d1;
+    }
+
+    @media (max-width: 991px) {
+      .framework-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .framework-card {
+        min-height: 0;
+      }
+
+      .research-pillar,
+      .research-pillar.is-reversed {
+        grid-template-columns: 1fr;
+        gap: 27px;
+      }
+
+      .research-pillar.is-reversed .pillar-visual,
+      .research-pillar.is-reversed .pillar-copy {
+        order: initial;
+      }
+
+      .question-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 767px) {
+      .research-lead h2 {
+        font-size: 31px;
+      }
+
+      .research-lead p {
+        font-size: 16px;
+      }
+
+      .research-pillar {
+        padding: 23px;
+      }
+
+      .pillar-copy h2 {
+        font-size: 27px;
+      }
+
+      .question-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .application-panel,
+      .research-cta {
+        padding: 27px 23px;
+      }
+
+      .research-button {
+        display: block;
+        width: 100%;
+        margin: 8px 0 0;
+        text-align: center;
+      }
+    }
+  </style>
 
   <script src="js/modernizr.custom.js"></script>
 </head>
 
 <body class="page">
 
-<div class="lm-animated-bg"></div>
+  <div class="lm-animated-bg"></div>
 
-<!-- Loading animation -->
-<div class="preloader">
-  <div class="preloader-animation">
-    <div class="preloader-spinner">
+  <!-- Loading animation -->
+  <div class="preloader">
+    <div class="preloader-animation">
+      <div class="preloader-spinner"></div>
     </div>
   </div>
-</div>
-<!-- /Loading animation -->
+  <!-- /Loading animation -->
 
-<!-- Scroll To Top Button -->
-<div class="lmpixels-scroll-to-top"><i class="lnr lnr-chevron-up"></i></div>
-<!-- /Scroll To Top Button -->
+  <!-- Scroll To Top Button -->
+  <div class="lmpixels-scroll-to-top" aria-label="Scroll to top">
+    <i class="lnr lnr-chevron-up" aria-hidden="true"></i>
+  </div>
+  <!-- /Scroll To Top Button -->
 
-<div class="page-scroll">
-  <div id="page_container" class="page-container bg-move-effect" data-animation="transition-flip-in-right">
+  <div class="page-scroll">
+    <div
+      id="page_container"
+      class="page-container bg-move-effect"
+      data-animation="transition-flip-in-right"
+    >
 
-    <!-- Header -->
-    <header id="site_header" class="header">
-      <div class="header-content clearfix">
+      <!-- Header -->
+      <header id="site_header" class="header">
+        <div class="header-content clearfix">
 
-        <!-- Text Logo -->
-        <div class="text-logo">
-          <a href="index.html">
-    
-            <div class="logo-text">Seo Research Group </div>
+          <div class="text-logo">
+            <a href="index.html" aria-label="Seo Research Group home">
+              <div class="logo-text">Seo Research Group</div>
+            </a>
+          </div>
+
+          <nav class="site-nav mobile-menu-hide" aria-label="Primary navigation">
+            <ul class="leven-classic-menu site-main-menu">
+              <li class="menu-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="menu-item">
+                <a href="members.html">Members</a>
+              </li>
+              <li class="menu-item current-menu-item">
+                <a href="research.html" aria-current="page">Research</a>
+              </li>
+              <li class="menu-item">
+                <a href="publications.html">Publications</a>
+              </li>
+              <li class="menu-item">
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <a class="menu-toggle mobile-visible" aria-label="Open navigation menu">
+            <i class="fa fa-bars" aria-hidden="true"></i>
           </a>
-  </div> 
-        <!-- /Text Logo -->
+        </div>
+      </header>
+      <!-- /Header -->
 
-        <!-- Navigation -->
-        <div class="site-nav mobile-menu-hide">
-          <ul class="leven-classic-menu site-main-menu">
-            <li class="menu-item">
-              <a href="index.html">Home</a>
-            </li>
+      <main id="main" class="site-main">
+        <div id="main-content" class="single-page-content">
+          <div id="primary" class="content-area">
 
-            <li class="menu-item">
-              <a href="members.html">Members</a>
-            </li>
+            <div class="page-title">
+              <h1>Research</h1>
+            </div>
 
-            <li class="menu-item current-menu-item">
-              <a href="research.html">Research</a>
-            </li>
+            <div
+              id="content"
+              class="page-content site-content single-post"
+              role="main"
+            >
 
-            <li class="menu-item">
-              <a href="publications.html">Publications</a>
-            </li>
+              <!-- Research introduction -->
+              <section class="research-lead" aria-labelledby="research-heading">
+                <span class="research-kicker">Our Research Program</span>
+                <h2 id="research-heading">Molecularly Programmed Separations</h2>
+                <p>
+                  We study how molecular structure, interfacial organization,
+                  and process operation jointly determine selective capture,
+                  transfer, and release. Rather than treating chemistry,
+                  transport, and process design as separate problems, we examine
+                  their coupling across scales to establish predictive
+                  principles for selective, reversible, and adaptable
+                  separation systems.
+                </p>
+              </section>
+              <!-- /Research introduction -->
 
-            <li class="menu-item">
-              <a href="contact.html">Contact</a>
+              <!-- Framework navigation -->
+              <section aria-label="Research framework">
+                <div class="framework-grid">
+
+                  <a class="framework-card" href="#molecular-recognition">
+                    <span class="framework-number">01 · Molecular Scale</span>
+                    <h3>Molecular Recognition</h3>
+                    <p>
+                      Encoding selectivity, reversibility, and responsiveness
+                      through molecular architecture and state.
+                    </p>
+                  </a>
+
+                  <a class="framework-card" href="#dynamic-interfaces">
+                    <span class="framework-number">02 · Interfacial Scale</span>
+                    <h3>Dynamic Interfaces</h3>
+                    <p>
+                      Resolving how solvation, organization, reaction, and
+                      transport reshape selectivity in time and space.
+                    </p>
+                  </a>
+
+                  <a class="framework-card" href="#continuous-processes">
+                    <span class="framework-number">03 · Process Scale</span>
+                    <h3>Continuous Processes</h3>
+                    <p>
+                      Translating molecular function into immobilized, cyclic,
+                      flow-based, and automated separation systems.
+                    </p>
+                  </a>
+
+                </div>
+              </section>
+              <!-- /Framework navigation -->
+
+              <!-- Molecular recognition -->
+              <section
+                id="molecular-recognition"
+                class="research-pillar molecular"
+                aria-labelledby="molecular-heading"
+              >
+                <figure class="pillar-visual">
+                  <img
+                    src="./img/research/Mol_rec_research.png"
+                    alt="Closed and open coordination states of a redox-responsive iron complex"
+                    loading="lazy"
+                  >
+                  <figcaption>
+                    Representative example from our published work:
+                    redox-dependent coordination changes create closed and open
+                    molecular states with distinct binding behavior.
+                  </figcaption>
+                </figure>
+
+                <div class="pillar-copy">
+                  <span class="pillar-scale">Molecular Scale</span>
+                  <h2 id="molecular-heading">Molecular Recognition</h2>
+                  <div class="pillar-subtitle">
+                    Programming selective binding, transfer, and release
+                  </div>
+
+                  <p>
+                    We design preorganized, multidentate, and
+                    stimulus-responsive molecular systems to control how target
+                    species are recognized and released. Our work examines how
+                    donor geometry, rigidity, local solvation, cooperative
+                    interactions, and changes in molecular state shape affinity
+                    and selectivity under competitive conditions.
+                  </p>
+
+                  <p>
+                    A central objective is to decouple capture from
+                    regeneration. Strong association during uptake must be
+                    paired with efficient release, so we study both forward and
+                    reverse pathways rather than optimizing a single
+                    equilibrium metric.
+                  </p>
+
+                  <ul class="topic-list">
+                    <li>Preorganization and cooperative binding</li>
+                    <li>Competitive selectivity</li>
+                    <li>Reversible capture and release</li>
+                    <li>Responsive coordination states</li>
+                  </ul>
+                </div>
+              </section>
+              <!-- /Molecular recognition -->
+
+              <!-- Dynamic interfaces -->
+              <section
+                id="dynamic-interfaces"
+                class="research-pillar dynamic is-reversed"
+                aria-labelledby="interfaces-heading"
+              >
+                <figure class="pillar-visual">
+                  <img
+                    src="./img/research/Pulse_interface.png"
+                    alt="Continuous and pulsed waveforms producing different transport and relaxation layers at an electrode interface"
+                    loading="lazy"
+                  >
+                  <figcaption>
+                    Representative example from our published work:
+                    time-dependent operation reorganizes concentration
+                    profiles and relaxation near an electrochemical interface.
+                  </figcaption>
+                </figure>
+
+                <div class="pillar-copy">
+                  <span class="pillar-scale">Interfacial Scale</span>
+                  <h2 id="interfaces-heading">Dynamic Interfaces</h2>
+                  <div class="pillar-subtitle">
+                    Revealing how selectivity evolves in time and space
+                  </div>
+
+                  <p>
+                    Molecular recognition is expressed through interfaces where
+                    solvation, speciation, aggregation, electrostatic fields,
+                    reaction, and transport are coupled. We investigate
+                    liquid–liquid, liquid–solid, membrane, and electrochemical
+                    interfaces to determine when molecular selectivity is
+                    preserved, amplified, transformed, or erased.
+                  </p>
+
+                  <p>
+                    By separating reaction, diffusion, and relaxation
+                    timescales, we examine transient selectivity,
+                    uptake–release asymmetry, and operation away from
+                    equilibrium. These studies connect molecular behavior to
+                    the interfacial pathways that determine observable
+                    separation performance.
+                  </p>
+
+                  <ul class="topic-list">
+                    <li>Interfacial speciation and organization</li>
+                    <li>Coupled reaction–transport</li>
+                    <li>Time-dependent selectivity</li>
+                    <li>Uptake–release asymmetry</li>
+                  </ul>
+                </div>
+              </section>
+              <!-- /Dynamic interfaces -->
+
+              <!-- Continuous processes -->
+              <section
+                id="continuous-processes"
+                class="research-pillar continuous"
+                aria-labelledby="processes-heading"
+              >
+                <figure class="pillar-visual">
+                  <img
+                    src="./img/research/Continuous_process.png"
+                    alt="Continuous flow tube-in-tube process with controlled gas and liquid streams"
+                    loading="lazy"
+                  >
+                  <figcaption>
+                    Representative example from our published work:
+                    reversible molecular chemistry translated into continuous
+                    multiphase flow operation.
+                  </figcaption>
+                </figure>
+
+                <div class="pillar-copy">
+                  <span class="pillar-scale">Process Scale</span>
+                  <h2 id="processes-heading">Continuous Processes</h2>
+                  <div class="pillar-subtitle">
+                    Preserving molecular function under repeated operation
+                  </div>
+
+                  <p>
+                    We translate molecular and interfacial mechanisms into
+                    immobilized, cyclic, and flow-based separation systems.
+                    Residence time, interfacial area, mass transfer,
+                    regeneration, and feedback control become co-design
+                    variables rather than downstream constraints.
+                  </p>
+
+                  <p>
+                    Automated platforms provide reproducible kinetic
+                    measurements, rapid comparison of operating conditions, and
+                    direct tests of whether a molecular advantage survives
+                    repeated cycling and continuous operation.
+                  </p>
+
+                  <ul class="topic-list">
+                    <li>Immobilized separation systems</li>
+                    <li>Flow contactors and reactors</li>
+                    <li>Residence-time control</li>
+                    <li>Automated experimentation</li>
+                  </ul>
+                </div>
+              </section>
+              <!-- /Continuous processes -->
+
+              <!-- Program-wide questions -->
+              <section
+                class="program-section"
+                aria-labelledby="questions-heading"
+              >
+                <div class="block-title">
+                  <h2 id="questions-heading">Questions That Connect the Program</h2>
+                </div>
+
+                <p>
+                  The molecular platform and target mixture may change, but the
+                  program is organized around four recurring scientific and
+                  engineering questions.
+                </p>
+
+                <div class="question-grid">
+
+                  <article class="question-card">
+                    <h3>Where is selectivity encoded?</h3>
+                    <p>
+                      We identify the structural, chemical, and environmental
+                      features that distinguish competing species.
+                    </p>
+                  </article>
+
+                  <article class="question-card">
+                    <h3>What does the interface change?</h3>
+                    <p>
+                      We determine how organization, solvation, and transport
+                      preserve or obscure molecular recognition.
+                    </p>
+                  </article>
+
+                  <article class="question-card">
+                    <h3>Can dynamics create new separation windows?</h3>
+                    <p>
+                      We examine whether transient states and controlled
+                      timescales reveal selectivity not apparent at equilibrium.
+                    </p>
+                  </article>
+
+                  <article class="question-card">
+                    <h3>What survives continuous operation?</h3>
+                    <p>
+                      We test reversibility, regeneration, stability, and
+                      throughput under repeated and process-relevant conditions.
+                    </p>
+                  </article>
+
+                </div>
+              </section>
+              <!-- /Program-wide questions -->
+
+              <!-- Application space -->
+              <section
+                class="application-panel"
+                aria-labelledby="applications-heading"
+              >
+                <h2 id="applications-heading">Application Space</h2>
+                <p>
+                  We apply this framework wherever selective capture, transfer,
+                  or release is limited by coupled molecular and transport
+                  phenomena. Current and emerging projects span ion recovery,
+                  membrane and electrochemical separations, gas and molecular
+                  capture, resource recovery from complex mixtures, and
+                  stimulus-controlled separation processes.
+                </p>
+
+                <ul class="application-list">
+                  <li>Ion and molecular separations</li>
+                  <li>Complex liquid mixtures</li>
+                  <li>Membrane and interfacial transport</li>
+                  <li>Resource recovery and recycling</li>
+                  <li>Electrochemical and photochemical control</li>
+                </ul>
+              </section>
+              <!-- /Application space -->
+
+              <!-- Closing call to action -->
+              <section class="research-cta" aria-labelledby="research-cta-heading">
+                <h2 id="research-cta-heading">
+                  Molecules, Interfaces, and Processes—Studied Together
+                </h2>
+                <p>
+                  Our aim is to determine how molecular information survives
+                  across scale and becomes useful separation performance. We
+                  welcome collaborations that connect molecular design,
+                  interfacial characterization, transport analysis, and process
+                  development.
+                </p>
+
+                <a class="research-button" href="publications.html">
+                  View Publications
+                </a>
+                <a class="research-button secondary" href="contact.html">
+                  Contact the Group
+                </a>
+              </section>
+              <!-- /Closing call to action -->
+
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer clearfix">
+        <div class="footer-social">
+          <ul class="footer-social-links">
+            <li>Seo Research Group</li>
+            <li>
+              <a href="mailto:hyowon.seo@stonybrook.edu">
+                hyowon.seo@stonybrook.edu
+              </a>
             </li>
           </ul>
         </div>
+      </footer>
+      <!-- /Footer -->
 
-        <a class="menu-toggle mobile-visible">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    </header>
-    <!-- /Header -->
-
-    <div id="main" class="site-main">
-      <div id="main-content" class="single-page-content">
-        <div id="primary" class="content-area">
-
-          <div class="page-title">
-            <h1>Research </h1>
-          </div>
-          
-      
-
-          <div class="row">
-            <div class="col-xs-12 col-sm-12">
-              <div class="p-50"></div>
-
-              <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" >
-                            <img src="./img/R1-H.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            <br>
-                             <br>
-                             <br>
-                            <h2>R1: Energy-Efficient Separations and Recovery</h2>
-                              <br>
-                            <h4> We develop separation and recovery systems that use molecular design, redox control, and interfacial tuning to achieve high selectivity with low energy input. By coupling binding thermodynamics, transport, and regeneration pathways, we create electronically driven cycles compatible with continuous operation. Our work targets liquid, gas, and metal-ion separations, emphasizing stable, modular processes that outperform conventional thermal or pressure-swing methods.</h4>
-                            
-                          </div>
-                        </div>
-                      </figure> 
-
-              <figure class="item standard" >
-                        <div class="row">
-                          
-                          <div class="col-xs-12 col-sm-8">
-                            <br>
-                             <br>
-                             <br>
-                            <h2>R2: Advanced Molecular Catalysis</h2>
-                              <br>
-                            <h4> We design catalytic cycles that use electrons, photons, and molecular structure to regulate activation and bond-forming steps. Our focus includes energy-efficient CO2 conversion to fuels and programmable, step-controlled catalysis where electrochemical and photochemical steps are independently tuned. This framework enables selective, mechanistically clear pathways that outperform conventional single-step schemes while connecting molecular behavior with practical catalytic performance.</h4>
-                            
-                          </div>
-                          <div class="col-xs-12 col-sm-4" >
-                            <img src="./img/R2catalysis.png" alt="" title=""/>
-                          </div>
-                        </div>
-                      </figure> 
-
-
-                    <figure class="item standard" >
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4" >
-                            <img src="./img/R3flow.png" alt="" title=""/>
-                          </div>
-                          <div class="col-xs-12 col-sm-8">
-                            <br>
-                             <br>
-                             <br>
-                            <h2>R3: Flow Systems and Automated Reactors</h2>
-                              <br>
-                            <h4> We build flow-based electrochemical and physicochemical platforms for controlled reaction studies, continuous processing, and automated experimentation. By integrating sensors, actuators, and real-time feedback, we achieve precise control of mass transport, residence time, and reaction conditions. Our systems support high-throughput, reproducible measurements and enable mechanistic studies and scalable operation that are difficult to realize in batch settings.</h4>
-                 
-                          </div>
-                          
-                        </div>
-                      </figure> 
-              
-              
-
-              
-                  
-            </div>
-          </div>
-
-          <hr>
-
-        
-
-        </div>
-      </div>
     </div>
   </div>
-</div>
 
-<script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.shuffle.min.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/validator.js"></script>
-<script src="js/main.js"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.shuffle.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/validator.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
