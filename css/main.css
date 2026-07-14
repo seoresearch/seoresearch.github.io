@@ -5923,3 +5923,128 @@ a.post-thumbnail:hover {
     z-index: 1;
   }
 }
+
+/* =============================================================================
+   Seo Research Group: mobile header and navigation color override
+   Keeps the mobile header/menu white with dark text.
+============================================================================= */
+@media only screen and (max-width: 991px) {
+  .header,
+  .header.fixed,
+  .header .header-content {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #252525 !important;
+  }
+
+  .header {
+    width: 100%;
+    border-bottom: 1px solid #dce5e5;
+    box-shadow: 0 2px 12px rgba(32, 53, 56, 0.10);
+  }
+
+  .header .header-content {
+    min-height: 52px;
+  }
+
+  .text-logo,
+  .text-logo a,
+  .text-logo a:hover,
+  .text-logo a:focus,
+  .logo-text {
+    color: #252525 !important;
+    background-color: transparent !important;
+    background: transparent !important;
+  }
+
+  .menu-toggle,
+  .menu-toggle:hover,
+  .menu-toggle:focus {
+    color: #252525 !important;
+    background: transparent !important;
+    outline: 0;
+  }
+
+  .site-nav {
+    z-index: 998 !important;
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border-left: 1px solid #dce5e5;
+    box-shadow: -12px 0 30px rgba(32, 53, 56, 0.12);
+  }
+
+  .site-main-menu {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    padding: 12px 0 24px;
+  }
+
+  .site-main-menu li,
+  .site-main-menu li:last-child {
+    margin: 0 !important;
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+  }
+
+  .site-main-menu li a {
+    display: block;
+    padding: 14px 26px;
+    color: #252525 !important;
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #edf1f1;
+    font-size: 17px;
+    line-height: 1.45;
+    opacity: 1 !important;
+  }
+
+  .site-main-menu li.current-menu-item > a,
+  .site-main-menu li.current-menu-parent > a {
+    padding-left: 23px;
+    color: #236566 !important;
+    background-color: #f3f7f7 !important;
+    background: #f3f7f7 !important;
+    border-left: 3px solid #2f7f80;
+    font-weight: 600;
+    opacity: 1 !important;
+  }
+
+  .site-main-menu li:hover > a,
+  .site-main-menu li > a:hover,
+  .site-main-menu li > a:focus {
+    color: #236566 !important;
+    background-color: #f3f7f7 !important;
+    background: #f3f7f7 !important;
+    opacity: 1 !important;
+  }
+
+  .site-main-menu li:last-child > a {
+    border-bottom: 0;
+  }
+
+  .site-main-menu .sub-menu,
+  .site-main-menu .sub-menu li,
+  .site-main-menu .sub-menu li a {
+    color: #252525 !important;
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+  }
+
+  .page-title {
+    background-color: #ffffff !important;
+  }
+
+  .page-title h1 {
+    color: #252525 !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .logo-text {
+    max-width: calc(100vw - 92px);
+    overflow: hidden;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
