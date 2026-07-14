@@ -1,297 +1,567 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Seo Research Group</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="Seo Research Group"/>
-  <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, portfolio"/>
-  <meta name="author" content="lmpixels"/>
-  <link rel="shortcut icon" href="favicon26.ico">
 
+  <title>Seo Research Group | Molecularly Programmed Separations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="The Seo Research Group at Stony Brook University develops molecularly programmed separations by connecting molecular recognition, dynamic interfaces, and continuous processes."
+  >
+  <meta
+    name="keywords"
+    content="molecularly programmed separations, molecular recognition, dynamic interfaces, continuous processes, separation science, Seo Research Group, Stony Brook University"
+  >
+  <meta name="author" content="Hyowon Seo">
+
+  <link rel="shortcut icon" href="favicon26.ico">
 
   <link rel="stylesheet" href="css/normalize.css" type="text/css">
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
   <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
   <link rel="stylesheet" href="css/main.css" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        type="text/css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css"
+  >
+
+  <style>
+    :root {
+      --seo-ink: #2f3f42;
+      --seo-muted: #667477;
+      --seo-accent: #2f7f80;
+      --seo-accent-dark: #236566;
+      --seo-soft: #f3f7f7;
+      --seo-line: #dce5e5;
+      --seo-white: #ffffff;
+    }
+
+    .seo-hero-banner {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .seo-section {
+      padding-top: 48px;
+    }
+
+    .seo-section-intro {
+      max-width: 960px;
+      margin-bottom: 28px;
+      color: var(--seo-muted);
+    }
+
+    .seo-section-intro p,
+    .seo-about-copy {
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    .seo-research-row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .seo-research-row > [class*="col-"] {
+      display: flex;
+      margin-bottom: 30px;
+    }
+
+    .seo-research-card {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      overflow: hidden;
+      background: var(--seo-white);
+      border: 1px solid var(--seo-line);
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(32, 53, 56, 0.07);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .seo-research-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(32, 53, 56, 0.11);
+    }
+
+    .seo-card-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 245px;
+      padding: 18px;
+      background: #fafcfc;
+      border-bottom: 1px solid var(--seo-line);
+    }
+
+    .seo-card-image img {
+      display: block;
+      width: 100%;
+      max-height: 215px;
+      object-fit: contain;
+    }
+
+    .seo-card-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 25px 25px 23px;
+    }
+
+    .seo-card-number {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: var(--seo-accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .seo-card-body h3 {
+      margin: 0 0 12px;
+      color: var(--seo-ink);
+      font-size: 23px;
+      line-height: 1.25;
+    }
+
+    .seo-card-body p {
+      flex: 1;
+      margin: 0 0 18px;
+      color: var(--seo-muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .seo-card-source {
+      display: block;
+      margin-top: -4px;
+      margin-bottom: 16px;
+      color: #7a8789;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .seo-text-link {
+      display: inline-flex;
+      align-items: center;
+      align-self: flex-start;
+      color: var(--seo-accent-dark);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .seo-text-link:hover,
+    .seo-text-link:focus {
+      color: var(--seo-accent);
+      text-decoration: underline;
+    }
+
+    .seo-text-link .fa {
+      margin-left: 8px;
+      font-size: 11px;
+    }
+
+    .seo-image-note {
+      margin-top: -10px;
+      color: #7a8789;
+      font-size: 12px;
+      text-align: right;
+    }
+
+    .seo-button {
+      display: inline-block;
+      padding: 11px 18px;
+      color: var(--seo-white);
+      background: var(--seo-accent-dark);
+      border: 1px solid var(--seo-accent-dark);
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 160ms ease, border-color 160ms ease;
+    }
+
+    .seo-button:hover,
+    .seo-button:focus {
+      color: var(--seo-white);
+      background: var(--seo-accent);
+      border-color: var(--seo-accent);
+      text-decoration: none;
+    }
+
+    .seo-button-secondary {
+      margin-left: 8px;
+      color: var(--seo-accent-dark);
+      background: transparent;
+    }
+
+    .seo-button-secondary:hover,
+    .seo-button-secondary:focus {
+      color: var(--seo-white);
+    }
+
+    .seo-cta {
+      margin-top: 50px;
+      margin-bottom: 35px;
+      padding: 36px;
+      color: var(--seo-white);
+      background: var(--seo-ink);
+      border-radius: 6px;
+    }
+
+    .seo-cta h2 {
+      margin-top: 0;
+      color: var(--seo-white);
+    }
+
+    .seo-cta p {
+      max-width: 850px;
+      margin-bottom: 22px;
+      color: #e2e9e9;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .seo-cta .seo-button {
+      background: var(--seo-white);
+      border-color: var(--seo-white);
+      color: var(--seo-ink);
+    }
+
+    .seo-cta .seo-button:hover,
+    .seo-cta .seo-button:focus {
+      background: #edf3f3;
+      border-color: #edf3f3;
+      color: var(--seo-ink);
+    }
+
+    .seo-cta .seo-button-secondary {
+      color: var(--seo-white);
+      background: transparent;
+      border-color: #a8b7b9;
+    }
+
+    .seo-cta .seo-button-secondary:hover,
+    .seo-cta .seo-button-secondary:focus {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--seo-white);
+    }
+
+    @media (max-width: 767px) {
+      .seo-section {
+        padding-top: 34px;
+      }
+
+      .seo-card-image {
+        min-height: 215px;
+      }
+
+      .seo-cta {
+        padding: 27px 23px;
+      }
+
+      .seo-button,
+      .seo-button-secondary {
+        display: block;
+        width: 100%;
+        margin: 8px 0 0;
+        text-align: center;
+      }
+
+      .seo-image-note {
+        text-align: left;
+      }
+    }
+  </style>
 
   <script src="js/modernizr.custom.js"></script>
 </head>
 
 <body class="page">
 
-<div class="lm-animated-bg"></div>
+  <div class="lm-animated-bg"></div>
 
-<!-- Loading animation -->
-<div class="preloader">
-  <div class="preloader-animation">
-    <div class="preloader-spinner">
+  <!-- Loading animation -->
+  <div class="preloader">
+    <div class="preloader-animation">
+      <div class="preloader-spinner"></div>
     </div>
   </div>
-</div>
-<!-- /Loading animation -->
+  <!-- /Loading animation -->
 
-<!-- Scroll To Top Button -->
-<div class="lmpixels-scroll-to-top"><i class="lnr lnr-chevron-up"></i></div>
-<!-- /Scroll To Top Button -->
+  <!-- Scroll To Top Button -->
+  <div class="lmpixels-scroll-to-top" aria-label="Scroll to top">
+    <i class="lnr lnr-chevron-up" aria-hidden="true"></i>
+  </div>
+  <!-- /Scroll To Top Button -->
 
-<div class="page-scroll">
-  <div id="page_container" class="page-container bg-move-effect" data-animation="transition-flip-in-right">
+  <div class="page-scroll">
+    <div
+      id="page_container"
+      class="page-container bg-move-effect"
+      data-animation="transition-flip-in-right"
+    >
 
-    <!-- Header -->
-    <header id="site_header" class="header">
-      <div class="header-content clearfix">
+      <!-- Header -->
+      <header id="site_header" class="header">
+        <div class="header-content clearfix">
 
-        <!-- Text Logo -->
-        <div class="text-logo">
-          <a href="index.html">
-          <div class="logo-text">Seo Research Group </div>
+          <div class="text-logo">
+            <a href="index.html" aria-label="Seo Research Group home">
+              <div class="logo-text">Seo Research Group</div>
+            </a>
+          </div>
 
+          <nav class="site-nav mobile-menu-hide" aria-label="Primary navigation">
+            <ul class="leven-classic-menu site-main-menu">
+              <li class="menu-item current-menu-item">
+                <a href="index.html" aria-current="page">Home</a>
+              </li>
+              <li class="menu-item">
+                <a href="members.html">Members</a>
+              </li>
+              <li class="menu-item">
+                <a href="research.html">Research</a>
+              </li>
+              <li class="menu-item">
+                <a href="publications.html">Publications</a>
+              </li>
+              <li class="menu-item">
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <a class="menu-toggle mobile-visible" aria-label="Open navigation menu">
+            <i class="fa fa-bars" aria-hidden="true"></i>
           </a>
-  </div> 
-        <!-- /Text Logo -->
+        </div>
+      </header>
+      <!-- /Header -->
 
-        <!-- Navigation -->
-        <div class="site-nav mobile-menu-hide">
-          <ul class="leven-classic-menu site-main-menu">
-            <li class="menu-item current-menu-item">
-              <a href="index.html">Home</a>
-            </li>
+      <main id="main" class="site-main">
+        <div id="main-content" class="single-page-content">
+          <div id="primary" class="content-area">
+            <div
+              id="content"
+              class="page-content site-content single-post"
+              role="main"
+            >
 
-            <li class="menu-item">
-              <a href="members.html">Members</a>
-            </li>
+              <!-- Banner -->
+              <section id="home_content" class="home-content third-style" aria-label="Seo Research Group">
+                <div class="start-page-full-width">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="inner-content">
+                        <img
+                          class="seo-hero-banner"
+                          src="./img/Banner26.png"
+                          alt="Seo Research Group: Molecularly Programmed Separations"
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- /Banner -->
 
-            <li class="menu-item">
-              <a href="research.html">Research</a>
-            </li>
+              <!-- About -->
+              <section class="seo-section" aria-labelledby="about-heading">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="block-title">
+                      <h2 id="about-heading">About Us</h2>
+                    </div>
+                    <p class="seo-about-copy">
+                      At the Seo Research Group, we develop molecularly programmed
+                      separation systems by connecting molecular recognition,
+                      dynamic interfaces, and continuous processes. We investigate
+                      how molecular structure, interfacial organization, and
+                      nonequilibrium transport govern selective capture, transfer,
+                      and release. By translating these relationships across
+                      scales, we seek predictive principles for efficient and
+                      adaptable separations across complex chemical systems.
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <!-- /About -->
 
-            <li class="menu-item">
-              <a href="publications.html">Publications</a>
-            </li>
+              <!-- Research framework -->
+              <section class="seo-section" aria-labelledby="framework-heading">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="block-title">
+                      <h2 id="framework-heading">How We Program Separations</h2>
+                    </div>
+                    <div class="seo-section-intro">
+                      <p>
+                        Separation performance emerges from coupled phenomena
+                        across scales. We design molecular interactions, resolve
+                        dynamic interfacial behavior, and engineer continuous
+                        systems that preserve selectivity under operating
+                        conditions.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-            <li class="menu-item">
-              <a href="contact.html">Contact</a>
+                <div class="row seo-research-row">
+
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                    <article class="seo-research-card">
+                      <figure class="seo-card-image">
+                        <img
+                          src="./img/publications/iron.png"
+                          alt="Molecular coordination states used to control binding and release"
+                          loading="lazy"
+                        >
+                      </figure>
+                      <div class="seo-card-body">
+                        <span class="seo-card-number">01 · Molecular Scale</span>
+                        <h3>Molecular Recognition</h3>
+                        <p>
+                          We design molecular architectures and responsive states
+                          that control selective binding, transfer, and release
+                          through preorganization, cooperative interactions, and
+                          reversible chemistry.
+                        </p>
+                        <small class="seo-card-source">
+                          Representative image adapted from our published work on
+                          redox-controlled molecular capture.
+                        </small>
+                        <a class="seo-text-link" href="research.html">
+                          Explore research
+                          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                    <article class="seo-research-card">
+                      <figure class="seo-card-image">
+                        <img
+                          src="./img/publications/Pulse.png"
+                          alt="Pulsed operation and time-dependent transport near a dynamic interface"
+                          loading="lazy"
+                        >
+                      </figure>
+                      <div class="seo-card-body">
+                        <span class="seo-card-number">02 · Interfacial Scale</span>
+                        <h3>Dynamic Interfaces</h3>
+                        <p>
+                          We determine how solvation, interfacial organization,
+                          relaxation, and nonequilibrium transport reshape
+                          selectivity during capture, transfer, and release.
+                        </p>
+                        <small class="seo-card-source">
+                          Representative image adapted from our published work on
+                          pulsed electrochemical operation.
+                        </small>
+                        <a class="seo-text-link" href="research.html">
+                          Explore research
+                          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                    <article class="seo-research-card">
+                      <figure class="seo-card-image">
+                        <img
+                          src="./img/publications/photo-jacs.png"
+                          alt="Continuous-flow system translating molecular function into process operation"
+                          loading="lazy"
+                        >
+                      </figure>
+                      <div class="seo-card-body">
+                        <span class="seo-card-number">03 · Process Scale</span>
+                        <h3>Continuous Processes</h3>
+                        <p>
+                          We translate molecular function into immobilized,
+                          cyclic, and flow-based systems with controlled residence
+                          time, regeneration, and reproducible operation.
+                        </p>
+                        <small class="seo-card-source">
+                          Representative image adapted from our published work on
+                          continuous photochemical separation.
+                        </small>
+                        <a class="seo-text-link" href="research.html">
+                          Explore research
+                          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </article>
+                  </div>
+
+                </div>
+
+                <p class="seo-image-note">
+                  Representative images are adapted from the group’s published work.
+                </p>
+              </section>
+              <!-- /Research framework -->
+
+
+              <!-- Closing call to action -->
+              <section class="seo-cta" aria-labelledby="cta-heading">
+                <h2 id="cta-heading">Molecules, Interfaces, and Processes—Studied Together</h2>
+                <p>
+                  Our group integrates molecular synthesis, coordination
+                  chemistry, electrochemistry, photochemistry, interfacial
+                  science, transport measurements, automation, and process
+                  engineering. We welcome students and collaborators interested
+                  in advancing the science of selective separations.
+                </p>
+                <a class="seo-button" href="members.html">Meet the Group</a>
+                <a class="seo-button seo-button-secondary" href="contact.html">
+                  Contact Us
+                </a>
+              </section>
+              <!-- /Closing call to action -->
+
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer clearfix">
+        <div class="footer-social">
+          <ul class="footer-social-links">
+            <li>Hyowon Seo</li>
+            <li>
+              <a href="mailto:hyowon.seo@stonybrook.edu">
+                hyowon.seo@stonybrook.edu
+              </a>
             </li>
           </ul>
         </div>
+      </footer>
+      <!-- /Footer -->
 
-        <!-- Mobile Menu Toggle -->
-        <a class="menu-toggle mobile-visible">
-          <i class="fa fa-bars"></i>
-        </a>
-        <!-- Mobile Menu Toggle -->
-      </div>
-    </header>
-    <!-- /Header -->
-
-    <div id="main" class="site-main">
-      <div id="main-content" class="single-page-content">
-        <div id="primary" class="content-area">
-          <div id="content" class="page-content site-content single-post" role="main">
-            <!-- Home Page Top Part -->
-            <div id="home_content" class="home-content third-style">
-              <div class="start-page-full-width">
-                <div class="row">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="inner-content">
-                      <img src="./img/Banner26.png" alt="" title=""/>
-                           
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-            <!-- Home Page Top Part -->
-
-            <!-- Services -->
-            <div class="row">
-              <div class="col-xs-12 col-sm-12">
-                <div class="p-50"></div>
-
-                <div class="block-title">
-                  <h2>About Us</h2>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-xs-12 col-sm-12">
-                <p>At the Seo Research Group, we develop molecularly programmed separation systems that connect molecular recognition, dynamic interfaces, and continuous processes. We investigate how molecular structure, interfacial organization, and nonequilibrium transport govern selective capture, transfer, and release. By translating these fundamental relationships across scales, we aim to create efficient and adaptable separation technologies for complex chemical systems.</p>
-              </div>
-            </div>
-            <br>
-         
-            <div class="row">
-
-              <div class="col-xs-12 col-sm-6">
-
-               <div class="center">
-                    <video id="video" width="70%" autoplay loop muted>
-                      <source src="./img/main_video2.mp4" type="video/mp4">
-                      </video>
-                    <div class="block-title">
-                      <div class="center">
-                      
-                      <h3>Electrochemical Carbon Capture</h3>
-                        <p>Separated CO<sub>2</sub> is coming out from the electrochemical cell</p>
-                      <a
-                            href="https://www.nature.com/articles/s41467-023-35866-w"
-                            target="_blank">Learn More
-                      </a>
-                        
-                      </div>
-                      
-                    </div>
-                </div>
-              </div>
-
-              <div class="col-xs-12 col-sm-6">
-
-                <div class="center">
-                    <video id="video" width="70%" autoplay loop muted>
-                      <source src="./img/main_video3.mp4" type="video/mp4">
-                      </video>
-                    <div class="block-title">
-                      <div class="center">
-                      
-                      <h3>Photochemical Carbon Capture</h3>
-                        <p>Mass-flow meter is measuring separated CO<sub>2</sub></p>
-                      <a
-                            href="https://pubs.acs.org/doi/full/10.1021/jacs.4c07278"
-                            target="_blank">Learn More
-                      </a>
-                      </div>
-                    </div>
-                    
-                 
-                </div>
-              </div>
-
-            </div>
-            <br>
-            <br>
-            <br>
-            <br>
-               <div class="row">
-              <div class="col-xs-12 col-sm-6">
-                 <div class="info-block-w-icon">
-                    <div class="ci-icon">
-                      <i class="linecons linecons-key"></i>
-                    </div>
-
-                    <div class="ci-text">
-                      <h5>Molecular Redox-Active Materials</h5>
-                      
-                    </div>
-                  </div>
-                  <div class="info-block-w-icon">
-                    <div class="ci-icon">
-                      <i class="linecons linecons-key"></i>
-                    </div>
-
-                    <div class="ci-text">
-                      <h5>Electrochemical  and Photochemical Processes</h5>
-                      
-                    </div>
-                  </div>
-                  <div class="info-block-w-icon">
-                    <div class="ci-icon">
-                      <i class="linecons linecons-key"></i>
-                    </div>
-
-                    <div class="ci-text">
-                      <h5>Gas Separation</h5>
-                      
-                    </div>
-                  </div>
-                  
-                
-          
-               
-                
-
-                </div>
-            
-              <div class="col-xs-12 col-sm-6">
-                 <div class="info-block-w-icon">
-                    <div class="ci-icon">
-                      <i class="linecons linecons-key"></i>
-                    </div>
-
-                    <div class="ci-text">
-                      <h5>Molecular Photoswitches</h5>
-                      
-                    </div>
-                  </div>
-                <div class="info-block-w-icon">
-                    <div class="ci-icon">
-                      <i class="linecons linecons-key"></i>
-                    </div>
-
-                    <div class="ci-text">
-                      <h5>Catalysis</h5>
-                      
-                    </div>
-                  </div>
-
-                 <div class="info-block-w-icon">
-                    <div class="ci-icon">
-                      <i class="linecons linecons-key"></i>
-                    </div>
-
-                    <div class="ci-text">
-                      <h5>Direct Air Capture</h5>
-                      
-                    </div>
-                  </div>
-
-              
-                
-
-                
-              </div>
-            </div>
-
-
-            
-
-            
-            </div>
-
-        </div>
-      </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="site-footer clearfix">
-      <div class="footer-social">
-        <ul class="footer-social-links">
-          <li>Hyowon Seo</li>
-          <li>
-            <a href="mailto:hyowon.seo@stonybrook.edu" target="_blank">hyowon.seo@stonybrook.edu</a>
-          </li>
-        </ul>
-      </div>
-    </footer>
-    <!-- /Footer -->
-
   </div>
-</div>
 
-<script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.shuffle.min.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/validator.js"></script>
-<script src="js/main.js"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.shuffle.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/validator.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
