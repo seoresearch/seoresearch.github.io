@@ -111,31 +111,27 @@
       text-decoration: underline;
     }
 
-    .timeline {
-      margin: 24px 0 0;
-      padding: 20px 0 0;
-      border-top: 1px solid var(--seo-line);
-    }
-
-    .timeline h3 {
-      margin-top: 0;
-      margin-bottom: 15px;
-      color: var(--seo-ink);
-      font-size: 18px;
-    }
-
-    .timeline-item {
-      display: flex;
-      margin-bottom: 9px;
+    .pi-background {
+      margin-top: 16px;
+      padding: 11px 14px;
+      background: var(--seo-soft);
+      border-left: 3px solid var(--seo-accent);
+      border-radius: 4px;
       color: var(--seo-muted);
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.55;
     }
 
-    .timeline-year {
-      flex: 0 0 108px;
+    .pi-background p {
+      margin: 0;
+    }
+
+    .pi-background p + p {
+      margin-top: 2px;
+    }
+
+    .pi-background strong {
       color: var(--seo-ink);
-      font-weight: 700;
     }
 
     .people-section {
@@ -182,6 +178,15 @@
       flex: 1;
       flex-direction: column;
       padding: 23px 23px 21px;
+    }
+
+    .staff-entry {
+      max-width: 680px;
+      padding: 4px 0 2px;
+    }
+
+    .staff-entry .member-name {
+      margin-bottom: 4px;
     }
 
     .member-name {
@@ -237,33 +242,23 @@
       text-decoration: underline;
     }
 
-    .alumni-list {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
+    .alumni-compact {
+      columns: 2;
+      column-gap: 44px;
       margin: 0;
-      padding: 0;
-      list-style: none;
+      padding-left: 20px;
     }
 
-    .alumni-list li {
-      padding: 16px 17px;
-      background: var(--seo-soft);
-      border: 1px solid var(--seo-line);
-      border-radius: 6px;
-    }
-
-    .alumni-name {
-      display: block;
-      margin-bottom: 3px;
-      color: var(--seo-ink);
-      font-weight: 700;
-    }
-
-    .alumni-detail {
+    .alumni-compact li {
+      break-inside: avoid;
+      margin-bottom: 9px;
       color: var(--seo-muted);
-      font-size: 13px;
-      line-height: 1.5;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .alumni-compact strong {
+      color: var(--seo-ink);
     }
 
     @media (max-width: 991px) {
@@ -271,9 +266,6 @@
         height: 330px;
       }
 
-      .alumni-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
     }
 
     @media (max-width: 767px) {
@@ -285,23 +277,13 @@
         font-size: 27px;
       }
 
-      .timeline-item {
-        display: block;
-        margin-bottom: 13px;
-      }
-
-      .timeline-year {
-        display: block;
-        margin-bottom: 2px;
-      }
-
       .member-photo {
         height: auto;
         max-height: 480px;
       }
 
-      .alumni-list {
-        grid-template-columns: 1fr;
+      .alumni-compact {
+        columns: 1;
       }
     }
   </style>
@@ -425,8 +407,10 @@
                       Chemical Engineering, where she developed electrochemical
                       carbon-capture systems. She received her PhD in Chemistry
                       from MIT in 2019, where she studied photoredox activation of
-                      CO<sub>2</sub> in continuous flow with Timothy Jamison. She
-                      earned BS and MS degrees in Pharmacy from Seoul National
+                      CO<sub>2</sub> in continuous flow with Timothy Jamison.
+                      During her doctoral studies, she received the Korean
+                      Government Scholarship and the Amgen Graduate Fellowship.
+                      She earned BS and MS degrees in Pharmacy from Seoul National
                       University, where she studied natural-product synthesis with
                       Young-Ger Suh.
                     </p>
@@ -448,42 +432,16 @@
                       </li>
                     </ul>
 
-                    <div class="timeline">
-                      <h3>Education and Experience</h3>
-
-                      <div class="timeline-item">
-                        <span class="timeline-year">2024–present</span>
-                        <span>
-                          Assistant Professor, Materials Science and Chemical
-                          Engineering, Stony Brook University
-                        </span>
-                      </div>
-
-                      <div class="timeline-item">
-                        <span class="timeline-year">2019–2024</span>
-                        <span>
-                          Postdoctoral Associate, Chemical Engineering, MIT
-                        </span>
-                      </div>
-
-                      <div class="timeline-item">
-                        <span class="timeline-year">2014–2019</span>
-                        <span>PhD in Chemistry, MIT</span>
-                      </div>
-
-                      <div class="timeline-item">
-                        <span class="timeline-year">2011–2013</span>
-                        <span>
-                          MS in Pharmacy, Seoul National University, South Korea
-                        </span>
-                      </div>
-
-                      <div class="timeline-item">
-                        <span class="timeline-year">2007–2011</span>
-                        <span>
-                          BS in Pharmacy, Seoul National University, South Korea
-                        </span>
-                      </div>
+                    <div class="pi-background" aria-label="Education and previous experience">
+                      <p>
+                        <strong>Previous appointment:</strong>
+                        Postdoctoral Associate, MIT Chemical Engineering (2019–2024)
+                      </p>
+                      <p>
+                        <strong>Education:</strong>
+                        PhD in Chemistry, MIT (2019); MS and BS in Pharmacy,
+                        Seoul National University
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -532,6 +490,21 @@
                 </div>
               </section>
               <!-- /Postdoctoral Researchers -->
+
+
+              <!-- Research Staff -->
+              <section class="people-section" aria-labelledby="staff-heading">
+                <div class="block-title">
+                  <h2 id="staff-heading">Research Staff</h2>
+                </div>
+
+                <div class="staff-entry">
+                  <h3 class="member-name">Ara Woo</h3>
+                  <div class="member-role">Research Assistant</div>
+                  <p class="member-detail">Seo Research Group, July 2026–present</p>
+                </div>
+              </section>
+              <!-- /Research Staff -->
 
               <!-- Graduate Researchers -->
               <section class="people-section" aria-labelledby="graduate-heading">
@@ -622,11 +595,11 @@
                       >
                       <div class="member-card-body">
                         <h3 class="member-name">Hyung Chan “Declan” Lim</h3>
-                        <div class="member-role">Master’s Student</div>
+                        <div class="member-role">Research Assistant</div>
 
                         <span class="member-label">Education</span>
                         <p class="member-detail">
-                          Master’s student, Stony Brook University,
+                          Research assistant, Seo Research Group,
                           Spring 2024–present
                         </p>
                         <p class="member-detail">
@@ -692,52 +665,50 @@
                   <h2 id="alumni-heading">Alumni</h2>
                 </div>
 
-                <ul class="alumni-list">
+                <ul class="alumni-compact">
                   <li>
-                    <span class="alumni-name">Alex D’Acunto</span>
-                    <span class="alumni-detail">
-                      Master’s researcher · Spellman High Voltage
-                    </span>
+                    <strong>Alex D’Acunto</strong> — Master’s researcher
+                    (2024–2025); now at Spellman High Voltage
                   </li>
                   <li>
-                    <span class="alumni-name">Nashita Nawarah</span>
-                    <span class="alumni-detail">Undergraduate researcher</span>
+                    <strong>Alisher Abdurazzokov</strong> — Undergraduate
+                    researcher (2024)
                   </li>
                   <li>
-                    <span class="alumni-name">Ahmed Nihal</span>
-                    <span class="alumni-detail">Undergraduate researcher</span>
+                    <strong>Ahmed Nihal</strong> — Undergraduate researcher
+                    (2024)
                   </li>
                   <li>
-                    <span class="alumni-name">Dereck Severino</span>
-                    <span class="alumni-detail">Undergraduate researcher</span>
+                    <strong>Ava Gross</strong> — Undergraduate researcher
+                    (2025)
                   </li>
                   <li>
-                    <span class="alumni-name">Alisher Abdurazzokov</span>
-                    <span class="alumni-detail">Undergraduate researcher</span>
+                    <strong>Nashita Nawarah</strong> — Undergraduate researcher
+                    (2025)
                   </li>
                   <li>
-                    <span class="alumni-name">Sam Chowdhury</span>
-                    <span class="alumni-detail">Undergraduate researcher</span>
+                    <strong>Chelsea Walz</strong> — Undergraduate researcher
+                    (2025)
                   </li>
                   <li>
-                    <span class="alumni-name">Naiomie Michel</span>
-                    <span class="alumni-detail">Undergraduate researcher</span>
+                    <strong>Sheena Chen</strong> — Undergraduate researcher
+                    (2025)
                   </li>
                   <li>
-                    <span class="alumni-name">Ava Gross</span>
-                    <span class="alumni-detail">Undergraduate researcher</span>
+                    <strong>Winnie Dong</strong> — Undergraduate researcher
+                    (2025)
                   </li>
                   <li>
-                    <span class="alumni-name">Sheena Chen</span>
-                    <span class="alumni-detail">Undergraduate researcher</span>
+                    <strong>Sam Chowdhury</strong> — Undergraduate researcher
+                    (2025)
                   </li>
                   <li>
-                    <span class="alumni-name">Winnie Dong</span>
-                    <span class="alumni-detail">Undergraduate researcher</span>
+                    <strong>Naiomie Michel</strong> — Undergraduate researcher
+                    (2025)
                   </li>
                   <li>
-                    <span class="alumni-name">Chelsea Walz</span>
-                    <span class="alumni-detail">Undergraduate researcher</span>
+                    <strong>Dereck Severino</strong> — Undergraduate researcher
+                    (2025)
                   </li>
                 </ul>
               </section>
