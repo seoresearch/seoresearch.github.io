@@ -6,7 +6,7 @@
     "google_scholar": "https://scholar.google.com/citations?user=NMCGDdYAAAAJ&hl=en",
     "legend": "* corresponding author; † equal contribution"
   },
-  "last_updated": "2026-07-14",
+  "last_updated": "2026-07-15",
   "publications": [
     {
       "title": "Continuous Light-Driven Pure CO₂ Production by Regenerative Non-Aqueous Amine–Photoacid Cycling",
@@ -437,6 +437,25 @@
       "manual": true
     }
   ],
-  "patents": [],
+  "patents": [
+    {
+      "title": "Electrochemical Target Species Capture with a Redox-Active Amine",
+      "inventors": "Trevor Alan Hatton; Hyowon Seo",
+      "assignee": "Massachusetts Institute of Technology",
+      "priority_year": 2021,
+      "sort_date": "2024-09-19",
+      "status": "Published Application",
+      "us_publication": "US 2024/0307819 A1",
+      "us_patent": "",
+      "pct_publication": "",
+      "other_publication": "",
+      "links": [
+        {
+          "label": "Google Patents",
+          "url": "https://patents.google.com/patent/US20240307819A1/en"
+        }
+      ]
+    }
+  ],
   "patent_note": "Only publicly available patent families should be listed. Add or update patent records manually."
 }
