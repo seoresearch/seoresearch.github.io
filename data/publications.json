@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "profile": {
     "name": "Hyowon Seo",
     "orcid": "0000-0002-9569-1902",
@@ -436,5 +436,7 @@
       ],
       "manual": true
     }
-  ]
+  ],
+  "patents": [],
+  "patent_note": "Only publicly available patent families should be listed. Add or update patent records manually."
 }
