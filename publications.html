@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta
     name="description"
-    content="Publications from the Seo Research Group and selected earlier contributions by Hyowon Seo."
+    content="Publications, patents, and selected earlier contributions from the Seo Research Group and Hyowon Seo."
   >
   <meta
     name="keywords"
-    content="Seo Research Group, Hyowon Seo, publications, molecularly programmed separations, electrochemistry, photochemistry, continuous flow"
+    content="Seo Research Group, Hyowon Seo, publications, patents, molecularly programmed separations, electrochemistry, photochemistry, continuous flow"
   >
   <meta name="author" content="Hyowon Seo">
 
@@ -253,6 +253,49 @@
       font-weight: 700;
     }
 
+
+    .publication-cover {
+      width: 100%;
+      max-width: 310px;
+      margin: 16px 0 3px;
+    }
+
+    .publication-cover a {
+      display: block;
+      padding: 7px;
+      background: #fafcfc;
+      border: 1px solid var(--seo-line);
+      border-radius: 5px;
+      box-shadow: 0 5px 16px rgba(32, 53, 56, 0.07);
+      cursor: zoom-in;
+    }
+
+    .publication-cover img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 430px;
+      object-fit: contain;
+    }
+
+    .publication-cover figcaption {
+      margin-top: 7px;
+      color: #7a8789;
+      font-size: 11px;
+      line-height: 1.45;
+      text-align: center;
+    }
+
+    .patent-item {
+      padding-left: 18px;
+      border-left: 3px solid var(--seo-accent);
+    }
+
+    .patent-status {
+      color: var(--seo-accent-dark);
+      font-weight: 700;
+    }
+
     .publication-links {
       display: flex;
       flex-wrap: wrap;
@@ -331,6 +374,10 @@
     }
 
     @media (max-width: 480px) {
+      .publication-cover {
+        max-width: 270px;
+      }
+
       .publication-item,
       .publication-item.no-image {
         grid-template-columns: 1fr;
@@ -453,6 +500,7 @@
                 <li><a href="#preprints">Preprints</a></li>
                 <li><a href="#since-2024">Since 2024</a></li>
                 <li><a href="#earlier-work">Earlier Contributions</a></li>
+                <li><a href="#patents">Patents</a></li>
               </ul>
 
               <div id="publication-root">
@@ -557,7 +605,16 @@
           `
           : "";
 
-        const linksMarkup = (record.links || [])
+        const recordLinks = Array.isArray(record.links)
+          ? record.links
+          : [];
+
+        const coverLink = recordLinks.find((item) =>
+          /cover/i.test(String(item.label || ""))
+        );
+
+        const linksMarkup = recordLinks
+          .filter((item) => !/cover/i.test(String(item.label || "")))
           .map(
             (item) => `
               <a
@@ -572,6 +629,31 @@
           )
           .join("");
 
+        const coverMarkup = coverLink
+          ? `
+            <figure class="publication-cover">
+              <a
+                href="${escapeHtml(coverLink.url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="${escapeHtml(coverLink.url)}"
+                  alt="${escapeHtml(
+                    (coverLink.label || "Journal cover") +
+                    " associated with " +
+                    record.title
+                  )}"
+                  loading="lazy"
+                >
+              </a>
+              <figcaption>
+                ${escapeHtml(coverLink.label || "Journal cover")}
+              </figcaption>
+            </figure>
+          `
+          : "";
+
         return `
           <li class="publication-item${record.image ? "" : " no-image"}">
             ${imageMarkup}
@@ -583,6 +665,7 @@
               <div class="publication-venue">${escapeHtml(record.venue)}</div>
               <p class="publication-authors">${highlightSeo(record.authors)}</p>
               ${linksMarkup ? `<div class="publication-links">${linksMarkup}</div>` : ""}
+              ${coverMarkup}
             </article>
           </li>
         `;
@@ -633,6 +716,86 @@
         `;
       }
 
+
+      function patentItem(record) {
+        const recordLinks = Array.isArray(record.links)
+          ? record.links
+          : [];
+
+        const linksMarkup = recordLinks
+          .map(
+            (item) => `
+              <a
+                class="publication-link"
+                href="${escapeHtml(item.url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ${escapeHtml(item.label)}
+              </a>
+            `
+          )
+          .join("");
+
+        const status = record.status || record.badge || "Public Patent Record";
+        const numbers = [
+          record.us_publication,
+          record.us_patent,
+          record.pct_publication,
+          record.other_publication
+        ].filter(Boolean).join(" · ");
+
+        return `
+          <li class="publication-item no-image patent-item">
+            <article class="publication-body">
+              <div class="publication-title-row">
+                <h3 class="publication-title">${escapeHtml(record.title)}</h3>
+                <span class="publication-badge">${escapeHtml(status)}</span>
+              </div>
+              ${record.inventors ? `<p class="publication-authors">${highlightSeo(record.inventors)}</p>` : ""}
+              ${record.assignee ? `<div class="publication-venue">${escapeHtml(record.assignee)}</div>` : ""}
+              ${numbers ? `<p class="publication-authors">${escapeHtml(numbers)}</p>` : ""}
+              ${record.priority_year ? `<p class="publication-authors"><span class="patent-status">Priority:</span> ${escapeHtml(record.priority_year)}</p>` : ""}
+              ${linksMarkup ? `<div class="publication-links">${linksMarkup}</div>` : ""}
+            </article>
+          </li>
+        `;
+      }
+
+      function renderPatents(records) {
+        if (!records.length) {
+          return `
+            <section id="patents" class="publication-section" aria-labelledby="patents-heading">
+              <div class="publication-section-header">
+                <h2 id="patents-heading">Patents and Applications</h2>
+                <p>Selected publicly available patent families.</p>
+              </div>
+              <div class="publication-note">
+                Public patent records will be added here as they become available.
+              </div>
+            </section>
+          `;
+        }
+
+        const sorted = [...records].sort((a, b) =>
+          String(b.sort_date || b.priority_year || "").localeCompare(
+            String(a.sort_date || a.priority_year || "")
+          )
+        );
+
+        return `
+          <section id="patents" class="publication-section" aria-labelledby="patents-heading">
+            <div class="publication-section-header">
+              <h2 id="patents-heading">Patents and Applications</h2>
+              <p>Selected publicly available patent families.</p>
+            </div>
+            <ul class="publication-list">
+              ${sorted.map(patentItem).join("")}
+            </ul>
+          </section>
+        `;
+      }
+
       fetch(DATA_URL, { cache: "no-store" })
         .then((response) => {
           if (!response.ok) {
@@ -659,6 +822,10 @@
             (record) => record.section === "prior"
           );
 
+          const patents = Array.isArray(data.patents)
+            ? data.patents
+            : [];
+
           root.innerHTML =
             renderSection(
               "preprints",
@@ -677,7 +844,8 @@
               "Earlier Contributions",
               "Research completed before the group was established at Stony Brook.",
               prior
-            );
+            ) +
+            renderPatents(patents);
 
           if (data.profile) {
             const scholar = document.getElementById("scholar-link");
