@@ -26,7 +26,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Update publication metadata, images, and website data
+      - name: Update publications
         env:
           PUBLICATIONS_ORCID: "0000-0002-9569-1902"
           CROSSREF_CONTACT_EMAIL: "hyowon.seo@stonybrook.edu"
@@ -39,7 +39,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data/publications.json data/publications.js
+          git add data/publications.json publications.html
 
           if [ -d "img/publications/auto" ]; then
             git add img/publications/auto
