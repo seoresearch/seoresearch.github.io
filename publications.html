@@ -351,6 +351,13 @@
       text-align: center;
     }
 
+
+    .publication-error a {
+      color: var(--seo-accent-dark);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
     @media (max-width: 767px) {
       .publications-intro {
         grid-template-columns: 1fr;
@@ -550,7 +557,11 @@
     (function () {
       "use strict";
 
-      const DATA_URL = "./data/publications.json";
+      const DATA_SOURCES = [
+        "./data/publications.json",
+        "/data/publications.json",
+        "https://raw.githubusercontent.com/seoresearch/seoresearch.github.io/main/data/publications.json"
+      ];
       const root = document.getElementById("publication-root");
 
       function escapeHtml(value) {
@@ -799,13 +810,48 @@
         `;
       }
 
-      fetch(DATA_URL, { cache: "no-store" })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`Could not load ${DATA_URL}`);
+      async function loadPublicationData() {
+        const errors = [];
+
+        for (const source of DATA_SOURCES) {
+          try {
+            const separator = source.includes("?") ? "&" : "?";
+            const url = `${source}${separator}v=${Date.now()}`;
+
+            const response = await fetch(url, {
+              cache: "no-store",
+              headers: {
+                "Accept": "application/json"
+              }
+            });
+
+            if (!response.ok) {
+              throw new Error(`HTTP ${response.status}`);
+            }
+
+            const text = await response.text();
+            let data;
+
+            try {
+              data = JSON.parse(text);
+            } catch (parseError) {
+              throw new Error("invalid JSON");
+            }
+
+            if (!data || !Array.isArray(data.publications)) {
+              throw new Error("missing publications array");
+            }
+
+            return data;
+          } catch (error) {
+            errors.push(`${source}: ${error.message}`);
           }
-          return response.json();
-        })
+        }
+
+        throw new Error(errors.join(" | "));
+      }
+
+      loadPublicationData()
         .then((data) => {
           const records = Array.isArray(data.publications)
             ? data.publications
@@ -842,11 +888,16 @@
           }
         })
         .catch((error) => {
-          console.error(error);
+          console.error("Publication data loading failed:", error);
           root.innerHTML = `
             <div class="publication-error">
-              The publication list could not be loaded. Confirm that
-              <code>data/publications.json</code> was copied to the repository.
+              Publication data are temporarily unavailable.
+              Please refresh the page in a moment or use
+              <a
+                href="https://scholar.google.com/citations?user=NMCGDdYAAAAJ&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Google Scholar</a>.
             </div>
           `;
         });
