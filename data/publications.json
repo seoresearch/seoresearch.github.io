@@ -6,8 +6,29 @@
     "google_scholar": "https://scholar.google.com/citations?user=NMCGDdYAAAAJ&hl=en",
     "legend": "* corresponding author; † equal contribution"
   },
-  "last_updated": "2026-07-15",
+  "last_updated": "2026-09-29",
   "publications": [
+    {
+      "title": "Photochemical CO Evolution in a Quinone-Based Electrochemical CO2 Capture System",
+      "authors": "Lim, H. C.; Seo, H.",
+      "venue": "Publication 2026",
+      "year": 2026,
+      "sort_date": "2026-09-28",
+      "section": "current",
+      "type": "preprint",
+      "badge": "Preprint",
+      "doi": "10.26434/chemrxiv.15009582/v1",
+      "image": "",
+      "image_alt": "",
+      "links": [
+        {
+          "label": "Preprint",
+          "url": "https://doi.org/10.26434/chemrxiv.15009582/v1"
+        }
+      ],
+      "manual": false,
+      "source": "Crossref"
+    },
     {
       "title": "Continuous Light-Driven Pure CO₂ Production by Regenerative Non-Aqueous Amine–Photoacid Cycling",
       "authors": "Byun, G. H.; Kim, N.; Joung, J. F.; Massen-Hane, M.; Gallant, B. M.; Seo, H.; Hatton, T. A.",
@@ -95,6 +116,48 @@
         }
       ],
       "manual": true
+    },
+    {
+      "title": "Leveraging Electrons for Electrochemical CO 2 Capture Using a Hemi‐Labile Iron Complex",
+      "authors": "Seo, H.; Chen, Y.; Walter, E.; Abdinejad, M.; Hatton, T. A.",
+      "venue": "Angewandte Chemie 2025, 137 (38)",
+      "year": 2025,
+      "sort_date": "2025-09-15",
+      "section": "current",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1002/ange.202505723",
+      "image": "",
+      "image_alt": "",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1002/ange.202505723"
+        }
+      ],
+      "manual": false,
+      "source": "Crossref"
+    },
+    {
+      "title": "Oxygen‐Stable Electrochemical CO2 Capture using Redox‐Active Heterocyclic Benzodithiophene Quinone",
+      "authors": "Abdinejad, M.; Massen‐Hane, M.; Seo, H.; Hatton, T. A.",
+      "venue": "Angewandte Chemie 2024, 136 (52)",
+      "year": 2024,
+      "sort_date": "2024-12-20",
+      "section": "current",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1002/ange.202412229",
+      "image": "",
+      "image_alt": "",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1002/ange.202412229"
+        }
+      ],
+      "manual": false,
+      "source": "Crossref"
     },
     {
       "title": "Oxygen-Stable Electrochemical CO₂ Capture Using Redox-Active Heterocyclic Benzodithiophene Quinone",
@@ -185,6 +248,27 @@
       "manual": true
     },
     {
+      "title": "Photochemical CO2 Capture and Release in Water Enabled By Photoacid Under Visible Light",
+      "authors": "Seo, H.; Hatton, T. A.",
+      "venue": "Publication 2023",
+      "year": 2023,
+      "sort_date": "2023-06-21",
+      "section": "prior",
+      "type": "preprint",
+      "badge": "Preprint",
+      "doi": "10.26434/chemrxiv-2023-pd83k",
+      "image": "",
+      "image_alt": "",
+      "links": [
+        {
+          "label": "Preprint",
+          "url": "https://doi.org/10.26434/chemrxiv-2023-pd83k"
+        }
+      ],
+      "manual": false,
+      "source": "Crossref"
+    },
+    {
       "title": "Electrochemical Direct Air Capture of CO₂ Using Neutral Red as Reversible Redox-Active Material",
       "authors": "Seo, H.; Hatton, T. A.*",
       "venue": "Nature Communications 2023, 14, 313",
@@ -200,26 +284,6 @@
         {
           "label": "Article",
           "url": "https://doi.org/10.1038/s41467-023-35866-w"
-        }
-      ],
-      "manual": true
-    },
-    {
-      "title": "Toward Solvent-Free Continuous-Flow Electrochemically Mediated Carbon Capture with High-Concentration Liquid Quinone Chemistry",
-      "authors": "Diederichsen, K. M.; Liu, Y.; Ozbek, N.; Seo, H.; Hatton, T. A.*",
-      "venue": "Joule 2022, 6 (1), 221–239",
-      "year": 2022,
-      "sort_date": "2022-01-19",
-      "section": "prior",
-      "type": "article",
-      "badge": "Article",
-      "doi": "10.1016/j.joule.2021.12.001",
-      "image": "./img/publications/LQ.png",
-      "image_alt": "Graphical abstract for solvent-free continuous-flow electrochemical carbon capture",
-      "links": [
-        {
-          "label": "Article",
-          "url": "https://doi.org/10.1016/j.joule.2021.12.001"
         }
       ],
       "manual": true
@@ -244,6 +308,26 @@
         {
           "label": "Cover",
           "url": "./img/publications/JACS_Cover.jpg"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Toward Solvent-Free Continuous-Flow Electrochemically Mediated Carbon Capture with High-Concentration Liquid Quinone Chemistry",
+      "authors": "Diederichsen, K. M.; Liu, Y.; Ozbek, N.; Seo, H.; Hatton, T. A.*",
+      "venue": "Joule 2022, 6 (1), 221–239",
+      "year": 2022,
+      "sort_date": "2022-01-19",
+      "section": "prior",
+      "type": "article",
+      "badge": "Article",
+      "doi": "10.1016/j.joule.2021.12.001",
+      "image": "./img/publications/LQ.png",
+      "image_alt": "Graphical abstract for solvent-free continuous-flow electrochemical carbon capture",
+      "links": [
+        {
+          "label": "Article",
+          "url": "https://doi.org/10.1016/j.joule.2021.12.001"
         }
       ],
       "manual": true
@@ -329,26 +413,6 @@
       "manual": true
     },
     {
-      "title": "Science of Synthesis: Flow Chemistry in Organic Synthesis",
-      "authors": "Beingessner, R. L.; Longstreet, A. R.; McTeague, T. A.; Kelly, L. P.; Seo, H.; Tran, T. H.; Wicker, A. C.; Jamison, T. F.*",
-      "venue": "Science of Synthesis 2018, Vol. 1, p. 429",
-      "year": 2018,
-      "sort_date": "2018-01-01",
-      "section": "prior",
-      "type": "chapter",
-      "badge": "Book Chapter",
-      "doi": "",
-      "image": "./img/publications/Book2.png",
-      "image_alt": "Cover image for Science of Synthesis: Flow Chemistry in Organic Synthesis",
-      "links": [
-        {
-          "label": "Chapter",
-          "url": "https://www.thieme-connect.de/products/ebooks/lookinside/10.1055/sos-SD-228-00239"
-        }
-      ],
-      "manual": true
-    },
-    {
       "title": "Ni-Catalyzed Electrochemical Decarboxylative C–C Couplings in Batch and Continuous Flow",
       "authors": "Li, H.; Breen, C. P.; Seo, H.; Jamison, T. F.*; Fang, Y.-Q.*; Bio, M. M.*",
       "venue": "Organic Letters 2018, 20 (5), 1338–1341",
@@ -364,6 +428,26 @@
         {
           "label": "Article",
           "url": "https://doi.org/10.1021/acs.orglett.8b00070"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "title": "Science of Synthesis: Flow Chemistry in Organic Synthesis",
+      "authors": "Beingessner, R. L.; Longstreet, A. R.; McTeague, T. A.; Kelly, L. P.; Seo, H.; Tran, T. H.; Wicker, A. C.; Jamison, T. F.*",
+      "venue": "Science of Synthesis 2018, Vol. 1, p. 429",
+      "year": 2018,
+      "sort_date": "2018-01-01",
+      "section": "prior",
+      "type": "chapter",
+      "badge": "Book Chapter",
+      "doi": "",
+      "image": "./img/publications/Book2.png",
+      "image_alt": "Cover image for Science of Synthesis: Flow Chemistry in Organic Synthesis",
+      "links": [
+        {
+          "label": "Chapter",
+          "url": "https://www.thieme-connect.de/products/ebooks/lookinside/10.1055/sos-SD-228-00239"
         }
       ],
       "manual": true
