@@ -11,15 +11,15 @@
     {
       "title": "Photochemical CO Evolution in a Quinone-Based Electrochemical CO2 Capture System",
       "authors": "Lim, H. C.; Seo, H.",
-      "venue": "Publication 2026",
+      "venue": "ChemRxiv (2026)",
       "year": 2026,
       "sort_date": "2026-09-28",
       "section": "current",
       "type": "preprint",
       "badge": "Preprint",
       "doi": "10.26434/chemrxiv.15009582/v1",
-"image": "./img/publications/CO_evolution.png",
-"image_alt": "Graphical abstract for photochemical CO evolution in a quinone-based electrochemical CO2 capture system"
+      "image": "",
+      "image_alt": "",
       "links": [
         {
           "label": "Preprint",
@@ -118,48 +118,6 @@
       "manual": true
     },
     {
-      "title": "Leveraging Electrons for Electrochemical CO 2 Capture Using a Hemi‐Labile Iron Complex",
-      "authors": "Seo, H.; Chen, Y.; Walter, E.; Abdinejad, M.; Hatton, T. A.",
-      "venue": "Angewandte Chemie 2025, 137 (38)",
-      "year": 2025,
-      "sort_date": "2025-09-15",
-      "section": "current",
-      "type": "article",
-      "badge": "Article",
-      "doi": "10.1002/ange.202505723",
-      "image": "",
-      "image_alt": "",
-      "links": [
-        {
-          "label": "Article",
-          "url": "https://doi.org/10.1002/ange.202505723"
-        }
-      ],
-      "manual": false,
-      "source": "Crossref"
-    },
-    {
-      "title": "Oxygen‐Stable Electrochemical CO2 Capture using Redox‐Active Heterocyclic Benzodithiophene Quinone",
-      "authors": "Abdinejad, M.; Massen‐Hane, M.; Seo, H.; Hatton, T. A.",
-      "venue": "Angewandte Chemie 2024, 136 (52)",
-      "year": 2024,
-      "sort_date": "2024-12-20",
-      "section": "current",
-      "type": "article",
-      "badge": "Article",
-      "doi": "10.1002/ange.202412229",
-      "image": "",
-      "image_alt": "",
-      "links": [
-        {
-          "label": "Article",
-          "url": "https://doi.org/10.1002/ange.202412229"
-        }
-      ],
-      "manual": false,
-      "source": "Crossref"
-    },
-    {
       "title": "Oxygen-Stable Electrochemical CO₂ Capture Using Redox-Active Heterocyclic Benzodithiophene Quinone",
       "authors": "Abdinejad, M.; Massen-Hane, M.; Seo, H.; Hatton, T. A.*",
       "venue": "Angewandte Chemie International Edition 2024, 63 (52), e202412229",
@@ -250,15 +208,15 @@
     {
       "title": "Photochemical CO2 Capture and Release in Water Enabled By Photoacid Under Visible Light",
       "authors": "Seo, H.; Hatton, T. A.",
-      "venue": "Publication 2023",
+      "venue": "ChemRxiv (2023)",
       "year": 2023,
       "sort_date": "2023-06-21",
       "section": "prior",
       "type": "preprint",
       "badge": "Preprint",
       "doi": "10.26434/chemrxiv-2023-pd83k",
-"image": "./img/publications/photo.PNG",
-"image_alt": "Graphical abstract for photochemical CO2 capture and release using a photoacid under visible light"
+      "image": "",
+      "image_alt": "",
       "links": [
         {
           "label": "Preprint",
