@@ -18,8 +18,8 @@
       "type": "preprint",
       "badge": "Preprint",
       "doi": "10.26434/chemrxiv.15009582/v1",
-      "image": "",
-      "image_alt": "",
+"image": "./img/publications/CO_evolution.png",
+"image_alt": "Graphical abstract for photochemical CO evolution in a quinone-based electrochemical CO2 capture system"
       "links": [
         {
           "label": "Preprint",
@@ -257,8 +257,8 @@
       "type": "preprint",
       "badge": "Preprint",
       "doi": "10.26434/chemrxiv-2023-pd83k",
-      "image": "",
-      "image_alt": "",
+"image": "./img/publications/photo.PNG",
+"image_alt": "Graphical abstract for photochemical CO2 capture and release using a photoacid under visible light"
       "links": [
         {
           "label": "Preprint",
