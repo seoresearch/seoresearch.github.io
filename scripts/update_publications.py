@@ -38,7 +38,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "publications.json"
-JS_DATA_PATH = ROOT / "data" / "publications.js"
+PUBLICATIONS_HTML_PATH = ROOT / "publications.html"
 IMAGE_DIR = ROOT / "img" / "publications" / "auto"
 
 ORCID = os.environ.get("PUBLICATIONS_ORCID", "0000-0002-9569-1902")
@@ -517,31 +517,57 @@ def add_images_to_blank_records(records: list[dict[str, Any]]) -> int:
 
 
 
-def write_publications_js(data: dict[str, Any]) -> bool:
+def sync_inline_publication_data(data: dict[str, Any]) -> bool:
     """
-    Write a JavaScript mirror of publications.json.
+    Embed the current publication database directly into publications.html.
 
-    The website loads this file with a normal <script> tag, which avoids
-    browser/runtime fetch problems on GitHub Pages. The JSON file remains the
-    editable source of truth and is still used by the updater.
+    This avoids runtime fetch/CORS/cache/path problems on GitHub Pages.
+    data/publications.json remains the source of truth used by this updater.
     """
-    JS_DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
+    if not PUBLICATIONS_HTML_PATH.exists():
+        raise FileNotFoundError(
+            f"Could not find publications page: {PUBLICATIONS_HTML_PATH}"
+        )
 
-    payload = (
-        "window.SEO_PUBLICATIONS_DATA = "
-        + json.dumps(data, ensure_ascii=False, separators=(",", ":"))
-        + ";\n"
+    page = PUBLICATIONS_HTML_PATH.read_text(encoding="utf-8")
+
+    start_marker = "/* SEO_PUBLICATION_DATA_START */"
+    end_marker = "/* SEO_PUBLICATION_DATA_END */"
+
+    start = page.find(start_marker)
+    end = page.find(end_marker)
+
+    if start == -1 or end == -1 or end <= start:
+        raise RuntimeError(
+            "publications.html is missing the inline publication-data markers."
+        )
+
+    serialized = json.dumps(
+        data,
+        ensure_ascii=False,
+        separators=(",", ":"),
+    ).replace("</", "<\\/")
+
+    replacement = (
+        start_marker
+        + "\n    window.SEO_PUBLICATIONS_DATA = "
+        + serialized
+        + ";\n    "
+        + end_marker
     )
 
-    previous = ""
-    if JS_DATA_PATH.exists():
-        previous = JS_DATA_PATH.read_text(encoding="utf-8")
-
-    if previous == payload:
+    old_block = page[start:end + len(end_marker)]
+    if old_block == replacement:
         return False
 
-    JS_DATA_PATH.write_text(payload, encoding="utf-8")
-    print(f"Updated JavaScript publication data: {JS_DATA_PATH}")
+    updated_page = (
+        page[:start]
+        + replacement
+        + page[end + len(end_marker):]
+    )
+
+    PUBLICATIONS_HTML_PATH.write_text(updated_page, encoding="utf-8")
+    print("Updated inline publication data in publications.html.")
     return True
 
 
@@ -636,10 +662,13 @@ def main() -> int:
             encoding="utf-8",
         )
 
-    js_changed = write_publications_js(data)
+    html_changed = sync_inline_publication_data(data)
 
-    if not metadata_changed and not js_changed:
-        print("No new Crossref records, representative images, duplicate corrections, or website-data changes were found.")
+    if not metadata_changed and not html_changed:
+        print(
+            "No new Crossref records, representative images, "
+            "duplicate corrections, or website-data changes were found."
+        )
         return 0
 
     if added:
