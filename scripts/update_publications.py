@@ -1,14 +1,25 @@
 #!/usr/bin/env python3
 """
-Update data/publications.json with newly registered Crossref works associated
-with Hyowon Seo's ORCID.
+Update data/publications.json from Crossref and, when possible, download a
+representative image from each new DOI landing page.
 
-This script:
-- reads the existing publication database,
-- queries Crossref by ORCID,
-- appends only DOI records not already present,
-- preserves manually curated records and the separate patents array,
-- writes changes back to data/publications.json.
+Image behavior
+--------------
+For records whose "image" field is blank, the script follows the DOI landing
+page and looks for article-specific image metadata such as:
+- citation_image
+- og:image
+- twitter:image
+- HTML images labelled as graphical abstract / TOC / abstract graphic
+
+If a suitable public image is found, it is downloaded to:
+    img/publications/auto/
+
+The image step is best-effort. Failure to find or download an image never makes
+the publication update fail.
+
+Manually curated records, cover links, and the separate patents array are
+preserved.
 """
 
 from __future__ import annotations
@@ -21,17 +32,27 @@ import sys
 import urllib.parse
 import urllib.request
 from datetime import date
+from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "publications.json"
+IMAGE_DIR = ROOT / "img" / "publications" / "auto"
 
 ORCID = os.environ.get("PUBLICATIONS_ORCID", "0000-0002-9569-1902")
 CONTACT_EMAIL = os.environ.get(
     "CROSSREF_CONTACT_EMAIL",
     "hyowon.seo@stonybrook.edu",
 )
+
+USER_AGENT = (
+    "Mozilla/5.0 (compatible; SeoResearchGroupWebsite/1.0; "
+    f"+mailto:{CONTACT_EMAIL})"
+)
+
+MAX_HTML_BYTES = 6_000_000
+MAX_IMAGE_BYTES = 12_000_000
 
 CROSSREF_FIELDS = ",".join(
     [
@@ -101,12 +122,15 @@ def venue_string(item: dict[str, Any], year: int) -> str:
 
     venue = journal or "Publication"
     venue += f" {year}"
+
     if volume:
         venue += f", {volume}"
         if issue:
             venue += f" ({issue})"
+
     if page:
         venue += f", {page.replace('-', '–')}"
+
     return venue
 
 
@@ -138,21 +162,305 @@ def fetch_crossref() -> list[dict[str, Any]]:
         url,
         headers={
             "Accept": "application/json",
-            "User-Agent": (
-                "SeoResearchGroupWebsite/1.0 "
-                f"(mailto:{CONTACT_EMAIL})"
-            ),
+            "User-Agent": USER_AGENT,
         },
     )
 
     with urllib.request.urlopen(request, timeout=60) as response:
         payload = json.load(response)
+
     return payload.get("message", {}).get("items", [])
+
+
+class ArticleImageParser(HTMLParser):
+    """Collect image candidates from article landing-page HTML."""
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.candidates: list[tuple[int, str, str]] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        attrs_dict = {
+            (key or "").lower(): value or ""
+            for key, value in attrs
+        }
+
+        if tag.lower() == "meta":
+            key = (
+                attrs_dict.get("property")
+                or attrs_dict.get("name")
+                or ""
+            ).lower()
+            content = attrs_dict.get("content", "").strip()
+            if not content:
+                return
+
+            priorities = {
+                "citation_image": 150,
+                "citation_graphical_abstract": 150,
+                "og:image": 110,
+                "og:image:url": 110,
+                "twitter:image": 100,
+                "twitter:image:src": 100,
+            }
+
+            if key in priorities:
+                self.candidates.append((priorities[key], content, key))
+
+        elif tag.lower() == "img":
+            src = (
+                attrs_dict.get("src")
+                or attrs_dict.get("data-src")
+                or attrs_dict.get("data-lazy-src")
+                or ""
+            ).strip()
+
+            if not src:
+                return
+
+            label = " ".join(
+                [
+                    attrs_dict.get("alt", ""),
+                    attrs_dict.get("title", ""),
+                    attrs_dict.get("class", ""),
+                    src,
+                ]
+            ).lower()
+
+            score = 15
+            if "graphical abstract" in label:
+                score += 150
+            elif "graphical" in label:
+                score += 120
+            elif "toc graphic" in label or "toc image" in label:
+                score += 120
+            elif "abstract graphic" in label or "abstract image" in label:
+                score += 110
+            elif "article image" in label or "article figure" in label:
+                score += 70
+            elif "figure" in label:
+                score += 35
+
+            self.candidates.append((score, src, label))
+
+
+def fetch_html(url: str) -> tuple[str, str]:
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": "text/html,application/xhtml+xml",
+        },
+    )
+
+    with urllib.request.urlopen(request, timeout=45) as response:
+        final_url = response.geturl()
+        raw = response.read(MAX_HTML_BYTES + 1)
+
+        if len(raw) > MAX_HTML_BYTES:
+            raw = raw[:MAX_HTML_BYTES]
+
+        charset = response.headers.get_content_charset() or "utf-8"
+        text = raw.decode(charset, errors="replace")
+
+    return final_url, text
+
+
+def is_bad_image_candidate(url: str, label: str) -> bool:
+    text = f"{url} {label}".lower()
+
+    blocked = (
+        "favicon",
+        "logo",
+        "brandmark",
+        "avatar",
+        "profile",
+        "sprite",
+        "tracking",
+        "pixel.gif",
+        "spacer",
+        "icon-",
+        "/icon/",
+    )
+
+    return (
+        not url
+        or url.startswith("data:")
+        or any(token in text for token in blocked)
+    )
+
+
+def image_candidates_for_doi(doi: str) -> list[tuple[int, str, str, str]]:
+    doi_url = f"https://doi.org/{urllib.parse.quote(doi, safe='/:')}"
+    final_url, page_html = fetch_html(doi_url)
+
+    parser = ArticleImageParser()
+    parser.feed(page_html)
+
+    candidates: list[tuple[int, str, str, str]] = []
+
+    for score, candidate, label in parser.candidates:
+        absolute = urllib.parse.urljoin(final_url, candidate)
+
+        if is_bad_image_candidate(absolute, label):
+            continue
+
+        candidates.append((score, absolute, label, final_url))
+
+    # Deduplicate while keeping the highest-scoring version.
+    best_by_url: dict[str, tuple[int, str, str, str]] = {}
+    for item in candidates:
+        score, url, label, referer = item
+        previous = best_by_url.get(url)
+        if previous is None or score > previous[0]:
+            best_by_url[url] = item
+
+    return sorted(
+        best_by_url.values(),
+        key=lambda item: item[0],
+        reverse=True,
+    )
+
+
+def extension_for_content_type(content_type: str, image_url: str) -> str:
+    content_type = content_type.split(";", 1)[0].strip().lower()
+
+    mapping = {
+        "image/jpeg": ".jpg",
+        "image/jpg": ".jpg",
+        "image/png": ".png",
+        "image/webp": ".webp",
+        "image/gif": ".gif",
+        "image/svg+xml": ".svg",
+    }
+
+    if content_type in mapping:
+        return mapping[content_type]
+
+    suffix = Path(urllib.parse.urlparse(image_url).path).suffix.lower()
+    if suffix in {".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg"}:
+        return ".jpg" if suffix == ".jpeg" else suffix
+
+    return ".jpg"
+
+
+def doi_filename(doi: str) -> str:
+    stem = re.sub(r"[^A-Za-z0-9._-]+", "_", doi).strip("_")
+    return stem[:160] or "publication"
+
+
+def download_image(
+    image_url: str,
+    referer: str,
+    doi: str,
+) -> Path | None:
+    request = urllib.request.Request(
+        image_url,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+            "Referer": referer,
+        },
+    )
+
+    try:
+        with urllib.request.urlopen(request, timeout=45) as response:
+            content_type = response.headers.get("Content-Type", "")
+
+            if not content_type.lower().startswith("image/"):
+                return None
+
+            chunks: list[bytes] = []
+            total = 0
+
+            while True:
+                chunk = response.read(256 * 1024)
+                if not chunk:
+                    break
+
+                total += len(chunk)
+                if total > MAX_IMAGE_BYTES:
+                    return None
+
+                chunks.append(chunk)
+
+            body = b"".join(chunks)
+
+    except Exception:
+        return None
+
+    if len(body) < 2_000:
+        return None
+
+    IMAGE_DIR.mkdir(parents=True, exist_ok=True)
+
+    extension = extension_for_content_type(content_type, image_url)
+    path = IMAGE_DIR / f"{doi_filename(doi)}{extension}"
+    path.write_bytes(body)
+
+    return path
+
+
+def fetch_representative_image(doi: str) -> str:
+    """
+    Return a repository-relative image path, or an empty string on failure.
+    """
+    try:
+        candidates = image_candidates_for_doi(doi)
+    except Exception as exc:
+        print(f"Image lookup failed for {doi}: {exc}")
+        return ""
+
+    for score, image_url, label, referer in candidates[:12]:
+        path = download_image(image_url, referer, doi)
+
+        if path is None:
+            continue
+
+        relative = path.relative_to(ROOT).as_posix()
+        print(
+            f"Fetched representative image for {doi}: "
+            f"{relative} (candidate score {score})"
+        )
+        return f"./{relative}"
+
+    print(f"No usable representative image found for {doi}.")
+    return ""
+
+
+def add_images_to_blank_records(records: list[dict[str, Any]]) -> int:
+    """
+    Backfill blank image fields. This lets an already-added publication acquire
+    an image on the next workflow run without deleting/re-adding the record.
+    """
+    count = 0
+
+    for record in records:
+        doi = str(record.get("doi", "")).strip()
+        current_image = str(record.get("image", "")).strip()
+
+        if not doi or current_image:
+            continue
+
+        image = fetch_representative_image(doi)
+        if not image:
+            continue
+
+        record["image"] = image
+        record["image_alt"] = (
+            "Representative image for " +
+            str(record.get("title", "publication"))
+        )
+        count += 1
+
+    return count
 
 
 def main() -> int:
     if not DATA_PATH.exists():
-        raise FileNotFoundError(f"Could not find publication database: {DATA_PATH}")
+        raise FileNotFoundError(
+            f"Could not find publication database: {DATA_PATH}"
+        )
 
     data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     records = data.setdefault("publications", [])
@@ -167,6 +475,7 @@ def main() -> int:
 
     for item in fetch_crossref():
         doi = clean_text(item.get("DOI")).lower()
+
         if not doi or doi in existing_dois:
             continue
 
@@ -188,7 +497,11 @@ def main() -> int:
             "image_alt": "",
             "links": [
                 {
-                    "label": "Preprint" if publication_type == "preprint" else "Article",
+                    "label": (
+                        "Preprint"
+                        if publication_type == "preprint"
+                        else "Article"
+                    ),
                     "url": f"https://doi.org/{doi}",
                 }
             ],
@@ -200,8 +513,14 @@ def main() -> int:
         existing_dois.add(doi)
         added.append(doi)
 
-    if not added:
-        print("No new Crossref records were found.")
+    # Also backfill images for publications that were added on an earlier run
+    # with a blank "image" field.
+    images_added = add_images_to_blank_records(records)
+
+    changed = bool(added or images_added)
+
+    if not changed:
+        print("No new Crossref records or representative images were found.")
         return 0
 
     records.sort(
@@ -214,14 +533,20 @@ def main() -> int:
     )
 
     data["last_updated"] = str(date.today())
+
     DATA_PATH.write_text(
         json.dumps(data, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
 
-    print(f"Added {len(added)} publication(s):")
-    for doi in added:
-        print(f"  - {doi}")
+    if added:
+        print(f"Added {len(added)} publication(s):")
+        for doi in added:
+            print(f"  - {doi}")
+
+    if images_added:
+        print(f"Added {images_added} representative image(s).")
+
     return 0
 
 
