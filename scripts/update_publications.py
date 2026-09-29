@@ -38,6 +38,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "publications.json"
+JS_DATA_PATH = ROOT / "data" / "publications.js"
 IMAGE_DIR = ROOT / "img" / "publications" / "auto"
 
 ORCID = os.environ.get("PUBLICATIONS_ORCID", "0000-0002-9569-1902")
@@ -515,6 +516,36 @@ def add_images_to_blank_records(records: list[dict[str, Any]]) -> int:
     return count
 
 
+
+def write_publications_js(data: dict[str, Any]) -> bool:
+    """
+    Write a JavaScript mirror of publications.json.
+
+    The website loads this file with a normal <script> tag, which avoids
+    browser/runtime fetch problems on GitHub Pages. The JSON file remains the
+    editable source of truth and is still used by the updater.
+    """
+    JS_DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+    payload = (
+        "window.SEO_PUBLICATIONS_DATA = "
+        + json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+        + ";\n"
+    )
+
+    previous = ""
+    if JS_DATA_PATH.exists():
+        previous = JS_DATA_PATH.read_text(encoding="utf-8")
+
+    if previous == payload:
+        return False
+
+    JS_DATA_PATH.write_text(payload, encoding="utf-8")
+    print(f"Updated JavaScript publication data: {JS_DATA_PATH}")
+    return True
+
+
+
 def main() -> int:
     if not DATA_PATH.exists():
         raise FileNotFoundError(
@@ -586,11 +617,7 @@ def main() -> int:
     # with a blank "image" field.
     images_added = add_images_to_blank_records(records)
 
-    changed = bool(added or images_added or duplicates_removed)
-
-    if not changed:
-        print("No new Crossref records, representative images, or duplicate corrections were found.")
-        return 0
+    metadata_changed = bool(added or images_added or duplicates_removed)
 
     records.sort(
         key=lambda record: (
@@ -601,12 +628,19 @@ def main() -> int:
         reverse=True,
     )
 
-    data["last_updated"] = str(date.today())
+    if metadata_changed:
+        data["last_updated"] = str(date.today())
 
-    DATA_PATH.write_text(
-        json.dumps(data, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
+        DATA_PATH.write_text(
+            json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+
+    js_changed = write_publications_js(data)
+
+    if not metadata_changed and not js_changed:
+        print("No new Crossref records, representative images, duplicate corrections, or website-data changes were found.")
+        return 0
 
     if added:
         print(f"Added {len(added)} publication(s):")
