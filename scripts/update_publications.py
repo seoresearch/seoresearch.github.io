@@ -114,13 +114,28 @@ def iso_date(parts: list[int]) -> str:
     return f"{year:04d}-{month:02d}-{day:02d}"
 
 
-def venue_string(item: dict[str, Any], year: int) -> str:
+def venue_string(
+    item: dict[str, Any],
+    year: int,
+    publication_type: str = "",
+    doi: str = "",
+) -> str:
     journal = clean_text(item.get("container-title"))
     volume = clean_text(item.get("volume"))
     issue = clean_text(item.get("issue"))
     page = clean_text(item.get("page"))
+    item_url = clean_text(item.get("URL")).lower()
+    doi_lower = doi.lower()
 
-    venue = journal or "Publication"
+    # Crossref sometimes leaves the container title blank for ChemRxiv.
+    if publication_type == "preprint" and (
+        "chemrxiv" in doi_lower
+        or "chemrxiv" in item_url
+        or "chemrxiv" in journal.lower()
+    ):
+        return f"ChemRxiv ({year})"
+
+    venue = journal or ("Preprint" if publication_type == "preprint" else "Publication")
     venue += f" {year}"
 
     if volume:
@@ -145,6 +160,50 @@ def classify(item: dict[str, Any]) -> tuple[str, str]:
     if crossref_type == "proceedings-article":
         return "conference", "Conference"
     return "article", "Article"
+
+
+
+def is_german_angewandte_doi(doi: str) -> bool:
+    """
+    Wiley registers the German-language Angewandte Chemie version separately
+    with a DOI beginning 10.1002/ange., while the citable International Edition
+    uses 10.1002/anie.  The website keeps only the International Edition.
+    """
+    return doi.strip().lower().startswith("10.1002/ange.")
+
+
+def remove_auto_german_angewandte_duplicates(
+    records: list[dict[str, Any]],
+) -> int:
+    """
+    Remove Crossref-added German-edition duplicates already present in the JSON.
+    Manually curated records are never deleted.
+    """
+    kept: list[dict[str, Any]] = []
+    removed = 0
+
+    for record in records:
+        doi = str(record.get("doi", "")).strip().lower()
+        is_auto = (
+            record.get("manual") is False
+            or str(record.get("source", "")).lower() == "crossref"
+        )
+
+        if is_auto and is_german_angewandte_doi(doi):
+            removed += 1
+            print(
+                "Removed German Angewandte Chemie duplicate: "
+                f"{record.get('title', doi)} ({doi})"
+            )
+            continue
+
+        kept.append(record)
+
+    if removed:
+        records[:] = kept
+
+    return removed
+
 
 
 def fetch_crossref() -> list[dict[str, Any]]:
@@ -465,6 +524,10 @@ def main() -> int:
     data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     records = data.setdefault("publications", [])
 
+    # Remove German Angewandte Chemie mirror records that an earlier
+    # Crossref run may have added as separate publications.
+    duplicates_removed = remove_auto_german_angewandte_duplicates(records)
+
     existing_dois = {
         str(record.get("doi", "")).strip().lower()
         for record in records
@@ -479,6 +542,12 @@ def main() -> int:
         if not doi or doi in existing_dois:
             continue
 
+        # Angewandte Chemie has parallel German (ange) and International
+        # Edition (anie) records. Keep only the International Edition.
+        if is_german_angewandte_doi(doi):
+            print(f"Skipping German Angewandte Chemie record: {doi}")
+            continue
+
         parts = date_parts(item)
         year = parts[0] if parts else date.today().year
         publication_type, badge = classify(item)
@@ -486,7 +555,7 @@ def main() -> int:
         record = {
             "title": clean_text(item.get("title")),
             "authors": format_authors(item.get("author", [])),
-            "venue": venue_string(item, year),
+            "venue": venue_string(item, year, publication_type, doi),
             "year": year,
             "sort_date": iso_date(parts),
             "section": "current" if year >= 2024 else "prior",
@@ -517,10 +586,10 @@ def main() -> int:
     # with a blank "image" field.
     images_added = add_images_to_blank_records(records)
 
-    changed = bool(added or images_added)
+    changed = bool(added or images_added or duplicates_removed)
 
     if not changed:
-        print("No new Crossref records or representative images were found.")
+        print("No new Crossref records, representative images, or duplicate corrections were found.")
         return 0
 
     records.sort(
@@ -546,6 +615,12 @@ def main() -> int:
 
     if images_added:
         print(f"Added {images_added} representative image(s).")
+
+    if duplicates_removed:
+        print(
+            f"Removed {duplicates_removed} German Angewandte Chemie "
+            "duplicate record(s)."
+        )
 
     return 0
 
