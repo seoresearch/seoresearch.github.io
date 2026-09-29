@@ -572,13 +572,85 @@ def sync_inline_publication_data(data: dict[str, Any]) -> bool:
 
 
 
-def main() -> int:
+
+def load_publication_data() -> tuple[dict[str, Any], bool]:
+    """
+    Load data/publications.json.
+
+    If the JSON file is malformed, recover from the valid publication data
+    embedded in publications.html, then let the normal updater rewrite a clean
+    JSON file. This makes the scheduled workflow self-healing after an
+    accidental manual JSON syntax error.
+    """
     if not DATA_PATH.exists():
         raise FileNotFoundError(
             f"Could not find publication database: {DATA_PATH}"
         )
 
-    data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+    raw = DATA_PATH.read_text(encoding="utf-8")
+
+    try:
+        return json.loads(raw), False
+    except json.JSONDecodeError as exc:
+        print(
+            "WARNING: data/publications.json is invalid JSON. "
+            f"{exc}. Attempting recovery from publications.html."
+        )
+
+    if not PUBLICATIONS_HTML_PATH.exists():
+        raise RuntimeError(
+            "Could not recover publication data because publications.html "
+            "is missing."
+        )
+
+    page = PUBLICATIONS_HTML_PATH.read_text(encoding="utf-8")
+
+    start_marker = "/* SEO_PUBLICATION_DATA_START */"
+    end_marker = "/* SEO_PUBLICATION_DATA_END */"
+
+    start = page.find(start_marker)
+    end = page.find(end_marker)
+
+    if start == -1 or end == -1 or end <= start:
+        raise RuntimeError(
+            "Could not recover publication data because publications.html "
+            "does not contain the inline publication-data markers."
+        )
+
+    block = page[start + len(start_marker):end]
+
+    match = re.search(
+        r"window\.SEO_PUBLICATIONS_DATA\s*=\s*(\{.*\})\s*;\s*$",
+        block,
+        flags=re.DOTALL,
+    )
+
+    if not match:
+        raise RuntimeError(
+            "Could not recover publication data from the inline data block "
+            "in publications.html."
+        )
+
+    recovered = json.loads(match.group(1))
+
+    if not isinstance(recovered, dict) or not isinstance(
+        recovered.get("publications"), list
+    ):
+        raise RuntimeError(
+            "Recovered publication data are missing the publications array."
+        )
+
+    print(
+        "Recovered publication data from publications.html. "
+        "A clean data/publications.json will be written."
+    )
+
+    return recovered, True
+
+
+
+def main() -> int:
+    data, json_recovered = load_publication_data()
     records = data.setdefault("publications", [])
 
     # Remove German Angewandte Chemie mirror records that an earlier
@@ -643,7 +715,9 @@ def main() -> int:
     # with a blank "image" field.
     images_added = add_images_to_blank_records(records)
 
-    metadata_changed = bool(added or images_added or duplicates_removed)
+    metadata_changed = bool(
+        added or images_added or duplicates_removed or json_recovered
+    )
 
     records.sort(
         key=lambda record: (
@@ -684,6 +758,9 @@ def main() -> int:
             f"Removed {duplicates_removed} German Angewandte Chemie "
             "duplicate record(s)."
         )
+
+    if json_recovered:
+        print("Repaired malformed data/publications.json.")
 
     return 0
 
