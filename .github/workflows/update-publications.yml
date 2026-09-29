@@ -1,13 +1,14 @@
 name: Update publications
 
-on:
+"on":
   schedule:
-    # Every Monday at 09:17 UTC. The non-round minute reduces peak-time delay.
+    # Every Monday at 09:17 UTC.
     - cron: "17 9 * * 1"
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: update-publications
@@ -19,30 +20,48 @@ jobs:
 
     steps:
       - name: Check out the website
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
-      - name: Query Crossref by ORCID
+      - name: Update publication metadata and images
         env:
           PUBLICATIONS_ORCID: "0000-0002-9569-1902"
           CROSSREF_CONTACT_EMAIL: "hyowon.seo@stonybrook.edu"
         run: python scripts/update_publications.py
 
-      - name: Commit new publication records
+      - name: Commit and push publication updates
+        id: publication_update
         shell: bash
         run: |
-          if git diff --quiet -- data/publications.json; then
-            echo "No publication changes."
-            exit 0
-          fi
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add data/publications.json
-          git commit -m "Update publications from Crossref"
+
+          if [ -d "img/publications/auto" ]; then
+            git add img/publications/auto
+          fi
+
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No publication changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Update publications and representative images"
           git push
+
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Request a GitHub Pages rebuild
+        if: steps.publication_update.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api \
+            --method POST \
+            "repos/${{ github.repository }}/pages/builds"
