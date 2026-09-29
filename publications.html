@@ -142,10 +142,17 @@
     }
 
     .publication-year {
-      margin: 28px 0 8px;
+      margin: 34px 0 10px;
+      padding-bottom: 7px;
       color: var(--seo-accent-dark);
-      font-size: 20px;
+      border-bottom: 1px solid var(--seo-line);
+      font-size: 23px;
       line-height: 1.3;
+    }
+
+
+    #works .publication-year:first-child {
+      margin-top: 0;
     }
 
     .publication-list {
@@ -471,7 +478,9 @@
             >
               <section class="publications-intro" aria-label="Publication overview">
                 <p>
-
+                  Peer-reviewed articles, reviews, book chapters, and preprints
+                  are listed together chronologically by year. Preprints are
+                  identified clearly with a <strong>Preprint</strong> badge.
                 </p>
 
                 <div class="profile-buttons">
@@ -497,9 +506,7 @@
               </section>
 
               <ul class="publication-nav" aria-label="Publication sections">
-                <li><a href="#preprints">Preprints</a></li>
-                <li><a href="#since-2024">Since 2024</a></li>
-                <li><a href="#earlier-work">Earlier Contributions</a></li>
+                <li><a href="#works">Publications &amp; Preprints</a></li>
                 <li><a href="#patents">Patents</a></li>
               </ul>
 
@@ -808,44 +815,19 @@
             ? data.publications
             : [];
 
-          const preprints = records.filter(
-            (record) => record.type === "preprint"
-          );
-
-          const current = records.filter(
-            (record) =>
-              record.section === "current" &&
-              record.type !== "preprint"
-          );
-
-          const prior = records.filter(
-            (record) => record.section === "prior"
-          );
-
           const patents = Array.isArray(data.patents)
             ? data.patents
             : [];
 
-          root.innerHTML =
-            renderSection(
-              "preprints",
-              "Preprints",
-              "Current manuscripts not yet represented by a final journal article.",
-              preprints
-            ) +
-            renderSection(
-              "since-2024",
-              "Publications",
-              "",
-              current
-            ) +
-            renderSection(
-              "earlier-work",
-              "Earlier Contributions",
-              "Research completed before the group was established at Stony Brook.",
-              prior
-            ) +
-            renderPatents(patents);
+          const works = records.filter(
+            (record) => record.section !== "patent"
+          );
+
+          root.innerHTML = `
+            <section id="works" class="publication-section" aria-label="Publications and preprints">
+              ${renderYearGroups(works)}
+            </section>
+          ` + renderPatents(patents);
 
           if (data.profile) {
             const scholar = document.getElementById("scholar-link");
